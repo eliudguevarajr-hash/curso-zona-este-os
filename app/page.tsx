@@ -39,16 +39,17 @@ export default function HomePage() {
         <div className="soft-panel overflow-hidden">
           <div className="surface-grid grid gap-8 px-6 py-10 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div>
-              <p className="eyebrow">Centro oficial de informacion</p>
+              <p className="eyebrow">Centro oficial de información</p>
+
               <h1 className="mt-4 font-display text-4xl leading-tight text-brand-900 sm:text-6xl">
                 {siteMeta.title}
               </h1>
               <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
               <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-700 sm:text-base">
-                Aqui encuentras solo lo necesario para avanzar sin confusion: que hacer ahora, donde entrar y a quien contactar.
+                Aquí encuentras solo lo necesario para avanzar sin confusión: qué hacer ahora, dónde entrar y a quién contactar.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href="/inscripcion">Iniciar inscripcion</ButtonLink>
+                <ButtonLink href="/inscripcion">Iniciar inscripción</ButtonLink>
                 <ButtonLink href="/classroom" variant="secondary">Ir a Classroom</ButtonLink>
                 <ButtonLink href="/calendario" variant="ghost">Ver calendario</ButtonLink>
               </div>
@@ -66,11 +67,11 @@ export default function HomePage() {
                   </div>
                   <div className="panel-step">
                     <p className="panel-step-kicker">Paso 2</p>
-                    <p className="panel-step-copy">Completa el registro en linea</p>
+                    <p className="panel-step-copy">Completa el registro en línea</p>
                   </div>
                   <div className="panel-step">
                     <p className="panel-step-kicker">Paso 3</p>
-                    <p className="panel-step-copy">Reune y entrega tus documentos</p>
+                    <p className="panel-step-copy">Reúne y entrega tus documentos</p>
                   </div>
                 </div>
               </div>
@@ -81,8 +82,8 @@ export default function HomePage() {
 
       <section className="container-shell mt-12 space-y-5">
         <SectionHeading
-          eyebrow="Elige una opcion"
-          title="Que necesitas hacer"
+          eyebrow="Elige una opción"
+          title="Qué necesitas hacer"
           description="Cada persona debe poder elegir una sola ruta y avanzar sin leer todo el sitio."
         />
         <div className="grid gap-4 md:grid-cols-2">
@@ -104,8 +105,8 @@ export default function HomePage() {
       <section className="container-shell mt-12 space-y-5">
         <SectionHeading
           eyebrow="Plataformas"
-          title="Donde debes entrar"
-          description="Cada plataforma tiene una sola funcion. Esta parte debe sentirse directa y evidente."
+          title="Dónde debes entrar"
+          description="Cada plataforma tiene una sola función. Esta parte debe sentirse directa y evidente."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {platformCards.map((card, index) => (
@@ -128,9 +129,9 @@ export default function HomePage() {
       <section className="container-shell mt-12">
         <CtaPanel
           title="Si tienes duda, entra por una sola ruta"
-          description="Para la mayoria de los usuarios, el siguiente paso correcto casi siempre sera inscripcion, calendario, Classroom o ayuda."
+          description="Para la mayoría de los usuarios, el siguiente paso correcto casi siempre será inscripción, calendario, Classroom o ayuda."
           actions={[
-            { label: "Iniciar inscripcion", href: "/inscripcion" },
+            { label: "Iniciar inscripción", href: "/inscripcion" },
             { label: "Ver documentos", href: "/inscripcion#documentos" },
             { label: "Ir a Classroom", href: "/classroom" },
             { label: "Ver ayuda", href: "/ayuda" },

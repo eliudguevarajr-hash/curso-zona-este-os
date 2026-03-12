@@ -13,14 +13,18 @@ export function Footer() {
         <div>
           <SiteLogo variant="footer" />
           <p className="mt-4 max-w-xl text-sm leading-7 text-brand-50">
-            Portal oficial de informacion para la Convocatoria y Curso de Capacitacion Ministerial 2026.
+            Portal oficial de información para la Convocatoria y Curso de Capacitación Ministerial 2026.
           </p>
         </div>
         <div>
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-100">Lo principal</h3>
           <div className="mt-4 grid gap-2">
             {footerLinks.map((item) => (
-              <Link key={item.href} className="text-sm text-brand-50 hover:text-white" href={item.href}>
+              <Link
+                key={item.href}
+                className="rounded-lg px-1 py-1 text-sm text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-gold-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+                href={item.href}
+              >
                 {item.label}
               </Link>
             ))}
@@ -31,10 +35,13 @@ export function Footer() {
           <div className="mt-4 space-y-2 text-sm">
             <p className="text-brand-50">Zona Este</p>
             <p className="font-semibold text-white">{primaryContact?.person}</p>
-            <a className="text-brand-50 hover:text-white" href={`tel:${primaryContact?.phone}`}>
+            <a
+              className="rounded-lg px-1 py-1 text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-gold-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              href={`tel:${primaryContact?.phone}`}
+            >
               {primaryContact?.phone}
             </a>
-            <p className="pt-2 text-brand-50">Si tienes duda, comienza en la seccion de Ayuda.</p>
+            <p className="pt-2 text-brand-50">Si tienes duda, comienza en la sección de Ayuda.</p>
           </div>
         </div>
       </div>

@@ -6,21 +6,40 @@ import { meetings, zoomTips } from "@/data/meetings";
 
 export default function ReunionesPage() {
   return (
-    <PageShell eyebrow="Reuniones y Zoom" title="Sesiones informativas y reuniones en vivo" description="Zoom será utilizado para reuniones informativas, orientación y sesiones en vivo relacionadas con el curso cuando sea necesario.">
+    <PageShell
+      eyebrow="Reuniones y Zoom"
+      title="Sesiones informativas y reuniones en vivo"
+      description="Zoom será utilizado para reuniones informativas, orientación y sesiones en vivo relacionadas con el curso cuando sea necesario."
+    >
       <section className="space-y-6">
-        <SectionHeading eyebrow="Próximas reuniones" title="Agenda programada" description="Sustituye estos datos por los enlaces y horarios definitivos cuando sean confirmados oficialmente." />
+        <SectionHeading
+          eyebrow="Próximas reuniones"
+          title="Agenda programada"
+          description="Sustituye estos datos por los enlaces y horarios definitivos cuando sean confirmados oficialmente."
+        />
         <div className="grid gap-4 lg:grid-cols-3">
           {meetings.map((meeting) => (
             <div className="card p-6" key={meeting.title}>
               <h3 className="text-lg font-semibold text-brand-900">{meeting.title}</h3>
               <dl className="mt-4 space-y-2 text-sm text-slate-700">
-                <div className="flex justify-between gap-4"><dt>Fecha</dt><dd>{meeting.date}</dd></div>
-                <div className="flex justify-between gap-4"><dt>Hora</dt><dd>{meeting.time}</dd></div>
-                <div className="flex justify-between gap-4"><dt>ID</dt><dd>{meeting.meetingId}</dd></div>
+                <div className="flex justify-between gap-4">
+                  <dt>Fecha</dt>
+                  <dd>{meeting.date}</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt>Hora</dt>
+                  <dd>{meeting.time}</dd>
+                </div>
+                <div className="flex justify-between gap-4">
+                  <dt>ID</dt>
+                  <dd>{meeting.meetingId}</dd>
+                </div>
               </dl>
               <p className="mt-4 text-sm leading-7 text-slate-700">{meeting.notes}</p>
               <div className="mt-5">
-                <ButtonLink href={meeting.href} external variant="secondary">Abrir Zoom</ButtonLink>
+                <ButtonLink href={meeting.href} external variant="secondary">
+                  Abrir Zoom
+                </ButtonLink>
               </div>
             </div>
           ))}

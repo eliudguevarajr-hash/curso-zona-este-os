@@ -24,8 +24,8 @@ export function Header() {
             <Link
               key={item.href}
               className={cn(
-                "rounded-2xl px-3 py-2 text-sm font-medium",
-                pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-800 hover:bg-white/70"
+                "nav-link",
+                pathname === item.href && "nav-link-active"
               )}
               href={item.href}
             >
@@ -40,7 +40,7 @@ export function Header() {
 
         <button
           aria-label="Abrir menú"
-          className="rounded-2xl border border-line bg-white/80 p-3 lg:hidden"
+          className="rounded-2xl border border-line bg-white px-3 py-3 text-brand-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory lg:hidden"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >
@@ -55,8 +55,8 @@ export function Header() {
               <Link
                 key={`${item.href}-${item.label}`}
                 className={cn(
-                  "rounded-2xl px-4 py-3 text-sm font-medium",
-                  pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-800 hover:bg-brand-50"
+                  "nav-link px-4 py-3",
+                  pathname === item.href && "nav-link-active"
                 )}
                 href={item.href}
                 onClick={() => setOpen(false)}

@@ -21,7 +21,7 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
         return (
           <div key={item.question} className="card overflow-hidden">
             <button
-              className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
+              className="accordion-trigger"
               onClick={() => setOpenItem(isOpen ? -1 : index)}
               type="button"
             >

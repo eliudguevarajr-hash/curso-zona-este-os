@@ -4,8 +4,8 @@ import { useMemo, useState } from "react";
 import { Search } from "lucide-react";
 
 import type { ResourceCategory, ResourceItem } from "@/data/resources";
-import { ButtonLink } from "./button-link";
 import { cn } from "@/lib/utils";
+import { ButtonLink } from "./button-link";
 
 export function ResourcesBrowser({
   categories,
@@ -33,10 +33,8 @@ export function ResourcesBrowser({
           <div className="flex flex-wrap gap-2">
             <button
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium",
-                activeCategory === "Todas"
-                  ? "bg-brand-700 text-white"
-                  : "bg-brand-50 text-brand-700 hover:bg-brand-100"
+                "interactive-chip",
+                activeCategory === "Todas" ? "interactive-chip-active" : "interactive-chip-idle"
               )}
               onClick={() => setActiveCategory("Todas")}
               type="button"
@@ -47,10 +45,8 @@ export function ResourcesBrowser({
               <button
                 key={category}
                 className={cn(
-                  "rounded-full px-4 py-2 text-sm font-medium",
-                  activeCategory === category
-                    ? "bg-brand-700 text-white"
-                    : "bg-brand-50 text-brand-700 hover:bg-brand-100"
+                  "interactive-chip",
+                  activeCategory === category ? "interactive-chip-active" : "interactive-chip-idle"
                 )}
                 onClick={() => setActiveCategory(category)}
                 type="button"
@@ -62,7 +58,7 @@ export function ResourcesBrowser({
           <label className="relative block w-full max-w-md">
             <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
             <input
-              className="w-full rounded-xl border border-line bg-white px-10 py-3 text-sm outline-none ring-brand-200 focus:ring"
+              className="form-control pl-10"
               onChange={(event) => setQuery(event.target.value)}
               placeholder="Buscar recurso, categoría o tipo"
               value={query}
@@ -78,7 +74,7 @@ export function ResourcesBrowser({
               <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
                 {item.category}
               </span>
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-600">
+              <span className="text-xs font-semibold uppercase tracking-wide text-slate-700">
                 {item.type}
               </span>
             </div>
