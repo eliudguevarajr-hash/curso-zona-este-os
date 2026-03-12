@@ -21,8 +21,8 @@ export function SiteLogo({ href = "/", variant = "header" }: SiteLogoProps) {
         src="/logo.png"
         width={56}
       />
-      <div className={header ? "max-w-[220px]" : "max-w-sm"}>
-        <p className={`font-display leading-tight ${header ? "text-base text-brand-900" : "text-2xl text-white"}`}>
+      <div className={header ? "min-w-0" : "max-w-sm"}>
+        <p className={`font-display leading-tight ${header ? "text-[1.02rem] text-brand-900 whitespace-nowrap" : "text-2xl text-white"}`}>
           {siteMeta.title}
         </p>
         <p className={`text-xs uppercase tracking-[0.18em] ${header ? "text-gold-600" : "text-gold-200"}`}>

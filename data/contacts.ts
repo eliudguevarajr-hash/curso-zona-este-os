@@ -1,17 +1,15 @@
 export type Contact = {
-  zone: string;
-  person: string;
+  name: string;
+  role: string;
   phone: string;
   primary?: boolean;
 };
 
 export const contacts: Contact[] = [
-  { zone: "Zona Este", person: "Hno Eliud Guevara", phone: "832-661-6355", primary: true },
-  { zone: "Zona Midwest", person: "Hno Jorge Pineda", phone: "614-769-0882" },
-  { zone: "Zona Noroeste", person: "Hno Ivan Ramirez", phone: "206-429-1790" },
-  { zone: "Zona Suroeste", person: "Hno Daniel Garcia", phone: "408-630-1157" },
-  { zone: "Zona Sur", person: "Hno Arsenio Flores", phone: "832-814-1694" },
-  { zone: "Depto. Nacional", person: "Hno Angel Martinez", phone: "417-437-9466" },
+  { name: "Hno Eliud Guevara", role: "Encargado", phone: "832-661-6355", primary: true },
+  { name: "Hno Marco Antonio Tellez", role: "Secretario", phone: "347-891-5351" },
+  { name: "Hno Abraham Torres", role: "Educador Ministerial", phone: "929-206-9728" },
+  { name: "Hno Isai Chavez", role: "Educador Ministerial", phone: "347-266-5321" },
 ];
 
 export const supportAreas = [

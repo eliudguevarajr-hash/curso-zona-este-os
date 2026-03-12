@@ -15,15 +15,18 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(248,246,241,0.9)] backdrop-blur">
-      <div className="container-shell flex min-h-[72px] items-center justify-between gap-3 py-2">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(243,243,239,0.92)] backdrop-blur">
+      <div className="container-shell grid min-h-[76px] grid-cols-[auto_1fr_auto] items-center gap-4 py-2">
         <SiteLogo />
 
-        <nav className="hidden items-center gap-1 lg:flex">
+        <nav className="hidden min-w-0 items-center justify-center gap-1 overflow-x-auto lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.href}
-              className={cn("nav-link", pathname === item.href && "nav-link-active")}
+              className={cn(
+                "nav-link whitespace-nowrap px-3 py-2 text-[13px]",
+                pathname === item.href && "nav-link-active"
+              )}
               href={item.href}
             >
               {item.label}
@@ -32,12 +35,14 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
+          <ButtonLink className="px-5" href="/inscripcion">
+            Comenzar Proceso
+          </ButtonLink>
         </div>
 
         <button
           aria-label="Abrir menú"
-          className="rounded-2xl border border-line bg-white px-3 py-3 text-brand-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand lg:hidden"
+          className="justify-self-end rounded-2xl border border-line bg-white px-3 py-3 text-brand-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand lg:hidden"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >

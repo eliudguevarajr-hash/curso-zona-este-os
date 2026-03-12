@@ -29,9 +29,15 @@ export const siteMeta = {
 
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
+  { label: "Convocatoria", href: "/convocatoria" },
   { label: "Inscripción", href: "/inscripcion" },
+  { label: "Calendario", href: "/calendario" },
+  { label: "Materias", href: "/materias" },
+  { label: "Recursos", href: "/recursos" },
   { label: "Classroom", href: "/classroom" },
+  { label: "Reuniones", href: "/reuniones" },
   { label: "Ayuda", href: "/ayuda" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export const colorPalette = [
@@ -101,5 +107,5 @@ export const footerLinks: NavItem[] = [
   { label: "Recursos", href: "/recursos" },
   { label: "Reuniones", href: "/reuniones" },
   { label: "Ayuda", href: "/ayuda" },
-  { label: "Preguntas frecuentes", href: "/faq" },
+  { label: "FAQ", href: "/faq" },
 ];
