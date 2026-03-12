@@ -42,11 +42,11 @@ textarea {
 }
 
 .card {
-  @apply rounded-3xl border border-slate-200/80 bg-white/88 shadow-soft backdrop-blur;
+  @apply rounded-3xl border border-slate-200/80 bg-white/90 shadow-soft backdrop-blur;
 }
 
 .soft-panel {
-  @apply rounded-3xl border border-slate-200/80 bg-white/72 shadow-soft backdrop-blur;
+  @apply rounded-3xl border border-slate-200/80 bg-white/70 shadow-soft backdrop-blur;
 }
 
 .section-title {
