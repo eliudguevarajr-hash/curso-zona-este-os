@@ -11,10 +11,10 @@ type PageShellProps = {
 
 export function PageShell({ eyebrow, title, description, children }: PageShellProps) {
   return (
-    <div className="space-y-12 py-10 sm:py-14">
+    <div className="space-y-12 py-8 sm:py-12">
       <section className="container-shell">
-        <div className="card overflow-hidden">
-          <div className="bg-soft-grid bg-[size:22px_22px] px-6 py-12 sm:px-10">
+        <div className="soft-panel overflow-hidden">
+          <div className="surface-grid px-6 py-10 sm:px-10">
             <SectionHeading eyebrow={eyebrow} title={title} description={description} />
           </div>
         </div>

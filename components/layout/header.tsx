@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { navigation, siteMeta } from "@/data/site";
+import { navigation, secondaryNavigation, siteMeta } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "../ui/button-link";
 
@@ -14,7 +14,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/70 bg-sand/90 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-sand/92 backdrop-blur">
       <div className="container-shell flex min-h-20 items-center justify-between gap-4">
         <Link className="max-w-xs" href="/">
           <p className="font-display text-lg leading-tight text-brand-900">{siteMeta.title}</p>
@@ -26,8 +26,23 @@ export function Header() {
             <Link
               key={item.href}
               className={cn(
-                "rounded-xl px-3 py-2 text-sm font-medium",
+                "rounded-2xl px-3 py-2 text-sm font-medium",
                 pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-600 hover:bg-white"
+              )}
+              href={item.href}
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
+
+        <nav className="hidden items-center gap-1 xl:flex">
+          {secondaryNavigation.map((item) => (
+            <Link
+              key={item.href}
+              className={cn(
+                "rounded-2xl px-3 py-2 text-sm font-medium",
+                pathname === item.href ? "bg-brand-50 text-brand-900" : "text-slate-500 hover:bg-white"
               )}
               href={item.href}
             >
@@ -42,7 +57,7 @@ export function Header() {
 
         <button
           aria-label="Abrir menú"
-          className="rounded-xl border border-line bg-white p-3 lg:hidden"
+          className="rounded-2xl border border-line bg-white p-3 lg:hidden"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >
@@ -53,11 +68,11 @@ export function Header() {
       {open ? (
         <div className="border-t border-line bg-white lg:hidden">
           <div className="container-shell flex flex-col gap-2 py-4">
-            {navigation.map((item) => (
+            {[...navigation, ...secondaryNavigation].map((item) => (
               <Link
-                key={item.href}
+                key={`${item.href}-${item.label}`}
                 className={cn(
-                  "rounded-xl px-4 py-3 text-sm font-medium",
+                  "rounded-2xl px-4 py-3 text-sm font-medium",
                   pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-700 hover:bg-brand-50"
                 )}
                 href={item.href}

@@ -13,30 +13,42 @@ export default function HomePage() {
   return (
     <div className="pb-8">
       <section className="container-shell pt-8 sm:pt-12">
-        <div className="card overflow-hidden">
-          <div className="grid gap-10 bg-soft-grid bg-[size:22px_22px] px-6 py-10 sm:px-10 lg:grid-cols-[1.4fr_0.9fr] lg:items-center">
+        <div className="soft-panel overflow-hidden">
+          <div className="surface-grid grid gap-8 px-6 py-8 sm:px-10 lg:grid-cols-[1.25fr_0.9fr] lg:items-center">
             <div>
-              <p className="eyebrow">Portal oficial de información</p>
+              <p className="eyebrow">Centro oficial de informacion</p>
               <h1 className="mt-4 font-display text-4xl leading-tight text-brand-900 sm:text-6xl">
                 {siteMeta.title}
               </h1>
               <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
               <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-600 sm:text-base">
-                Bienvenido al centro oficial de información y orientación para la Convocatoria y Curso de Capacitación Ministerial 2026.
-                Aquí encontrarás pasos, fechas, materias, accesos y contactos para dar seguimiento claro al proceso.
+                Aqui encuentras solo lo necesario para avanzar sin confusion: que hacer, en que fecha, donde entrar y a quien contactar.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href="/convocatoria">Ver Convocatoria</ButtonLink>
-                <ButtonLink href="/inscripcion" variant="secondary">Iniciar Inscripción</ButtonLink>
-                <ButtonLink href="/materias" variant="secondary">Ver Materias</ButtonLink>
-                <ButtonLink href="/classroom" variant="secondary">Ir a Google Classroom</ButtonLink>
-                <ButtonLink href="/calendario" variant="ghost">Ver Calendario</ButtonLink>
+                <ButtonLink href="/inscripcion">Iniciar inscripcion</ButtonLink>
+                <ButtonLink href="/calendario" variant="secondary">Ver calendario</ButtonLink>
+                <ButtonLink href="/classroom" variant="secondary">Ir a Classroom</ButtonLink>
+                <ButtonLink href="/ayuda" variant="ghost">Necesito ayuda</ButtonLink>
               </div>
             </div>
-            <div className="space-y-4">
+            <div className="grid gap-4">
               {announcements.map((item) => (
                 <AnnouncementBanner item={item} key={item.title} />
               ))}
+              <div className="card grid gap-4 p-5 sm:grid-cols-3">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 1</p>
+                  <p className="mt-2 text-sm font-medium text-brand-900">Solicita tu formato firmado</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 2</p>
+                  <p className="mt-2 text-sm font-medium text-brand-900">Completa el registro en linea</p>
+                </div>
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 3</p>
+                  <p className="mt-2 text-sm font-medium text-brand-900">Reune tus documentos</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -44,9 +56,9 @@ export default function HomePage() {
 
       <section className="container-shell mt-16 space-y-6">
         <SectionHeading
-          eyebrow="Siguiente paso"
-          title="¿Qué debo hacer ahora?"
-          description="Selecciona la ruta que mejor describa tu situación actual para encontrar la orientación adecuada."
+          eyebrow="Ruta rapida"
+          title="Que debo hacer ahora"
+          description="Selecciona tu situacion actual y entra directamente al siguiente paso correcto."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {roleCards.map((card) => (
@@ -57,12 +69,12 @@ export default function HomePage() {
 
       <section className="container-shell mt-16 space-y-6">
         <SectionHeading
-          eyebrow="Resumen"
-          title="Panorama general del proceso"
-          description="Estos son los elementos principales que todo aspirante o alumno debe ubicar desde el inicio."
+          eyebrow="Proceso"
+          title="Resumen simple del proceso"
+          description="Este es el recorrido completo del aspirante desde convocatoria hasta inicio de clases."
         />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-          {summaryCards.map((card) => (
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {summaryCards.slice(0, 4).map((card) => (
             <InfoCard key={card.title} {...card} accent="bg-brand-500" />
           ))}
         </div>
@@ -70,18 +82,18 @@ export default function HomePage() {
 
       <section className="container-shell mt-16 space-y-6">
         <SectionHeading
-          eyebrow="Fechas importantes"
-          title="Próximas fechas clave"
-          description="Consulta las ventanas principales de convocatoria, inicio de clases y el desarrollo general del curso."
+          eyebrow="Fechas"
+          title="Fechas que debes tener presentes"
+          description="Las siguientes fechas son las mas importantes para registrantes y alumnos."
         />
         <KeyDates items={keyDates.slice(0, 6)} />
       </section>
 
       <section className="container-shell mt-16 space-y-6">
         <SectionHeading
-          eyebrow="Evaluaciones y orientación"
-          title="Etapas complementarias del proceso"
-          description="Además del registro y la entrega de documentos, el aspirante debe dar seguimiento a las actividades de evaluación y orientación."
+          eyebrow="Ubicacion de actividades"
+          title="Donde se hace cada cosa"
+          description="Cada plataforma tiene una funcion especifica. Esta separacion evita confusion."
         />
         <div className="grid gap-4 lg:grid-cols-3">
           {processCards.map((card) => (
@@ -92,9 +104,9 @@ export default function HomePage() {
 
       <section className="container-shell mt-16 space-y-6">
         <SectionHeading
-          eyebrow="Acceso rápido"
-          title="Enlaces de uso frecuente"
-          description="Accede directamente a los servicios y secciones más consultados por los participantes."
+          eyebrow="Acceso rapido"
+          title="Enlaces principales"
+          description="Estos accesos concentran lo que mas se necesita durante el proceso."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {quickLinks.map((link) => (
@@ -111,12 +123,12 @@ export default function HomePage() {
 
       <section className="container-shell mt-16">
         <CtaPanel
-          title="Mantén claro dónde se realiza cada actividad"
-          description="Este portal organiza la información general. Google Classroom se utiliza para tareas y entregas; Zoom para reuniones en vivo; Google Forms para registros y solicitudes; Google Drive para archivos y recursos cuando sea necesario."
+          title="Usa este portal como punto central"
+          description="Este sitio organiza informacion y accesos. Classroom es para tareas y entregas. Zoom es para reuniones. Forms y Drive se usan solo cuando sea necesario."
           actions={[
-            { label: "Ver Classroom", href: "/classroom" },
-            { label: "Ver Reuniones", href: "/reuniones" },
-            { label: "Abrir Registro", href: "https://example.com/registro", external: true },
+            { label: "Iniciar inscripcion", href: "/inscripcion" },
+            { label: "Ir a Classroom", href: "/classroom" },
+            { label: "Ver ayuda", href: "/ayuda" },
           ]}
         />
       </section>

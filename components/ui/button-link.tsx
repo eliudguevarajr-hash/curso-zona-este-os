@@ -19,11 +19,11 @@ export function ButtonLink({
   className,
 }: ButtonLinkProps) {
   const shared =
-    "inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 text-sm font-semibold";
+    "inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold";
   const variants = {
-    primary: "bg-brand-700 text-white hover:bg-brand-800",
-    secondary: "border border-brand-200 bg-white text-brand-800 hover:border-brand-300 hover:bg-brand-50",
-    ghost: "text-brand-800 hover:bg-brand-50",
+    primary: "bg-brand-800 text-white shadow-sm hover:bg-brand-900",
+    secondary: "border border-slate-200 bg-white/90 text-brand-900 hover:border-brand-200 hover:bg-brand-50",
+    ghost: "text-brand-900 hover:bg-brand-50",
   };
 
   if (external) {

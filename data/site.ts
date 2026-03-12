@@ -25,15 +25,28 @@ export const siteMeta = {
 
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Convocatoria", href: "/convocatoria" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Materias", href: "/materias" },
   { label: "Calendario", href: "/calendario" },
-  { label: "Recursos", href: "/recursos" },
+  { label: "Materias", href: "/materias" },
   { label: "Classroom", href: "/classroom" },
-  { label: "Reuniones", href: "/reuniones" },
+  { label: "Recursos", href: "/recursos" },
   { label: "Ayuda", href: "/ayuda" },
+];
+
+export const secondaryNavigation: NavItem[] = [
+  { label: "Convocatoria", href: "/convocatoria" },
+  { label: "Recursos", href: "/recursos" },
+  { label: "Reuniones", href: "/reuniones" },
   { label: "FAQ", href: "/faq" },
+];
+
+export const colorPalette = [
+  { name: "Marfil", hex: "#f8f6f1" },
+  { name: "Niebla", hex: "#eef3f7" },
+  { name: "Azul base", hex: "#3f6f94" },
+  { name: "Azul institucional", hex: "#284860" },
+  { name: "Azul profundo", hex: "#11202a" },
+  { name: "Arena suave", hex: "#e7dfd2" },
 ];
 
 export const announcements: Announcement[] = [
@@ -85,9 +98,9 @@ export const quickLinks: QuickLink[] = [
 ];
 
 export const footerLinks: NavItem[] = [
-  { label: "Convocatoria", href: "/convocatoria" },
   { label: "Inscripción", href: "/inscripcion" },
   { label: "Calendario", href: "/calendario" },
   { label: "Classroom", href: "/classroom" },
+  { label: "Recursos", href: "/recursos" },
   { label: "Ayuda", href: "/ayuda" },
 ];
