@@ -1,22 +1,22 @@
 export const roleCards = [
   {
     title: "Soy nuevo",
-    description: "Conoce la convocatoria, verifica si puedes participar y revisa el proceso completo.",
+    description: "Revisa si puedes participar y conoce el proceso.",
     href: "/convocatoria",
   },
   {
-    title: "Ya inicié mi inscripción",
-    description: "Confirma los pasos pendientes y prepara tu expediente de matriculación.",
+    title: "Ya inicie mi inscripcion",
+    description: "Confirma tus pasos pendientes y prepara documentos.",
     href: "/inscripcion",
   },
   {
     title: "Ya soy alumno",
-    description: "Consulta materias, calendario, Classroom y recursos del curso.",
+    description: "Entra a Classroom y revisa calendario y materias.",
     href: "/classroom",
   },
   {
     title: "Necesito ayuda",
-    description: "Encuentra orientación por tipo de duda y contacto directo por zona.",
+    description: "Encuentra contacto directo y orientacion rapida.",
     href: "/ayuda",
   },
 ];

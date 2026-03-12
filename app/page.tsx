@@ -12,22 +12,22 @@ export default function HomePage() {
   const platformCards = [
     {
       title: "Este sitio web",
-      description: "Aqui revisas pasos, fechas, materias, recursos y contactos oficiales.",
+      description: "Pasos, fechas, materias, recursos y contactos oficiales.",
       href: "/convocatoria",
     },
     {
       title: "Google Classroom",
-      description: "Aqui se entregan tareas, actividades y avisos de clase.",
+      description: "Tareas, actividades y avisos de clase.",
       href: "/classroom",
     },
     {
       title: "Zoom",
-      description: "Aqui ingresas a reuniones informativas y sesiones en vivo.",
+      description: "Reuniones informativas y sesiones en vivo.",
       href: "/reuniones",
     },
     {
       title: "Formularios y Drive",
-      description: "Aqui se abren registros, formatos y carpetas de apoyo cuando se publiquen.",
+      description: "Registros, formatos y carpetas de apoyo.",
       href: "/recursos",
     },
   ];
@@ -78,20 +78,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-16 space-y-6">
+      <section className="container-shell mt-12 space-y-5">
         <SectionHeading
           eyebrow="Elige una opcion"
           title="Que necesitas hacer"
           description="Cada persona debe poder elegir una sola ruta y avanzar sin leer todo el sitio."
         />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-4 md:grid-cols-2">
           {roleCards.map((card) => (
             <InfoCard key={card.title} {...card} />
           ))}
         </div>
       </section>
 
-      <section className="container-shell mt-16 space-y-6">
+      <section className="container-shell mt-12 space-y-5">
         <SectionHeading
           eyebrow="Fechas"
           title="Fechas que debes tener presentes"
@@ -100,18 +100,18 @@ export default function HomePage() {
         <KeyDates items={keyDates.slice(0, 4)} />
       </section>
 
-      <section className="container-shell mt-16 space-y-6">
+      <section className="container-shell mt-12 space-y-5">
         <SectionHeading
           eyebrow="Plataformas"
           title="Donde debes entrar"
           description="Cada plataforma tiene una sola funcion. Esta parte debe sentirse directa y evidente."
         />
-        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+        <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {platformCards.map((card) => (
-            <div className="card p-5" key={card.title}>
-              <h3 className="text-lg font-semibold text-brand-900">{card.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{card.description}</p>
-              <div className="mt-4">
+            <div className="grid gap-3 px-5 py-4 md:grid-cols-[180px_1fr_auto] md:items-center" key={card.title}>
+              <h3 className="text-base font-semibold text-brand-900">{card.title}</h3>
+              <p className="text-sm leading-7 text-slate-600">{card.description}</p>
+              <div>
                 <ButtonLink href={card.href} variant="secondary">Entrar</ButtonLink>
               </div>
             </div>
@@ -119,7 +119,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-16">
+      <section className="container-shell mt-12">
         <CtaPanel
           title="Si tienes duda, entra por una sola ruta"
           description="Para la mayoria de los usuarios, el siguiente paso correcto casi siempre sera inscripcion, calendario, Classroom o ayuda."
