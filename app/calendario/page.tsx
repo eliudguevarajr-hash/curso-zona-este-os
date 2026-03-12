@@ -1,5 +1,4 @@
 import { PageShell } from "@/components/layout/page-shell";
-import { KeyDates } from "@/components/ui/key-dates";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { courseSchedule, keyDates } from "@/data/courses";
 
@@ -27,36 +26,17 @@ const groupedBlocks = [
 
 export default function CalendarioPage() {
   return (
-    <PageShell eyebrow="Calendario" title="Calendario general del curso" description="Consulta la convocatoria, fechas importantes, materias y recesos en una vista clara y fácil de seguir.">
+    <PageShell
+      eyebrow="Calendario"
+      title="Calendario General del Curso"
+      description="Consulta la Convocatoria, Fechas Importantes, Materias y Recesos en una Vista Clara y Facil de Seguir."
+    >
       <section className="space-y-6">
-        <SectionHeading eyebrow="Fechas importantes" title="Resumen principal" description="Este bloque agrupa las fechas que deben permanecer siempre visibles para aspirantes y alumnos." />
-        <KeyDates items={keyDates} />
-      </section>
-
-      <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Bloques mensuales" title="Lectura rápida por período" description="La organización por bloques ayuda a identificar con facilidad en qué etapa del curso se encuentra cada participante." />
-        <div className="grid gap-4 lg:grid-cols-2">
-          {groupedBlocks.map((group) => (
-            <div className="card p-6" key={group.month}>
-              <h3 className="font-display text-2xl text-brand-900">{group.month}</h3>
-              <div className="mt-5 space-y-4">
-                {group.items.map((item) => (
-                  <div className="flex items-start justify-between gap-4 border-b border-line pb-4 last:border-none" key={item.label}>
-                    <div>
-                      <p className="text-sm font-semibold text-brand-900">{item.label}</p>
-                      <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
-                    </div>
-                    <p className="text-right text-sm text-slate-600">{item.date}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Línea académica" title="Timeline del curso" description="Cada bloque identifica si corresponde a convocatoria, inicio, materia, receso o fecha importante." />
+        <SectionHeading
+          eyebrow="Linea de Tiempo"
+          title="Calendario General del Curso"
+          description="Sigue el orden completo del proceso y ubica cada bloque academico dentro del ano escolar."
+        />
         <div className="space-y-4">
           {courseSchedule.map((block, index) => (
             <div className="flex gap-4" key={block.slug}>
@@ -72,8 +52,36 @@ export default function CalendarioPage() {
                     </p>
                     <h3 className="mt-1 text-lg font-semibold text-brand-900">{block.title}</h3>
                   </div>
-                  <p className="text-sm text-slate-600">{block.start} al {block.end}</p>
+                  <p className="text-sm text-slate-600">
+                    {block.start} al {block.end}
+                  </p>
                 </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 space-y-6">
+        <SectionHeading
+          eyebrow="Resumen Mensual"
+          title="Lectura Rapida por Periodo"
+          description="Despues de revisar la linea de tiempo principal, puedes ubicar cada etapa por mes o bloque del ano."
+        />
+        <div className="grid gap-4 lg:grid-cols-2">
+          {groupedBlocks.map((group) => (
+            <div className="card p-6" key={group.month}>
+              <h3 className="font-display text-2xl text-brand-900">{group.month}</h3>
+              <div className="mt-5 space-y-4">
+                {group.items.map((item) => (
+                  <div className="flex items-start justify-between gap-4 border-b border-line pb-4 last:border-none" key={item.label}>
+                    <div>
+                      <p className="text-sm font-semibold text-brand-900">{item.label}</p>
+                      <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
+                    </div>
+                    <p className="text-right text-sm text-slate-600">{item.date}</p>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
