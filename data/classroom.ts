@@ -1,14 +1,38 @@
-export const classroomOverview = [
-  "Google Classroom será la plataforma para tareas, entregas y actividad académica de cada materia.",
-  "El sitio web funciona como centro oficial de información y navegación. No sustituye el uso de Classroom.",
-  "Cada alumno deberá ingresar a su clase asignada, revisar anuncios y entregar sus actividades en tiempo.",
+export const classroomUsage = [
+  {
+    title: "Tareas y entregas",
+    description: "Todas las actividades y entregas de materias se realizan en Google Classroom.",
+  },
+  {
+    title: "Avisos de clase",
+    description: "Los alumnos deben revisar anuncios, materiales y recordatorios publicados por el maestro.",
+  },
+  {
+    title: "Seguimiento academico",
+    description: "Classroom es el espacio para dar seguimiento a cada materia ya asignada.",
+  },
 ];
 
-export const classroomSteps = [
-  "Ingresa a tu clase o materia asignada.",
+export const classroomChecklist = [
+  "Entra a tu clase o materia asignada.",
   "Revisa anuncios, materiales y avisos del maestro.",
-  "Completa y entrega tus actividades dentro del tiempo indicado.",
-  "Solicita apoyo si tienes problemas de acceso o no encuentras tu clase.",
+  "Entrega tus actividades en el tiempo indicado.",
+  "Busca ayuda si no puedes entrar o no ves tu clase.",
+];
+
+export const classroomSupportNotes = [
+  {
+    title: "Si no encuentras tu clase",
+    description: "Confirma primero el nombre de la materia, el codigo o el enlace correcto.",
+  },
+  {
+    title: "Si tu codigo no funciona",
+    description: "Comunicate con el responsable correspondiente antes de intentar otro acceso por tu cuenta.",
+  },
+  {
+    title: "Si tienes duda sobre una tarea",
+    description: "Revisa primero los anuncios y materiales dentro de Classroom y despues solicita apoyo.",
+  },
 ];
 
 export const classroomCourses = [
@@ -24,4 +48,5 @@ export const classroomCourses = [
   title: course,
   code: `CCM2026-${index + 1}X`,
   href: "https://classroom.google.com/example",
+  status: "Pendiente de publicacion",
 }));
