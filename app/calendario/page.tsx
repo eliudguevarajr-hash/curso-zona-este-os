@@ -29,7 +29,7 @@ export default function CalendarioPage() {
   return (
     <PageShell
       eyebrow="Calendario"
-      title="Calendario y materias"
+      title="Calendario y Materias"
       description="Aquí están las fechas principales, la secuencia de materias y el estado de reuniones futuras."
     >
       <section className="space-y-6">
@@ -63,54 +63,56 @@ export default function CalendarioPage() {
         </div>
       </section>
 
-      <section className="mt-10 space-y-6">
-        <SectionHeading
-          eyebrow="Resumen mensual"
-          title="Lectura rápida por periodo"
-          description="Después de revisar la línea principal, aquí puedes ubicar cada etapa por mes."
-        />
-        <div className="grid gap-4 lg:grid-cols-2">
-          {groupedBlocks.map((group) => (
-            <div className="card p-6" key={group.month}>
-              <h3 className="font-display text-2xl text-brand-900">{group.month}</h3>
-              <div className="mt-5 space-y-4">
-                {group.items.map((item) => (
-                  <div
-                    className="flex items-start justify-between gap-4 border-b border-line pb-4 last:border-none"
-                    key={item.label}
-                  >
-                    <div>
+      <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
+        <div className="space-y-5">
+          <SectionHeading
+            eyebrow="Resumen mensual"
+            title="Lectura rápida por periodo"
+            description="Después de revisar la línea principal, aquí puedes ubicar cada etapa por mes."
+          />
+          <div className="grid gap-4 sm:grid-cols-2">
+            {groupedBlocks.map((group) => (
+              <div className="card p-5" key={group.month}>
+                <h3 className="text-lg font-semibold text-brand-900">{group.month}</h3>
+                <div className="mt-4 space-y-3">
+                  {group.items.map((item) => (
+                    <div className="border-b border-line pb-3 last:border-none" key={item.label}>
                       <p className="text-sm font-semibold text-brand-900">{item.label}</p>
-                      <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
+                      <p className="mt-1 text-xs text-slate-700">{item.date}</p>
                     </div>
-                    <p className="text-right text-sm text-slate-700">{item.date}</p>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </section>
 
-      <section className="mt-10 space-y-6">
-        <SectionHeading
-          eyebrow="Reuniones"
-          title="Estado de reuniones y Zoom"
-          description="Los enlaces de Zoom se publicarán más adelante. Aquí puedes revisar las reuniones previstas."
-        />
-        <div className="grid gap-4 lg:grid-cols-2">
-          {meetings.map((meeting, index) => (
-            <div className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`} key={meeting.title}>
-              <h3 className="text-lg font-semibold text-brand-900">{meeting.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-700">
-                {meeting.date} · {meeting.time}
-              </p>
-              <p className="mt-3 text-xs leading-6 text-slate-600">{meeting.notes}</p>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-700">
-                Enlace pendiente de publicación
-              </p>
-            </div>
-          ))}
+        <div className="space-y-5">
+          <SectionHeading
+            eyebrow="Reuniones"
+            title="Estado de Zoom"
+            description="Los enlaces de Zoom todavía no están publicados. Aquí puedes ver las reuniones previstas."
+          />
+          <div className="card divide-y divide-slate-200/80 overflow-hidden">
+            {meetings.map((meeting, index) => (
+              <div
+                className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
+                  index % 2 === 0 ? "tint-brand" : "tint-mist"
+                }`}
+                key={meeting.title}
+              >
+                <div>
+                  <h3 className="text-base font-semibold text-brand-900">{meeting.title}</h3>
+                  <p className="mt-1 text-sm text-slate-700">
+                    {meeting.date} · {meeting.time}
+                  </p>
+                </div>
+                <span className="rounded-full bg-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-700">
+                  Pendiente
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </PageShell>

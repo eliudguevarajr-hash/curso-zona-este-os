@@ -21,22 +21,22 @@ export const registrationSteps = [
   {
     title: "Habla con tu localidad",
     description:
-      "Acércate al Encargado de tu Localidad, manifiesta tu deseo de participar y solicita tu Solicitud de Inscripción firmada.",
+      "Acércate al Encargado de tu Localidad y solicita tu Solicitud de Inscripción firmada.",
   },
   {
     title: "Haz tu registro en línea",
     description:
-      "Ingresa al formulario oficial de aspirante, completa tus datos y confirma tu preinscripción en el sistema.",
+      "Completa el Registro de Aspirante con tus datos básicos.",
   },
   {
-    title: "Completa tus diagnósticos",
+    title: "Espera la siguiente etapa",
     description:
-      "Después del registro, completa el diagnóstico vocacional y el diagnóstico ministerial desde los formularios oficiales publicados.",
+      "Los diagnósticos se abrirán cuando corresponda dentro del proceso.",
   },
   {
     title: "Prepara tus documentos",
     description:
-      "Comienza a reunir los documentos físicos para tu matrícula y da seguimiento a las siguientes etapas del proceso.",
+      "Reúne los documentos físicos para tu matrícula.",
   },
 ];
 
@@ -89,7 +89,7 @@ export const processForms: ProcessForm[] = [
   },
   {
     title: "Diagnóstico Vocacional",
-    description: "Identifica tus dones y el área de servicio a la que el Señor te está llamando.",
+    description: "Se habilitará cuando esta etapa esté disponible.",
     href: managedLinks.vocationalDiagnosticForm.href,
     external: managedLinks.vocationalDiagnosticForm.external,
     status: managedLinks.vocationalDiagnosticForm.status,
@@ -97,7 +97,7 @@ export const processForms: ProcessForm[] = [
   },
   {
     title: "Diagnóstico Ministerial",
-    description: "Evaluación breve sobre tus conocimientos bíblicos, doctrinales y administrativos.",
+    description: "Se habilitará cuando esta etapa esté disponible.",
     href: managedLinks.ministerialDiagnosticForm.href,
     external: managedLinks.ministerialDiagnosticForm.external,
     status: managedLinks.ministerialDiagnosticForm.status,
@@ -105,7 +105,7 @@ export const processForms: ProcessForm[] = [
   },
   {
     title: "Entrevista Ministerial",
-    description: "Paso final. No requiere llenar formulario en línea.",
+    description: "Paso final. No requiere formulario en línea.",
     status: "pending",
     note: "El equipo de Zona Este te contactará para programar la entrevista. El enlace de Zoom se publicará más adelante en Calendario.",
   },
@@ -113,5 +113,5 @@ export const processForms: ProcessForm[] = [
 
 export const registrationNotes = [
   "Si tienes preguntas sobre el registro en línea, comunícate con el equipo de Ayuda de Zona Este.",
-  "Ya están disponibles los formularios oficiales, la Solicitud de Inscripción, la convocatoria PDF, Classroom y la carpeta general de recursos.",
+  "Por ahora solo está habilitado el Registro de Aspirante. Los diagnósticos siguen pendientes.",
 ];
