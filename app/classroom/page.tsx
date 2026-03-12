@@ -69,7 +69,7 @@ export default function ClassroomPage() {
         <SectionHeading
           eyebrow="Clases Disponibles"
           title="Entra a tu materia"
-          description="La lista de accesos debe sentirse directa. Solo busca tu materia y entra."
+          description="Ya está disponible un acceso general. Si más adelante se publican enlaces o códigos por materia, se actualizarán aquí."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {classroomCourses.map((course, index) => (

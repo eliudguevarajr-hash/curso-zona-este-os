@@ -1,4 +1,5 @@
 import { PageShell } from "@/components/layout/page-shell";
+import { PublishingStatus } from "@/components/ui/publishing-status";
 import { ResourcesBrowser } from "@/components/ui/resources-browser";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { resourceCategories, resourceItems } from "@/data/resources";
@@ -11,6 +12,10 @@ export default function RecursosPage() {
       description="Repositorio central de archivos, formularios y accesos de consulta para el proceso de convocatoria y curso."
     >
       <section className="space-y-6">
+        <PublishingStatus />
+      </section>
+
+      <section className="mt-12 space-y-6">
         <SectionHeading
           eyebrow="Explorador de recursos"
           title="Busca por categoría o palabra clave"

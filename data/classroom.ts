@@ -61,7 +61,10 @@ export const classroomCourses: ClassroomCourseLink[] = [
   code: `CCM2026-${index + 1}X`,
   href: managedLinks.classroomAccess.href,
   external: managedLinks.classroomAccess.external,
-  status: "Pendiente de publicación",
-  linkStatus: "pending" as const,
-  note: "El acceso oficial de esta materia aún no ha sido publicado.",
+  status: managedLinks.classroomAccess.status === "available" ? "Acceso general disponible" : "Pendiente de publicación",
+  linkStatus: managedLinks.classroomAccess.status,
+  note:
+    managedLinks.classroomAccess.status === "available"
+      ? "Actualmente se muestra el acceso general compartido. Cuando existan enlaces o códigos por materia, se podrán sustituir aquí."
+      : "El acceso oficial de esta materia aún no ha sido publicado.",
 }));

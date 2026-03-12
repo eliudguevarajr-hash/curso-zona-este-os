@@ -59,6 +59,6 @@ export const faqItems = [
   {
     question: "¿A quién contacto si tengo dudas?",
     answer:
-      "Si perteneces a la Zona Este, debes comunicarte prioritariamente con Hno Eliud Guevara. También encontrarás contactos de otras zonas y del departamento nacional en la sección de Ayuda.",
+      "Si perteneces a la Zona Este, debes comunicarte prioritariamente con Hno. Eliud Guevara. También encontrarás contactos de otras zonas y del departamento nacional en la sección de Ayuda.",
   },
 ];

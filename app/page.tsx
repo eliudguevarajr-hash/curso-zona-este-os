@@ -6,7 +6,7 @@ import { KeyDates } from "@/components/ui/key-dates";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
 import { roleCards } from "@/data/home";
-import { announcements, quickLinks, siteMeta } from "@/data/site";
+import { announcements, siteMeta } from "@/data/site";
 
 export default function HomePage() {
   const routeAccents = ["bg-brand-500", "bg-gold-400", "bg-sage-400", "bg-brand-800"];

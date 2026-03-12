@@ -56,14 +56,14 @@ export const resourceItems: ResourceItem[] = [
   },
   {
     title: "Carpeta de Materias",
-    description: "Repositorio general de materiales del curso cuando sea habilitado.",
+    description: "Repositorio general de materiales del curso.",
     category: "Materias",
     type: "Drive",
     ...managedLinks.generalDrive,
   },
   {
     title: "Acceso General a Classroom",
-    description: "Página con enlaces, códigos y ayuda de ingreso por materia.",
+    description: "Acceso general ya publicado para consulta y seguimiento de clases.",
     category: "Classroom",
     type: "Classroom",
     ...managedLinks.classroomAccess,
