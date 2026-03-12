@@ -10,7 +10,7 @@ type InfoCardProps = {
 
 export function InfoCard({ title, description, href, accent = "bg-brand-700" }: InfoCardProps) {
   const content = (
-    <div className="card h-full p-6">
+    <div className="card h-full p-6 hover:-translate-y-0.5">
       <div className={`mb-5 h-1.5 w-14 rounded-full ${accent}`} />
       <h3 className="font-display text-[1.65rem] leading-tight text-brand-900">{title}</h3>
       <p className="mt-3 text-sm leading-7 text-slate-600">{description}</p>

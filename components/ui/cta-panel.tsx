@@ -17,7 +17,7 @@ export function CtaPanel({
 }) {
   return (
     <div className="card overflow-hidden">
-      <div className="grid gap-6 bg-brand-900 px-6 py-8 text-white sm:px-8 lg:grid-cols-[1.5fr_1fr] lg:items-center">
+      <div className="grid gap-6 bg-brand-wash px-6 py-8 text-white sm:px-8 lg:grid-cols-[1.5fr_1fr] lg:items-center">
         <div>
           <p className="eyebrow text-brand-200">Siguiente paso</p>
           <h3 className="mt-2 font-display text-3xl">{title}</h3>

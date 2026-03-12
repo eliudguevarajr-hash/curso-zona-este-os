@@ -14,11 +14,11 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-sand/92 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(248,246,241,0.86)] backdrop-blur">
       <div className="container-shell flex min-h-20 items-center justify-between gap-4">
         <Link className="max-w-xs" href="/">
           <p className="font-display text-lg leading-tight text-brand-900">{siteMeta.title}</p>
-          <p className="text-xs uppercase tracking-[0.22em] text-brand-600">Convocatoria 2026</p>
+          <p className="text-xs uppercase tracking-[0.22em] text-gold-600">Convocatoria 2026</p>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -27,7 +27,7 @@ export function Header() {
               key={item.href}
               className={cn(
                 "rounded-2xl px-3 py-2 text-sm font-medium",
-                pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-600 hover:bg-white"
+                pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-600 hover:bg-white/70"
               )}
               href={item.href}
             >
@@ -42,7 +42,7 @@ export function Header() {
 
         <button
           aria-label="Abrir menú"
-          className="rounded-2xl border border-line bg-white p-3 lg:hidden"
+          className="rounded-2xl border border-line bg-white/80 p-3 lg:hidden"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >
@@ -51,7 +51,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-white lg:hidden">
+        <div className="border-t border-line bg-white/95 lg:hidden">
           <div className="container-shell flex flex-col gap-2 py-4">
             {navigation.map((item) => (
               <Link

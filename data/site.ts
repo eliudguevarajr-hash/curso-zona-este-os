@@ -33,11 +33,14 @@ export const navigation: NavItem[] = [
 
 export const colorPalette = [
   { name: "Marfil", hex: "#f8f6f1" },
+  { name: "Papel", hex: "#fffdf9" },
   { name: "Niebla", hex: "#eef3f7" },
-  { name: "Azul base", hex: "#3f6f94" },
-  { name: "Azul institucional", hex: "#284860" },
-  { name: "Azul profundo", hex: "#11202a" },
-  { name: "Arena suave", hex: "#e7dfd2" },
+  { name: "Arena Suave", hex: "#e7dfd2" },
+  { name: "Azul Base", hex: "#3f6f94" },
+  { name: "Azul Institucional", hex: "#284860" },
+  { name: "Azul Profundo", hex: "#11202a" },
+  { name: "Dorado Suave", hex: "#c59a57" },
+  { name: "Salvia", hex: "#5d7555" },
 ];
 
 export const announcements: Announcement[] = [

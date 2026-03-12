@@ -7,11 +7,11 @@ export function Footer() {
   const primaryContact = contacts.find((contact) => contact.primary);
 
   return (
-    <footer className="mt-20 border-t border-line bg-brand-900 text-brand-100">
+    <footer className="mt-20 border-t border-line bg-brand-wash text-brand-100">
       <div className="container-shell grid gap-10 py-12 lg:grid-cols-[1.5fr_0.8fr_0.8fr]">
         <div>
           <p className="font-display text-2xl text-white">{siteMeta.title}</p>
-          <p className="mt-2 text-sm uppercase tracking-[0.22em] text-brand-300">Convocatoria 2026</p>
+          <p className="mt-2 text-sm uppercase tracking-[0.22em] text-gold-200">Convocatoria 2026</p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-brand-100/90">
             Portal oficial de informacion para la Convocatoria y Curso de Capacitacion Ministerial 2026.
           </p>

@@ -9,6 +9,7 @@ import { roleCards } from "@/data/home";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
 export default function HomePage() {
+  const routeAccents = ["bg-brand-500", "bg-gold-400", "bg-sage-400", "bg-brand-800"];
   const platformCards = [
     {
       title: "Este sitio web",
@@ -56,20 +57,20 @@ export default function HomePage() {
               {announcements.map((item) => (
                 <AnnouncementBanner item={item} key={item.title} />
               ))}
-              <div className="card p-5">
+              <div className="brand-panel p-5">
                 <p className="eyebrow">Ruta inmediata</p>
                 <div className="mt-4 grid gap-3">
-                  <div className="rounded-2xl bg-brand-50 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 1</p>
-                    <p className="mt-1 text-sm font-medium text-brand-900">Solicita tu formato firmado en tu localidad</p>
+                  <div className="rounded-2xl bg-white/10 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 1</p>
+                    <p className="mt-1 text-sm font-medium text-white">Solicita tu formato firmado en tu localidad</p>
                   </div>
-                  <div className="rounded-2xl bg-brand-50 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 2</p>
-                    <p className="mt-1 text-sm font-medium text-brand-900">Completa el registro en linea</p>
+                  <div className="rounded-2xl bg-white/10 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 2</p>
+                    <p className="mt-1 text-sm font-medium text-white">Completa el registro en linea</p>
                   </div>
-                  <div className="rounded-2xl bg-brand-50 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">Paso 3</p>
-                    <p className="mt-1 text-sm font-medium text-brand-900">Reune y entrega tus documentos</p>
+                  <div className="rounded-2xl bg-white/10 p-4">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 3</p>
+                    <p className="mt-1 text-sm font-medium text-white">Reune y entrega tus documentos</p>
                   </div>
                 </div>
               </div>
@@ -85,8 +86,8 @@ export default function HomePage() {
           description="Cada persona debe poder elegir una sola ruta y avanzar sin leer todo el sitio."
         />
         <div className="grid gap-4 md:grid-cols-2">
-          {roleCards.map((card) => (
-            <InfoCard key={card.title} {...card} />
+          {roleCards.map((card, index) => (
+            <InfoCard key={card.title} {...card} accent={routeAccents[index] ?? "bg-brand-500"} />
           ))}
         </div>
       </section>
@@ -107,8 +108,13 @@ export default function HomePage() {
           description="Cada plataforma tiene una sola funcion. Esta parte debe sentirse directa y evidente."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
-          {platformCards.map((card) => (
-            <div className="grid gap-3 px-5 py-4 md:grid-cols-[180px_1fr_auto] md:items-center" key={card.title}>
+          {platformCards.map((card, index) => (
+            <div
+              className={`grid gap-3 px-5 py-4 md:grid-cols-[180px_1fr_auto] md:items-center ${
+                index % 2 === 0 ? "tint-brand" : "tint-gold"
+              }`}
+              key={card.title}
+            >
               <h3 className="text-base font-semibold text-brand-900">{card.title}</h3>
               <p className="text-sm leading-7 text-slate-600">{card.description}</p>
               <div>
