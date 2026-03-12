@@ -20,7 +20,7 @@ export function CourseCard({ course }: { course: Course }) {
           {course.status}
         </span>
       </div>
-      <dl className="mt-5 grid gap-3 text-sm text-slate-600">
+      <dl className="mt-5 grid gap-3 text-sm text-slate-700">
         <div className="flex justify-between gap-4 border-b border-line pb-3">
           <dt>Fechas</dt>
           <dd className="text-right font-medium text-ink">
@@ -48,7 +48,7 @@ export function CourseCard({ course }: { course: Course }) {
           <dd className="text-right font-medium text-ink">{course.resources}</dd>
         </div>
       </dl>
-      <p className="mt-5 text-sm leading-7 text-slate-600">{course.description}</p>
+      <p className="mt-5 text-sm leading-7 text-slate-700">{course.description}</p>
       {!isBreak ? (
         <div className="mt-6">
           <ButtonLink href="/classroom" variant="secondary">

@@ -22,8 +22,8 @@ export function ButtonLink({
     "inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold";
   const variants = {
     primary: "bg-brand-800 text-white shadow-sm hover:bg-brand-900",
-    secondary: "border border-slate-200 bg-white/90 text-brand-900 hover:border-brand-200 hover:bg-brand-50",
-    ghost: "text-brand-900 hover:bg-brand-50",
+    secondary: "border border-brand-200 bg-white text-brand-900 shadow-sm hover:border-brand-300 hover:bg-brand-50",
+    ghost: "bg-white/70 text-brand-900 hover:bg-brand-50",
   };
 
   if (external) {

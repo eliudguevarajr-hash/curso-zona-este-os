@@ -25,7 +25,7 @@ export default function AyudaPage() {
                 <span className="rounded-full bg-brand-700 px-3 py-1 text-xs font-semibold text-white">Prioritario</span>
               ) : null}
               <h3 className="mt-4 text-lg font-semibold text-brand-900">{contact.zone}</h3>
-              <p className="mt-2 text-sm text-slate-600">{contact.person}</p>
+              <p className="mt-2 text-sm text-slate-700">{contact.person}</p>
               <a className="mt-4 inline-block text-sm font-semibold text-brand-700 hover:text-brand-900" href={`tel:${contact.phone}`}>
                 {contact.phone}
               </a>

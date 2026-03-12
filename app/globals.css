@@ -64,7 +64,7 @@ textarea {
 }
 
 .section-copy {
-  @apply max-w-3xl text-sm leading-7 text-slate-600 sm:text-base;
+  @apply max-w-3xl text-sm leading-7 text-slate-700 sm:text-base;
 }
 
 .eyebrow {
@@ -88,11 +88,11 @@ textarea {
 }
 
 .panel-step {
-  @apply rounded-2xl border border-white/10 bg-white/15 p-4;
+  @apply rounded-2xl border border-white/15 bg-white/20 p-4;
 }
 
 .panel-step-kicker {
-  @apply text-xs font-semibold uppercase tracking-[0.18em] text-brand-50;
+  @apply text-xs font-semibold uppercase tracking-[0.18em] text-white;
 }
 
 .panel-step-copy {

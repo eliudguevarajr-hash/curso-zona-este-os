@@ -26,10 +26,10 @@ export default function MateriasPage() {
                 {courseSchedule.map((course) => (
                   <tr className="border-b border-line bg-white" key={course.slug}>
                     <td className="px-4 py-4 font-semibold text-brand-900">{course.title}</td>
-                    <td className="px-4 py-4 text-slate-600">{course.start} al {course.end}</td>
-                    <td className="px-4 py-4 text-slate-600">{course.duration}</td>
-                    <td className="px-4 py-4 text-slate-600">{course.type}</td>
-                    <td className="px-4 py-4 text-slate-600">{course.status}</td>
+                    <td className="px-4 py-4 text-slate-700">{course.start} al {course.end}</td>
+                    <td className="px-4 py-4 text-slate-700">{course.duration}</td>
+                    <td className="px-4 py-4 text-slate-700">{course.type}</td>
+                    <td className="px-4 py-4 text-slate-700">{course.status}</td>
                   </tr>
                 ))}
               </tbody>
@@ -56,7 +56,7 @@ export default function MateriasPage() {
                 <p className="eyebrow">{course.type}</p>
                 <h3 className="mt-1 text-lg font-semibold text-brand-900">{course.title}</h3>
               </div>
-              <div className="text-sm text-slate-600">{course.start} al {course.end} · {course.duration}</div>
+              <div className="text-sm text-slate-700">{course.start} al {course.end} · {course.duration}</div>
             </div>
           ))}
         </div>

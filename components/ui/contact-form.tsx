@@ -8,7 +8,7 @@ export function ContactForm() {
   return (
     <div className="card p-6">
       <h3 className="font-display text-2xl text-brand-900">Solicitud de ayuda</h3>
-      <p className="mt-2 text-sm leading-7 text-slate-600">
+      <p className="mt-2 text-sm leading-7 text-slate-700">
         Formulario de demostración para la versión inicial. Puede conectarse a un servicio real en una fase posterior.
       </p>
       <form

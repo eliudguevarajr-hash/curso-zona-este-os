@@ -16,7 +16,7 @@ export function KeyDates({ items }: { items: DateItem[] }) {
             {item.kind}
           </span>
           <h3 className="text-base font-semibold text-brand-900">{item.label}</h3>
-          <p className="text-sm text-slate-600 sm:text-right">{item.date}</p>
+          <p className="text-sm text-slate-700 sm:text-right">{item.date}</p>
         </div>
       ))}
     </div>

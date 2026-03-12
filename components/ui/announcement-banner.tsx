@@ -23,7 +23,7 @@ export function AnnouncementBanner({ item }: { item: Announcement }) {
       </div>
       <div className="space-y-1">
         <p className="font-semibold text-brand-900">{item.title}</p>
-        <p className="text-sm leading-6 text-slate-700">{item.detail}</p>
+        <p className="text-sm leading-6 text-slate-800">{item.detail}</p>
       </div>
     </div>
   );

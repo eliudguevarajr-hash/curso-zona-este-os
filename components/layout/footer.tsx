@@ -8,11 +8,11 @@ export function Footer() {
   const primaryContact = contacts.find((contact) => contact.primary);
 
   return (
-    <footer className="mt-20 border-t border-line bg-brand-wash text-brand-100">
+    <footer className="mt-20 border-t border-line bg-brand-wash text-white">
       <div className="container-shell grid gap-10 py-12 lg:grid-cols-[1.5fr_0.8fr_0.8fr]">
         <div>
           <SiteLogo variant="footer" />
-          <p className="mt-4 max-w-xl text-sm leading-7 text-brand-100/90">
+          <p className="mt-4 max-w-xl text-sm leading-7 text-brand-50">
             Portal oficial de informacion para la Convocatoria y Curso de Capacitacion Ministerial 2026.
           </p>
         </div>
@@ -34,12 +34,12 @@ export function Footer() {
             <a className="text-brand-50 hover:text-white" href={`tel:${primaryContact?.phone}`}>
               {primaryContact?.phone}
             </a>
-            <p className="pt-2 text-brand-100">Si tienes duda, comienza en la seccion de Ayuda.</p>
+            <p className="pt-2 text-brand-50">Si tienes duda, comienza en la seccion de Ayuda.</p>
           </div>
         </div>
       </div>
       <div className="border-t border-white/10">
-        <div className="container-shell py-4 text-xs text-brand-200">
+        <div className="container-shell py-4 text-xs text-brand-50">
           © 2026 Departamento Educativo - Zona Este. Sitio informativo oficial de la Convocatoria 2026.
         </div>
       </div>

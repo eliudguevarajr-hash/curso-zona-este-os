@@ -78,12 +78,12 @@ export function ResourcesBrowser({
               <span className="rounded-full bg-brand-50 px-3 py-1 text-xs font-semibold text-brand-700">
                 {item.category}
               </span>
-              <span className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+              <span className="text-xs font-semibold uppercase tracking-wide text-slate-600">
                 {item.type}
               </span>
             </div>
             <h3 className="mt-4 text-lg font-semibold text-brand-900">{item.title}</h3>
-            <p className="mt-2 flex-1 text-sm leading-7 text-slate-600">{item.description}</p>
+            <p className="mt-2 flex-1 text-sm leading-7 text-slate-700">{item.description}</p>
             <div className="mt-5">
               <ButtonLink href={item.href} external={item.href.startsWith("http")} variant="secondary">
                 Abrir recurso
@@ -96,7 +96,7 @@ export function ResourcesBrowser({
       {filtered.length === 0 ? (
         <div className="card p-8 text-center">
           <h3 className="text-lg font-semibold text-brand-900">No hay resultados</h3>
-          <p className="mt-2 text-sm text-slate-600">
+          <p className="mt-2 text-sm text-slate-700">
             Ajusta la búsqueda o cambia la categoría para encontrar el recurso que necesitas.
           </p>
         </div>

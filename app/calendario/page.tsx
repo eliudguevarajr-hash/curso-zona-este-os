@@ -52,7 +52,7 @@ export default function CalendarioPage() {
                     </p>
                     <h3 className="mt-1 text-lg font-semibold text-brand-900">{block.title}</h3>
                   </div>
-                  <p className="text-sm text-slate-600">
+                  <p className="text-sm text-slate-700">
                     {block.start} al {block.end}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function CalendarioPage() {
                       <p className="text-sm font-semibold text-brand-900">{item.label}</p>
                       <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
                     </div>
-                    <p className="text-right text-sm text-slate-600">{item.date}</p>
+                    <p className="text-right text-sm text-slate-700">{item.date}</p>
                   </div>
                 ))}
               </div>

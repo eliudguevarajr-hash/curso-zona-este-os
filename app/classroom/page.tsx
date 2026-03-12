@@ -59,7 +59,7 @@ export default function ClassroomPage() {
           {classroomUsage.map((item, index) => (
             <div className={`card p-5 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={item.title}>
               <h3 className="text-lg font-semibold text-brand-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
+              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
             </div>
           ))}
         </div>
@@ -81,10 +81,10 @@ export default function ClassroomPage() {
             >
               <div>
                 <h3 className="text-base font-semibold text-brand-900">{course.title}</h3>
-                <p className="mt-1 text-xs uppercase tracking-wide text-slate-500">{course.status}</p>
+                <p className="mt-1 text-xs uppercase tracking-wide text-slate-700">{course.status}</p>
               </div>
-              <p className="text-sm text-slate-600">Codigo: {course.code}</p>
-              <p className="text-sm text-slate-600">Acceso de materia</p>
+              <p className="text-sm text-slate-700">Codigo: {course.code}</p>
+              <p className="text-sm text-slate-700">Acceso de materia</p>
               <div>
                 <ButtonLink href={course.href} external variant="secondary">
                   Entrar
@@ -105,7 +105,7 @@ export default function ClassroomPage() {
           {classroomSupportNotes.map((item) => (
             <div className="card p-5" key={item.title}>
               <h3 className="text-lg font-semibold text-brand-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate-600">{item.description}</p>
+              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
             </div>
           ))}
         </div>

@@ -44,7 +44,7 @@ export default function HomePage() {
                 {siteMeta.title}
               </h1>
               <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
-              <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-600 sm:text-base">
+              <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-700 sm:text-base">
                 Aqui encuentras solo lo necesario para avanzar sin confusion: que hacer ahora, donde entrar y a quien contactar.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -116,7 +116,7 @@ export default function HomePage() {
               key={card.title}
             >
               <h3 className="text-base font-semibold text-brand-900">{card.title}</h3>
-              <p className="text-sm leading-7 text-slate-600">{card.description}</p>
+              <p className="text-sm leading-7 text-slate-700">{card.description}</p>
               <div>
                 <ButtonLink href={card.href} variant="secondary">Entrar</ButtonLink>
               </div>

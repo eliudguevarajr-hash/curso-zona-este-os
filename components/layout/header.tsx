@@ -25,7 +25,7 @@ export function Header() {
               key={item.href}
               className={cn(
                 "rounded-2xl px-3 py-2 text-sm font-medium",
-                pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-600 hover:bg-white/70"
+                pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-800 hover:bg-white/70"
               )}
               href={item.href}
             >
@@ -56,7 +56,7 @@ export function Header() {
                 key={`${item.href}-${item.label}`}
                 className={cn(
                   "rounded-2xl px-4 py-3 text-sm font-medium",
-                  pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-700 hover:bg-brand-50"
+                  pathname === item.href ? "bg-brand-100 text-brand-900" : "text-slate-800 hover:bg-brand-50"
                 )}
                 href={item.href}
                 onClick={() => setOpen(false)}

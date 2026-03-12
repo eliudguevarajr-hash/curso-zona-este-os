@@ -21,7 +21,7 @@ export default function ConvocatoriaPage() {
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Fechas clave</p>
           <h3 className="mt-3 font-display text-3xl text-brand-900">Ventana principal</h3>
-          <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600">
+          <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
             <p><span className="font-semibold text-ink">Convocatoria:</span> 05 al 28 de marzo de 2026</p>
             <p><span className="font-semibold text-ink">Inicio de clases:</span> 03 de mayo de 2026</p>
             <p><span className="font-semibold text-ink">Prórroga:</span> No hay prórroga</p>
@@ -42,7 +42,7 @@ export default function ConvocatoriaPage() {
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Resultado del curso</p>
           <h3 className="mt-2 font-display text-3xl text-brand-900">Importancia del certificado y promedio final</h3>
-          <div className="mt-5 space-y-4 text-sm leading-7 text-slate-600">
+          <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
             {outcomeNotes.map((note) => (
               <p key={note}>{note}</p>
             ))}

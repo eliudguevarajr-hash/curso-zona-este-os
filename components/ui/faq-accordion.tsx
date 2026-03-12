@@ -29,7 +29,7 @@ export function FAQAccordion({ items }: { items: FAQItem[] }) {
               <ChevronDown className={cn("h-5 w-5 text-brand-700", isOpen && "rotate-180")} />
             </button>
             {isOpen ? (
-              <div className="border-t border-line px-5 py-4 text-sm leading-7 text-slate-600">
+              <div className="border-t border-line px-5 py-4 text-sm leading-7 text-slate-700">
                 {item.answer}
               </div>
             ) : null}

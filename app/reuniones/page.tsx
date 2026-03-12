@@ -13,12 +13,12 @@ export default function ReunionesPage() {
           {meetings.map((meeting) => (
             <div className="card p-6" key={meeting.title}>
               <h3 className="text-lg font-semibold text-brand-900">{meeting.title}</h3>
-              <dl className="mt-4 space-y-2 text-sm text-slate-600">
+              <dl className="mt-4 space-y-2 text-sm text-slate-700">
                 <div className="flex justify-between gap-4"><dt>Fecha</dt><dd>{meeting.date}</dd></div>
                 <div className="flex justify-between gap-4"><dt>Hora</dt><dd>{meeting.time}</dd></div>
                 <div className="flex justify-between gap-4"><dt>ID</dt><dd>{meeting.meetingId}</dd></div>
               </dl>
-              <p className="mt-4 text-sm leading-7 text-slate-600">{meeting.notes}</p>
+              <p className="mt-4 text-sm leading-7 text-slate-700">{meeting.notes}</p>
               <div className="mt-5">
                 <ButtonLink href={meeting.href} external variant="secondary">Abrir Zoom</ButtonLink>
               </div>
@@ -30,7 +30,7 @@ export default function ReunionesPage() {
       <section className="mt-12 grid gap-6 lg:grid-cols-[1fr_1fr]">
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Cómo ingresar a Zoom</p>
-          <div className="mt-4 space-y-4 text-sm leading-7 text-slate-600">
+          <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700">
             <p>1. Ubica el enlace oficial de tu reunión.</p>
             <p>2. Verifica fecha y hora antes de entrar.</p>
             <p>3. Ingresa con tu nombre completo para facilitar la identificación.</p>

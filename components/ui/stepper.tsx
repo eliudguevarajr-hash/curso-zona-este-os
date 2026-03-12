@@ -16,7 +16,7 @@ export function Stepper({ steps }: { steps: Step[] }) {
           </div>
           <div className="card flex-1 p-5">
             <h3 className="text-lg font-semibold text-brand-900">{step.title}</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-600">{step.description}</p>
+            <p className="mt-2 text-sm leading-7 text-slate-700">{step.description}</p>
           </div>
         </div>
       ))}
