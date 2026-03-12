@@ -9,42 +9,49 @@ export type ManagedLink = {
 
 export const managedLinks: {
   registrationForm: ManagedLink;
+  vocationalDiagnosticForm: ManagedLink;
+  ministerialDiagnosticForm: ManagedLink;
   inscriptionRequestPdf: ManagedLink;
   convocatoriaPdf: ManagedLink;
   generalDrive: ManagedLink;
-  helpForm: ManagedLink;
   orientationZoom: ManagedLink;
   classroomAccess: ManagedLink;
 } = {
   registrationForm: {
-    href: "/ayuda",
-    external: false,
-    status: "pending",
-    note: "Pendiente de publicación del formulario oficial de registro.",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
+    external: true,
+    status: "available",
+    note: "Formulario oficial para registro de aspirante.",
+  },
+  vocationalDiagnosticForm: {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScU86NwMhPpYujuwUQTFirdw6Yojw6_lHow9IHSGcTFD_WL1A/viewform",
+    external: true,
+    status: "available",
+    note: "Formulario oficial para diagnóstico vocacional.",
+  },
+  ministerialDiagnosticForm: {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScSTJC5NYgmrHCqdJNBHJn3Di2ysk5MqWVPh5h-wzN3uJ48Hg/viewform",
+    external: true,
+    status: "available",
+    note: "Formulario oficial para diagnóstico ministerial.",
   },
   inscriptionRequestPdf: {
-    href: "/recursos",
-    external: false,
-    status: "pending",
-    note: "Pendiente de publicación del formato oficial firmado.",
+    href: "https://drive.google.com/file/d/1q-teDKbtI3d1w1trNFaS0xOtJGbQdGX-/view?usp=sharing",
+    external: true,
+    status: "available",
+    note: "Formato oficial de Solicitud de Inscripción ya publicado.",
   },
   convocatoriaPdf: {
-    href: "/recursos",
-    external: false,
-    status: "pending",
-    note: "Pendiente de publicación del PDF oficial de la convocatoria.",
+    href: "https://drive.google.com/file/d/1B4BqaFlFgdHrrdrIfZrvwmNvXKIPtamk/view?usp=sharing",
+    external: true,
+    status: "available",
+    note: "PDF oficial de la convocatoria ya publicado.",
   },
   generalDrive: {
     href: "https://drive.google.com/drive/folders/1b7423b7U1tg5NqfkcqFh3h9upq3FVXVx?usp=drive_link",
     external: true,
     status: "available",
     note: "Carpeta general de recursos ya publicada.",
-  },
-  helpForm: {
-    href: "/ayuda",
-    external: false,
-    status: "pending",
-    note: "Pendiente de conectar un formulario real de ayuda y seguimiento.",
   },
   orientationZoom: {
     href: "/reuniones",
@@ -62,9 +69,19 @@ export const managedLinks: {
 
 export const publishingChecklist = [
   {
-    title: "Formulario de Registro",
+    title: "Registro de Aspirante",
     audience: "Aspirantes",
     ...managedLinks.registrationForm,
+  },
+  {
+    title: "Diagnóstico Vocacional",
+    audience: "Aspirantes",
+    ...managedLinks.vocationalDiagnosticForm,
+  },
+  {
+    title: "Diagnóstico Ministerial",
+    audience: "Aspirantes",
+    ...managedLinks.ministerialDiagnosticForm,
   },
   {
     title: "Solicitud de Inscripción",
@@ -90,11 +107,6 @@ export const publishingChecklist = [
     title: "Accesos de Classroom",
     audience: "Alumnos",
     ...managedLinks.classroomAccess,
-  },
-  {
-    title: "Formulario de Ayuda",
-    audience: "Soporte",
-    ...managedLinks.helpForm,
   },
 ];
 

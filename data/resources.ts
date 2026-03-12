@@ -35,21 +35,35 @@ export const resourceCategories: ResourceCategory[] = [
 export const resourceItems: ResourceItem[] = [
   {
     title: "Convocatoria Oficial 2026",
-    description: "Versión PDF para consulta y difusión cuando sea publicada oficialmente.",
+    description: "Versión PDF oficial para consulta y difusión.",
     category: "Convocatoria",
     type: "PDF",
     ...managedLinks.convocatoriaPdf,
   },
   {
     title: "Registro en Línea",
-    description: "Formulario principal para iniciar el proceso cuando esté disponible.",
+    description: "Formulario principal para iniciar el proceso.",
     category: "Registro",
     type: "Formulario",
     ...managedLinks.registrationForm,
   },
   {
+    title: "Diagnóstico Vocacional",
+    description: "Formulario oficial para identificar dones y área de servicio.",
+    category: "Formularios",
+    type: "Formulario",
+    ...managedLinks.vocationalDiagnosticForm,
+  },
+  {
+    title: "Diagnóstico Ministerial",
+    description: "Formulario oficial para evaluación bíblica, doctrinal y administrativa.",
+    category: "Formularios",
+    type: "Formulario",
+    ...managedLinks.ministerialDiagnosticForm,
+  },
+  {
     title: "Solicitud de Inscripción",
-    description: "Formato para firma del Encargado de Localidad cuando sea publicado.",
+    description: "Formato oficial para firma del Encargado de Localidad.",
     category: "Documentos",
     type: "PDF",
     ...managedLinks.inscriptionRequestPdf,
@@ -74,13 +88,6 @@ export const resourceItems: ResourceItem[] = [
     category: "Zoom",
     type: "Zoom",
     ...managedLinks.orientationZoom,
-  },
-  {
-    title: "Formulario de Ayuda",
-    description: "Solicitud de apoyo o aclaración de dudas. Por ahora usa la página de ayuda.",
-    category: "Formularios",
-    type: "Formulario",
-    ...managedLinks.helpForm,
   },
   {
     title: "Guía General del Alumno",

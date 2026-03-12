@@ -5,6 +5,7 @@ import { DocumentsCard } from "@/components/ui/documents-card";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { Stepper } from "@/components/ui/stepper";
 import {
+  processForms,
   registrationCtas,
   registrationNotes,
   registrationSteps,
@@ -24,7 +25,7 @@ export default function InscripcionPage() {
           <p className="eyebrow text-brand-100">Empieza aquí</p>
           <h2 className="mt-3 font-display text-3xl text-white">Haz una sola cosa a la vez</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
-            Primero consigue tu solicitud firmada. Después realiza tu registro en línea. Luego prepara tu expediente físico.
+            Primero consigue tu solicitud firmada. Después completa el registro para aspirante y los diagnósticos oficiales. Luego prepara tu expediente físico.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <ButtonLink
@@ -33,7 +34,7 @@ export default function InscripcionPage() {
               variant="panel"
               disabled={managedLinks.registrationForm.status !== "available"}
             >
-              Registro en Línea
+              Registro de Aspirante
             </ButtonLink>
             <ButtonLink
               href={managedLinks.inscriptionRequestPdf.href}
@@ -45,7 +46,7 @@ export default function InscripcionPage() {
             </ButtonLink>
           </div>
           <p className="mt-4 text-xs leading-6 text-brand-100">
-            {managedLinks.registrationForm.note}
+            Registro disponible. Solicitud PDF y Zoom aún pendientes de publicación oficial.
           </p>
         </div>
 
@@ -80,9 +81,45 @@ export default function InscripcionPage() {
 
       <section className="mt-12 space-y-5">
         <SectionHeading
+          eyebrow="Formularios Oficiales"
+          title="Accede al formulario correcto en cada etapa"
+          description="Los formularios ya publicados se pueden abrir desde aquí. La entrevista ministerial no requiere formulario."
+        />
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {processForms.map((form, index) => (
+            <div className={`card p-5 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={form.title}>
+              <div className="flex items-center justify-between gap-3">
+                <h3 className="text-lg font-semibold text-brand-900">{form.title}</h3>
+                <span
+                  className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
+                    form.status === "available" ? "bg-sage-100 text-sage-700" : "bg-gold-100 text-gold-700"
+                  }`}
+                >
+                  {form.status === "available" ? "Disponible" : "Pendiente"}
+                </span>
+              </div>
+              <p className="mt-3 text-sm leading-7 text-slate-700">{form.description}</p>
+              <p className="mt-3 text-xs leading-6 text-slate-600">{form.note}</p>
+              <div className="mt-5">
+                <ButtonLink
+                  href={form.href ?? "/reuniones"}
+                  external={form.external}
+                  variant="secondary"
+                  disabled={form.status !== "available"}
+                >
+                  {form.status === "available" ? "Abrir Formulario" : "Pendiente"}
+                </ButtonLink>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 space-y-5">
+        <SectionHeading
           eyebrow="Notas Importantes"
           title="Lo que no debes olvidar"
-          description="Estas dos indicaciones ayudan a evitar retrasos o errores durante la matriculación."
+          description="Estas indicaciones ayudan a evitar retrasos o errores durante la matriculación."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {registrationNotes.map((note, index) => (
@@ -99,12 +136,13 @@ export default function InscripcionPage() {
 
       <section className="mt-12">
         <CtaPanel
-          title="Si ya terminaste el registro, continúa con tus documentos"
-          description="No necesitas memorizar todo el proceso. Solo avanza en este orden: solicitud firmada, registro en línea, documentos y seguimiento del calendario."
+          title="Ya puedes iniciar con registro y diagnósticos"
+          description="Registro de aspirante, diagnóstico vocacional y diagnóstico ministerial ya están publicados. Todavía faltan la solicitud oficial, la convocatoria PDF y los enlaces de Zoom."
           actions={[
-            { label: "Ver Documentos", href: "/inscripcion#documentos" },
-            { label: "Ver Calendario", href: "/calendario" },
-            { label: "Obtener Ayuda", href: "/ayuda" },
+            { label: "Registro de Aspirante", href: managedLinks.registrationForm.href, external: managedLinks.registrationForm.external },
+            { label: "Diagnóstico Vocacional", href: managedLinks.vocationalDiagnosticForm.href, external: managedLinks.vocationalDiagnosticForm.external },
+            { label: "Diagnóstico Ministerial", href: managedLinks.ministerialDiagnosticForm.href, external: managedLinks.ministerialDiagnosticForm.external },
+            { label: "Ver Recursos", href: "/recursos" },
           ]}
         />
       </section>

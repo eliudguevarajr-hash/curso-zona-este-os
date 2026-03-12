@@ -8,6 +8,15 @@ type RegistrationCta = {
   note?: string;
 };
 
+type ProcessForm = {
+  title: string;
+  description: string;
+  href?: string;
+  external?: boolean;
+  status: "available" | "pending";
+  note: string;
+};
+
 export const registrationSteps = [
   {
     title: "Habla con tu localidad",
@@ -17,17 +26,17 @@ export const registrationSteps = [
   {
     title: "Haz tu registro en línea",
     description:
-      "Ingresa al registro oficial cuando sea publicado, completa tus datos y confirma tu preinscripción en el sistema.",
+      "Ingresa al formulario oficial de aspirante, completa tus datos y confirma tu preinscripción en el sistema.",
+  },
+  {
+    title: "Completa tus diagnósticos",
+    description:
+      "Después del registro, completa el diagnóstico vocacional y el diagnóstico ministerial desde los formularios oficiales publicados.",
   },
   {
     title: "Prepara tus documentos",
     description:
-      "Después del registro, comienza a reunir los documentos físicos para tu matriculación.",
-  },
-  {
-    title: "Da seguimiento al proceso",
-    description:
-      "Mantente atento a examen diagnóstico, reunión informativa, entrevista vocacional e inicio de clases.",
+      "Comienza a reunir los documentos físicos para tu matriculación y da seguimiento a las siguientes etapas del proceso.",
   },
 ];
 
@@ -42,26 +51,67 @@ export const requiredDocuments = [
 
 export const registrationCtas: RegistrationCta[] = [
   {
+    label: "Registro de Aspirante",
+    ...managedLinks.registrationForm,
+  },
+  {
+    label: "Diagnóstico Vocacional",
+    ...managedLinks.vocationalDiagnosticForm,
+  },
+  {
+    label: "Diagnóstico Ministerial",
+    ...managedLinks.ministerialDiagnosticForm,
+  },
+  {
     label: "Ver Solicitud",
     ...managedLinks.inscriptionRequestPdf,
   },
   {
-    label: "Registro en Línea",
-    ...managedLinks.registrationForm,
-  },
-  {
     label: "Ver Documentos",
     href: "#documentos",
-    status: "available" as const,
+    status: "available",
   },
   {
     label: "Obtener Ayuda",
     href: "/ayuda",
-    status: "available" as const,
+    status: "available",
+  },
+];
+
+export const processForms: ProcessForm[] = [
+  {
+    title: "Registro para Aspirante",
+    description: "Completa tu información básica y carga los documentos iniciales en el formulario oficial.",
+    href: managedLinks.registrationForm.href,
+    external: managedLinks.registrationForm.external,
+    status: managedLinks.registrationForm.status,
+    note: managedLinks.registrationForm.note ?? "",
+  },
+  {
+    title: "Diagnóstico Vocacional",
+    description: "Identifica tus dones y el área de servicio a la que el Señor te está llamando.",
+    href: managedLinks.vocationalDiagnosticForm.href,
+    external: managedLinks.vocationalDiagnosticForm.external,
+    status: managedLinks.vocationalDiagnosticForm.status,
+    note: managedLinks.vocationalDiagnosticForm.note ?? "",
+  },
+  {
+    title: "Diagnóstico Ministerial",
+    description: "Evaluación breve sobre tus conocimientos bíblicos, doctrinales y administrativos.",
+    href: managedLinks.ministerialDiagnosticForm.href,
+    external: managedLinks.ministerialDiagnosticForm.external,
+    status: managedLinks.ministerialDiagnosticForm.status,
+    note: managedLinks.ministerialDiagnosticForm.note ?? "",
+  },
+  {
+    title: "Entrevista Ministerial",
+    description: "Paso final. No requiere llenar formulario en línea.",
+    status: "pending",
+    note: "Nuestro equipo te contactará por correo o mensaje para programar tu entrevista vía Zoom. El enlace de Zoom se publicará más adelante.",
   },
 ];
 
 export const registrationNotes = [
   "Si tienes preguntas sobre el registro en línea, comunícate con el Responsable del Departamento Educativo de tu zona.",
-  "No esperes al final para reunir documentos. Lo recomendable es prepararlos en cuanto completes tu registro.",
+  "Ya están disponibles los formularios de registro y diagnósticos, la Solicitud de Inscripción y la convocatoria PDF. Los enlaces de Zoom se publicarán más adelante.",
 ];
