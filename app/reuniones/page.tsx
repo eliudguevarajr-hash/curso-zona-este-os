@@ -8,14 +8,14 @@ export default function ReunionesPage() {
   return (
     <PageShell
       eyebrow="Reuniones y Zoom"
-      title="Sesiones informativas y reuniones en vivo"
-      description="Zoom será utilizado para reuniones informativas, orientación y sesiones en vivo relacionadas con el curso cuando sea necesario."
+      title="Reuniones y sesiones en vivo"
+      description="Usa esta página para consultar reuniones publicadas o confirmar que el acceso de Zoom todavía está pendiente."
     >
       <section className="space-y-6">
         <SectionHeading
           eyebrow="Próximas reuniones"
           title="Agenda programada"
-          description="Sustituye estos datos por los enlaces y horarios definitivos cuando sean confirmados oficialmente."
+          description="Cuando los enlaces oficiales de Zoom sean publicados, aparecerán aquí."
         />
         <div className="grid gap-4 lg:grid-cols-3">
           {meetings.map((meeting) => (
@@ -39,7 +39,7 @@ export default function ReunionesPage() {
               <p className="mt-3 text-xs leading-6 text-slate-600">
                 {meeting.linkStatus === "available"
                   ? "Enlace disponible."
-                  : "Enlace pendiente de publicación. Consulta esta página y el apartado de ayuda para seguimiento."}
+                  : "Enlace pendiente de publicación. Revisa esta página más adelante o consulta Ayuda si tienes dudas."}
               </p>
               <div className="mt-5">
                 <ButtonLink
@@ -58,7 +58,7 @@ export default function ReunionesPage() {
 
       <section className="mt-12 grid gap-6 lg:grid-cols-[1fr_1fr]">
         <div className="card p-6 sm:p-8">
-          <p className="eyebrow">Cómo ingresar a Zoom</p>
+          <p className="eyebrow">Cómo ingresar</p>
           <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700">
             <p>1. Ubica el enlace oficial de tu reunión.</p>
             <p>2. Verifica fecha y hora antes de entrar.</p>
@@ -67,7 +67,7 @@ export default function ReunionesPage() {
           </div>
         </div>
         <div className="card p-6 sm:p-8">
-          <p className="eyebrow">Recomendaciones y ayuda técnica básica</p>
+          <p className="eyebrow">Antes de entrar</p>
           <div className="mt-4 grid gap-4">
             {zoomTips.map((tip) => (
               <InfoCard key={tip} title="Recomendación" description={tip} accent="bg-brand-400" />

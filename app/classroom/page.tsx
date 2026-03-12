@@ -6,7 +6,6 @@ import {
   classroomChecklist,
   classroomCourses,
   classroomSupportNotes,
-  classroomUsage,
 } from "@/data/classroom";
 
 export default function ClassroomPage() {
@@ -14,28 +13,28 @@ export default function ClassroomPage() {
     <PageShell
       eyebrow="Google Classroom"
       title="Google Classroom"
-      description="Classroom es la plataforma oficial para tareas, entregas y seguimiento de cada materia. Este sitio solo orienta y organiza los accesos."
+      description="Usa esta página solo para una cosa: entrar a tus clases y saber qué hacer si tienes un problema de acceso."
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
           <p className="eyebrow text-brand-100">Uso principal</p>
-          <h2 className="mt-3 font-display text-3xl text-white">Aquí se hacen las tareas y entregas</h2>
+          <h2 className="mt-3 font-display text-3xl text-white">Aquí entras a tus clases</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
-            Si ya eres alumno, Google Classroom debe ser tu punto de entrada para revisar actividades, avisos y entregas de cada materia.
+            Si ya eres alumno, Google Classroom es tu punto de entrada para tareas, actividades, avisos y entregas.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <ButtonLink href="#clases" variant="panel">
-              Ver Clases
+              Ver Acceso
             </ButtonLink>
             <ButtonLink href="/ayuda" variant="panelSecondary">
-              Necesito Ayuda
+              Tengo un Problema
             </ButtonLink>
           </div>
         </div>
 
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Antes de entrar</p>
-          <h2 className="mt-3 font-display text-3xl text-brand-900">Revisa estas cuatro acciones</h2>
+          <h2 className="mt-3 font-display text-3xl text-brand-900">Sigue estas acciones</h2>
           <div className="mt-5 space-y-3">
             {classroomChecklist.map((step, index) => (
               <div className="flex gap-3 rounded-2xl bg-brand-50/70 p-4" key={step}>
@@ -49,27 +48,11 @@ export default function ClassroomPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-5">
-        <SectionHeading
-          eyebrow="Función de Classroom"
-          title="Qué debes hacer aquí"
-          description="Esta página debe resolver de inmediato para qué sirve Classroom y qué no debes buscar aquí."
-        />
-        <div className="grid gap-4 md:grid-cols-3">
-          {classroomUsage.map((item, index) => (
-            <div className={`card p-5 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={item.title}>
-              <h3 className="text-lg font-semibold text-brand-900">{item.title}</h3>
-              <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <section className="mt-12 space-y-5" id="clases">
         <SectionHeading
-          eyebrow="Clases Disponibles"
-          title="Entra a tu materia"
-          description="Ya está disponible un acceso general. Si más adelante se publican enlaces o códigos por materia, se actualizarán aquí."
+          eyebrow="Acceso publicado"
+          title="Entra con el acceso general disponible"
+          description="Por ahora este es el acceso general publicado. Si más adelante se publican accesos por materia, se actualizarán aquí."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {classroomCourses.map((course, index) => (
@@ -105,9 +88,9 @@ export default function ClassroomPage() {
 
       <section className="mt-12 space-y-5">
         <SectionHeading
-          eyebrow="Problemas Comunes"
-          title="Si algo no funciona"
-          description="La ayuda debe estar visible sin obligar al alumno a leer bloques largos."
+          eyebrow="Si algo falla"
+          title="Haz esto antes de pedir ayuda"
+          description="Solo revisa estas indicaciones y luego contacta soporte si el problema continúa."
         />
         <div className="grid gap-4 md:grid-cols-3">
           {classroomSupportNotes.map((item) => (
@@ -121,10 +104,10 @@ export default function ClassroomPage() {
 
       <section className="mt-12">
         <CtaPanel
-          title="Este portal no reemplaza Classroom"
-          description="Usa este sitio para orientarte. Usa Google Classroom para entrar a tu materia, revisar actividades y realizar entregas."
+          title="Este portal solo te orienta"
+          description="Usa Google Classroom para entrar a tu clase y realizar entregas. Usa este sitio solo para fechas, proceso, recursos y ayuda."
           actions={[
-            { label: "Ver Ayuda", href: "/ayuda" },
+            { label: "Ir a Ayuda", href: "/ayuda" },
             { label: "Ver Recursos", href: "/recursos" },
           ]}
         />

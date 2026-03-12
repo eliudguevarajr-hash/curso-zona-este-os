@@ -16,19 +16,19 @@ export const contacts: Contact[] = [
 
 export const supportAreas = [
   {
-    title: "Ayuda con inscripción",
-    description: "Orientación sobre el registro en línea, solicitud firmada y pasos iniciales.",
+    title: "Inscripción",
+    description: "Registro de Aspirante, diagnósticos, solicitud firmada y pasos iniciales.",
   },
   {
-    title: "Ayuda con documentos",
-    description: "Revisión del expediente y aclaraciones sobre requisitos de matriculación.",
+    title: "Documentos",
+    description: "Expediente, requisitos de matrícula y revisión de formatos oficiales.",
   },
   {
-    title: "Ayuda con Classroom",
-    description: "Problemas de acceso, códigos de clase y seguimiento de tareas.",
+    title: "Classroom",
+    description: "Acceso, código de clase, tareas y problemas de ingreso.",
   },
   {
-    title: "Ayuda con reuniones",
-    description: "Acceso a Zoom, horarios y orientación técnica básica.",
+    title: "Reuniones",
+    description: "Zoom, horarios y orientación técnica básica.",
   },
 ];

@@ -21,7 +21,7 @@ export type QuickLink = {
 };
 
 export const siteMeta = {
-  title: "Departamento Educativo - Zona Este",
+  title: "Departamento Educativo: Zona Este",
   subtitle: "Convocatoria / Curso de Capacitación Ministerial 2026",
   description:
     "Portal oficial de información, orientación y seguimiento para la Convocatoria y Curso de Capacitación Ministerial 2026 de la Zona Este.",
@@ -30,7 +30,6 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Calendario", href: "/calendario" },
   { label: "Classroom", href: "/classroom" },
   { label: "Ayuda", href: "/ayuda" },
 ];
@@ -55,45 +54,41 @@ export const announcements: Announcement[] = [
   },
   {
     title: "Este sitio es el centro oficial de información",
-    detail:
-      "Google Classroom seguirá siendo la plataforma para tareas, entregas y actividad académica.",
+    detail: "Google Classroom sigue siendo la plataforma para tareas, entregas y actividad académica.",
     tone: "info",
   },
 ];
 
 export const quickLinks: QuickLink[] = [
   {
-    title: "Registro en línea",
-    description: "Completa tu preinscripción mediante el formulario oficial cuando sea publicado.",
+    title: "Registro de Aspirante",
+    description: "Formulario oficial para comenzar el proceso.",
     ...managedLinks.registrationForm,
   },
   {
+    title: "Diagnóstico Vocacional",
+    description: "Formulario oficial de seguimiento vocacional.",
+    ...managedLinks.vocationalDiagnosticForm,
+  },
+  {
+    title: "Diagnóstico Ministerial",
+    description: "Formulario oficial de evaluación ministerial.",
+    ...managedLinks.ministerialDiagnosticForm,
+  },
+  {
+    title: "Solicitud de Inscripción",
+    description: "Formato oficial para firma del Encargado de Localidad.",
+    ...managedLinks.inscriptionRequestPdf,
+  },
+  {
     title: "Google Classroom",
-    description: "Consulta clases, tareas, avisos y entregas de cada materia.",
+    description: "Acceso general a clases, tareas y avisos.",
     ...managedLinks.classroomAccess,
   },
   {
-    title: "Zoom",
-    description: "Accede a reuniones informativas y sesiones en vivo cuando se publiquen los enlaces.",
-    ...managedLinks.orientationZoom,
-  },
-  {
-    title: "Recursos",
-    description: "Encuentra formatos, documentos y carpetas de apoyo.",
-    href: "/recursos",
-    status: "available",
-  },
-  {
-    title: "Documentos",
-    description: "Revisa el listado oficial de documentos para matriculación.",
-    href: "/inscripcion#documentos",
-    status: "available",
-  },
-  {
-    title: "Contacto Zona Este",
-    description: "Solicita orientación directa al equipo responsable.",
-    href: "/ayuda",
-    status: "available",
+    title: "Carpeta de Recursos",
+    description: "Carpeta general de materiales y documentos.",
+    ...managedLinks.generalDrive,
   },
 ];
 
@@ -106,5 +101,5 @@ export const footerLinks: NavItem[] = [
   { label: "Recursos", href: "/recursos" },
   { label: "Reuniones", href: "/reuniones" },
   { label: "Ayuda", href: "/ayuda" },
-  { label: "FAQ", href: "/faq" },
+  { label: "Preguntas frecuentes", href: "/faq" },
 ];

@@ -11,8 +11,8 @@ export default function ConvocatoriaPage() {
   return (
     <PageShell
       eyebrow="Convocatoria oficial"
-      title="Convocatoria / Curso de Capacitación Ministerial 2026"
-      description="Información general sobre el propósito de la convocatoria, quiénes pueden participar y cómo se desarrolla el proceso."
+      title="Convocatoria del Curso 2026"
+      description="Lee esta página solo si quieres confirmar quién puede participar, qué incluye el proceso y qué fechas debes seguir."
     >
       <section className="grid gap-6 lg:grid-cols-[1.4fr_0.8fr]">
         <div className="card p-6 sm:p-8">
@@ -32,9 +32,9 @@ export default function ConvocatoriaPage() {
 
       <section className="mt-12 space-y-6">
         <SectionHeading
-          eyebrow="Información principal"
-          title="Aspectos que todo aspirante debe conocer"
-          description="La convocatoria establece un proceso ordenado y acompañado por el Departamento Educativo."
+          eyebrow="Lo principal"
+          title="Lo que debes saber antes de iniciar"
+          description="Esta parte resume lo más importante sin obligarte a leer textos largos."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {convocatoriaSections.map((section) => (
@@ -46,7 +46,7 @@ export default function ConvocatoriaPage() {
       <section className="mt-12 grid gap-6 lg:grid-cols-[1fr_1fr]">
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Resultado del curso</p>
-          <h3 className="mt-2 font-display text-3xl text-brand-900">Importancia del certificado y promedio final</h3>
+          <h3 className="mt-2 font-display text-3xl text-brand-900">Certificado y promedio final</h3>
           <div className="mt-5 space-y-4 text-sm leading-7 text-slate-700">
             {outcomeNotes.map((note) => (
               <p key={note}>{note}</p>
@@ -54,7 +54,7 @@ export default function ConvocatoriaPage() {
           </div>
         </div>
         <div className="card p-6 sm:p-8">
-          <p className="eyebrow">Examen y entrevista</p>
+          <p className="eyebrow">Etapas adicionales</p>
           <div className="mt-4 grid gap-4">
             {processCards.map((card) => (
               <InfoCard key={card.title} title={card.title} description={card.description} href={card.href} accent="bg-warning" />
@@ -65,21 +65,21 @@ export default function ConvocatoriaPage() {
 
       <section className="mt-12 space-y-6">
         <SectionHeading
-          eyebrow="Calendario"
-          title="Fechas principales del proceso formativo"
-          description="Estas fechas sirven como guía general para el seguimiento de la convocatoria y las materias del curso."
+          eyebrow="Fechas"
+          title="Fechas principales del proceso"
+          description="Estas fechas te ayudan a ubicar el avance general de la convocatoria y del curso."
         />
         <KeyDates items={keyDates.slice(0, 8)} />
       </section>
 
       <section className="mt-12">
         <CtaPanel
-          title="Continúa con tu inscripción"
-          description="Si ya verificaste que puedes participar, el siguiente paso es solicitar tu formato firmado e iniciar el registro en línea."
+          title="Si ya confirmaste que puedes participar, sigue con Inscripción"
+          description="El siguiente paso práctico es entrar a Inscripción para abrir formularios, revisar solicitud y preparar tus documentos."
           actions={[
-            { label: "Ver Inscripción", href: "/inscripcion" },
+            { label: "Ir a Inscripción", href: "/inscripcion" },
             {
-              label: managedLinks.registrationForm.status === "available" ? "Abrir Registro en Línea" : "Registro Pendiente",
+              label: managedLinks.registrationForm.status === "available" ? "Abrir Registro de Aspirante" : "Registro Pendiente",
               href: managedLinks.registrationForm.href,
               external: managedLinks.registrationForm.external,
             },

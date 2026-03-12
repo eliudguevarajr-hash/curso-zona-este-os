@@ -7,7 +7,7 @@ export default function FAQPage() {
     <PageShell
       eyebrow="Preguntas frecuentes"
       title="Respuestas rápidas para dudas comunes"
-      description="Esta sección reúne las aclaraciones más importantes sobre la convocatoria, la inscripción, el curso y los accesos digitales."
+      description="Usa esta página para resolver dudas puntuales sin recorrer todo el sitio."
     >
       <FAQAccordion items={faqItems} />
     </PageShell>

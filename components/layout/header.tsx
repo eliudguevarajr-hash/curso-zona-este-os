@@ -15,8 +15,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(248,246,241,0.86)] backdrop-blur">
-      <div className="container-shell flex min-h-20 items-center justify-between gap-4">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(248,246,241,0.9)] backdrop-blur">
+      <div className="container-shell flex min-h-[72px] items-center justify-between gap-3 py-2">
         <SiteLogo />
 
         <nav className="hidden items-center gap-1 lg:flex">
@@ -32,7 +32,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href="/inscripcion">Iniciar inscripción</ButtonLink>
+          <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
         </div>
 
         <button
@@ -59,7 +59,7 @@ export function Header() {
               </Link>
             ))}
             <ButtonLink className="mt-2" href="/inscripcion">
-              Iniciar inscripción
+              Comenzar Proceso
             </ButtonLink>
           </div>
         </div>

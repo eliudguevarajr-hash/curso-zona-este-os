@@ -8,15 +8,15 @@ export default function MateriasPage() {
 
   return (
     <PageShell
-      eyebrow="Plan de estudios"
+      eyebrow="Materias"
       title="Materias y programación académica"
-      description="Consulta el desarrollo del curso por materia, fechas, duración y referencias básicas para el seguimiento del proceso académico."
+      description="Consulta las materias del curso y sus fechas sin perderte entre varias vistas diferentes."
     >
       <section className="space-y-6">
         <SectionHeading
-          eyebrow="Calendario académico"
-          title="Tabla general del plan de estudios"
-          description="Los horarios de clases estarán determinados en el calendario escolar del Departamento Educativo de la zona y por su Administrador."
+          eyebrow="Resumen general"
+          title="Tabla principal del plan de estudios"
+          description="Aquí puedes ver el orden de las materias, sus fechas y el estado general del curso."
         />
         <div className="card overflow-hidden">
           <div className="overflow-x-auto">
@@ -48,34 +48,13 @@ export default function MateriasPage() {
 
       <section className="mt-12 space-y-6">
         <SectionHeading
-          eyebrow="Vista por materia"
-          title="Tarjetas del plan de estudios"
-          description="Cada tarjeta resume información básica y campos listos para actualización futura."
+          eyebrow="Por materia"
+          title="Detalle de cada materia"
+          description="Usa estas tarjetas solo cuando necesites revisar una materia específica."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {visibleCourses.map((course) => (
             <CourseCard course={course} key={course.slug} />
-          ))}
-        </div>
-      </section>
-
-      <section className="mt-12 space-y-6">
-        <SectionHeading
-          eyebrow="Línea de tiempo"
-          title="Secuencia del curso 2026"
-          description="Vista resumida para ubicar materias y recesos durante el año académico."
-        />
-        <div className="space-y-4">
-          {courseSchedule.map((course) => (
-            <div className="card flex flex-col gap-3 p-5 md:flex-row md:items-center md:justify-between" key={course.slug}>
-              <div>
-                <p className="eyebrow">{course.type}</p>
-                <h3 className="mt-1 text-lg font-semibold text-brand-900">{course.title}</h3>
-              </div>
-              <div className="text-sm text-slate-700">
-                {course.start} al {course.end} · {course.duration}
-              </div>
-            </div>
           ))}
         </div>
       </section>
