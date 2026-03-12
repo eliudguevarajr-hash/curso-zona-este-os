@@ -26,14 +26,13 @@ export default function InscripcionPage() {
             Primero consigue tu solicitud firmada. Despues realiza tu registro en linea. Luego prepara tu expediente fisico.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href="https://example.com/registro" external className="bg-white text-brand-900 hover:bg-brand-50">
+            <ButtonLink href="https://example.com/registro" external variant="panel">
               Registro en Linea
             </ButtonLink>
             <ButtonLink
               href="https://example.com/solicitud-inscripcion.pdf"
               external
-              variant="secondary"
-              className="border-white/35 bg-white/15 text-white hover:bg-white/25"
+              variant="panelSecondary"
             >
               Ver Solicitud
             </ButtonLink>

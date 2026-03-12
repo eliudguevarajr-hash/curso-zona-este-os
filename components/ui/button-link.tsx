@@ -7,7 +7,7 @@ type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
   external?: boolean;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "panel" | "panelSecondary";
   className?: string;
 };
 
@@ -24,6 +24,8 @@ export function ButtonLink({
     primary: "bg-brand-800 text-white shadow-sm hover:bg-brand-900",
     secondary: "border border-brand-200 bg-white text-brand-900 shadow-sm hover:border-brand-300 hover:bg-brand-50",
     ghost: "bg-white/70 text-brand-900 hover:bg-brand-50",
+    panel: "bg-white text-brand-900 shadow-sm hover:bg-brand-50",
+    panelSecondary: "border border-brand-100/40 bg-brand-50 text-brand-900 shadow-sm hover:bg-white",
   };
 
   if (external) {

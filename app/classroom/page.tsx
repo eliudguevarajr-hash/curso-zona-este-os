@@ -24,10 +24,10 @@ export default function ClassroomPage() {
             Si ya eres alumno, Google Classroom debe ser tu punto de entrada para revisar actividades, avisos y entregas de cada materia.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href="#clases" className="bg-white text-brand-900 hover:bg-brand-50">
+            <ButtonLink href="#clases" variant="panel">
               Ver Clases
             </ButtonLink>
-            <ButtonLink href="/ayuda" variant="secondary" className="border-white/35 bg-white/15 text-white hover:bg-white/25">
+            <ButtonLink href="/ayuda" variant="panelSecondary">
               Necesito Ayuda
             </ButtonLink>
           </div>

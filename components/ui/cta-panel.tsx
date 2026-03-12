@@ -29,12 +29,7 @@ export function CtaPanel({
               key={action.label}
               href={action.href}
               external={action.external}
-              variant={action.external ? "secondary" : "primary"}
-              className={
-                action.external
-                  ? "border-white/30 bg-white/10 text-white hover:bg-white/20"
-                  : "bg-white text-brand-900 hover:bg-brand-50"
-              }
+              variant={action.external ? "panelSecondary" : "panel"}
             >
               {action.label}
             </ButtonLink>
