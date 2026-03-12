@@ -27,17 +27,8 @@ export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
   { label: "Calendario", href: "/calendario" },
-  { label: "Materias", href: "/materias" },
   { label: "Classroom", href: "/classroom" },
-  { label: "Recursos", href: "/recursos" },
   { label: "Ayuda", href: "/ayuda" },
-];
-
-export const secondaryNavigation: NavItem[] = [
-  { label: "Convocatoria", href: "/convocatoria" },
-  { label: "Recursos", href: "/recursos" },
-  { label: "Reuniones", href: "/reuniones" },
-  { label: "FAQ", href: "/faq" },
 ];
 
 export const colorPalette = [
@@ -98,9 +89,13 @@ export const quickLinks: QuickLink[] = [
 ];
 
 export const footerLinks: NavItem[] = [
+  { label: "Convocatoria", href: "/convocatoria" },
   { label: "Inscripción", href: "/inscripcion" },
   { label: "Calendario", href: "/calendario" },
+  { label: "Materias", href: "/materias" },
   { label: "Classroom", href: "/classroom" },
   { label: "Recursos", href: "/recursos" },
+  { label: "Reuniones", href: "/reuniones" },
   { label: "Ayuda", href: "/ayuda" },
+  { label: "FAQ", href: "/faq" },
 ];

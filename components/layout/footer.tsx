@@ -13,11 +13,11 @@ export function Footer() {
           <p className="font-display text-2xl text-white">{siteMeta.title}</p>
           <p className="mt-2 text-sm uppercase tracking-[0.22em] text-brand-300">Convocatoria 2026</p>
           <p className="mt-4 max-w-xl text-sm leading-7 text-brand-100/90">
-            Portal oficial de informacion, orientacion y navegacion para el Curso de Capacitacion Ministerial 2026.
+            Portal oficial de informacion para la Convocatoria y Curso de Capacitacion Ministerial 2026.
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-300">Accesos clave</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-300">Lo principal</h3>
           <div className="mt-4 grid gap-2">
             {footerLinks.map((item) => (
               <Link key={item.href} className="text-sm hover:text-white" href={item.href}>
@@ -34,6 +34,7 @@ export function Footer() {
             <a className="hover:text-white" href={`tel:${primaryContact?.phone}`}>
               {primaryContact?.phone}
             </a>
+            <p className="pt-2 text-brand-200">Si tienes duda, comienza en la seccion de Ayuda.</p>
           </div>
         </div>
       </div>

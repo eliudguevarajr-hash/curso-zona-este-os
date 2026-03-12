@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { navigation, secondaryNavigation, siteMeta } from "@/data/site";
+import { navigation, siteMeta } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "../ui/button-link";
 
@@ -36,21 +36,6 @@ export function Header() {
           ))}
         </nav>
 
-        <nav className="hidden items-center gap-1 xl:flex">
-          {secondaryNavigation.map((item) => (
-            <Link
-              key={item.href}
-              className={cn(
-                "rounded-2xl px-3 py-2 text-sm font-medium",
-                pathname === item.href ? "bg-brand-50 text-brand-900" : "text-slate-500 hover:bg-white"
-              )}
-              href={item.href}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-
         <div className="hidden lg:block">
           <ButtonLink href="/inscripcion">Iniciar inscripción</ButtonLink>
         </div>
@@ -68,7 +53,7 @@ export function Header() {
       {open ? (
         <div className="border-t border-line bg-white lg:hidden">
           <div className="container-shell flex flex-col gap-2 py-4">
-            {[...navigation, ...secondaryNavigation].map((item) => (
+            {navigation.map((item) => (
               <Link
                 key={`${item.href}-${item.label}`}
                 className={cn(
