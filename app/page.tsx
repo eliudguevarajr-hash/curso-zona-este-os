@@ -29,8 +29,12 @@ export default function HomePage() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
-                <ButtonLink href="/calendario" variant="secondary">Ver Fechas</ButtonLink>
-                <ButtonLink href="/ayuda" variant="ghost">Necesito Ayuda</ButtonLink>
+                <ButtonLink href="/calendario" variant="secondary">
+                  Ver Fechas
+                </ButtonLink>
+                <ButtonLink href="/ayuda" variant="ghost">
+                  Necesito Ayuda
+                </ButtonLink>
               </div>
             </div>
             <div className="grid gap-4">
@@ -52,7 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-12 space-y-5">
+      <section className="container-shell mt-10 space-y-5">
         <SectionHeading
           eyebrow="Rutas"
           title="Elige solo una ruta"
@@ -60,7 +64,10 @@ export default function HomePage() {
         />
         <div className="grid gap-4 lg:grid-cols-3">
           {roleCards.map((card, index) => (
-            <div className={`card p-6 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={card.title}>
+            <div
+              className={`card p-6 ${index === 1 ? "tint-mist" : index === 2 ? "tint-sage" : "tint-brand"}`}
+              key={card.title}
+            >
               <h3 className="text-xl font-semibold text-brand-900">{card.title}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-700">{card.description}</p>
               <div className="mt-5">
@@ -73,7 +80,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-12 space-y-5">
+      <section className="container-shell mt-10 space-y-5">
         <SectionHeading
           eyebrow="Proceso"
           title="Lo principal del proceso"
@@ -83,7 +90,7 @@ export default function HomePage() {
           {nextStepList.map((item, index) => (
             <div
               className={`grid gap-3 px-5 py-4 md:grid-cols-[220px_1fr_auto] md:items-center ${
-                index % 2 === 0 ? "tint-brand" : "tint-gold"
+                index % 2 === 0 ? "tint-brand" : "tint-mist"
               }`}
               key={item.title}
             >
@@ -97,7 +104,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-12 space-y-5">
+      <section className="container-shell mt-10 space-y-5">
         <SectionHeading
           eyebrow="Fechas clave"
           title="Solo estas fechas deben quedar claras"
@@ -106,7 +113,7 @@ export default function HomePage() {
         <KeyDates items={keyDates.slice(0, 4)} />
       </section>
 
-      <section className="container-shell mt-12 space-y-5">
+      <section className="container-shell mt-10 space-y-5">
         <SectionHeading
           eyebrow="Accesos oficiales"
           title="Abre directamente lo que ya está publicado"
@@ -114,12 +121,15 @@ export default function HomePage() {
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {quickLinks.map((item, index) => (
-            <div className={`card p-5 ${index % 3 === 1 ? "tint-gold" : index % 3 === 2 ? "tint-sage" : "tint-brand"}`} key={item.title}>
+            <div
+              className={`card p-5 ${index % 3 === 1 ? "tint-mist" : index % 3 === 2 ? "tint-sage" : "tint-brand"}`}
+              key={item.title}
+            >
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-lg font-semibold text-brand-900">{item.title}</h3>
                 <span
                   className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
-                    item.status === "available" ? "bg-sage-100 text-sage-700" : "bg-gold-100 text-gold-700"
+                    item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                   }`}
                 >
                   {item.status === "available" ? "Disponible" : "Pendiente"}
@@ -128,12 +138,7 @@ export default function HomePage() {
               <p className="mt-3 text-sm leading-7 text-slate-700">{item.description}</p>
               {item.note ? <p className="mt-3 text-xs leading-6 text-slate-600">{item.note}</p> : null}
               <div className="mt-5">
-                <ButtonLink
-                  href={item.href}
-                  external={item.external}
-                  variant="secondary"
-                  disabled={item.status !== "available"}
-                >
+                <ButtonLink href={item.href} external={item.external} variant="secondary" disabled={item.status !== "available"}>
                   {item.status === "available" ? "Abrir" : "Pendiente"}
                 </ButtonLink>
               </div>

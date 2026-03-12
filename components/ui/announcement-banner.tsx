@@ -10,13 +10,13 @@ export function AnnouncementBanner({ item }: { item: Announcement }) {
     <div
       className={cn(
         "card flex items-start gap-4 p-5",
-        warning ? "border-gold-200 tint-gold" : "border-brand-100 tint-brand"
+        warning ? "border-brand-200 tint-mist" : "border-brand-100 tint-brand"
       )}
     >
       <div
         className={cn(
           "rounded-full p-2",
-          warning ? "bg-gold-100 text-gold-700" : "bg-brand-100 text-brand-700"
+          warning ? "bg-brand-100 text-brand-700" : "bg-brand-100 text-brand-700"
         )}
       >
         {warning ? <AlertCircle className="h-5 w-5" /> : <Info className="h-5 w-5" />}

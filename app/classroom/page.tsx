@@ -47,7 +47,7 @@ export default function ClassroomPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-5" id="clases">
+      <section className="mt-10 space-y-5" id="clases">
         <SectionHeading
           eyebrow="Acceso publicado"
           title="Entra con el acceso general disponible"
@@ -57,7 +57,7 @@ export default function ClassroomPage() {
           {classroomCourses.map((course, index) => (
             <div
               className={`grid gap-3 px-5 py-4 md:grid-cols-[1.2fr_150px_170px_auto] md:items-center ${
-                index % 3 === 0 ? "tint-brand" : index % 3 === 1 ? "tint-gold" : "tint-sage"
+                index % 3 === 0 ? "tint-brand" : index % 3 === 1 ? "tint-mist" : "tint-sage"
               }`}
               key={course.title}
             >
@@ -85,7 +85,7 @@ export default function ClassroomPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-5">
+      <section className="mt-10 space-y-5">
         <SectionHeading
           eyebrow="Si algo falla"
           title="Haz esto antes de pedir ayuda"

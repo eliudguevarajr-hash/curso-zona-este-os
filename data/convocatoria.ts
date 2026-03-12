@@ -15,17 +15,17 @@ export const convocatoriaSections = [
   {
     title: "Qué incluye el proceso",
     content:
-      "Solicitud firmada por la localidad, registro en línea, integración del expediente físico, examen diagnóstico, reunión informativa sobre el plan de estudios y entrevista vocacional.",
+      "Solicitud firmada por la localidad, registro en línea, integración del expediente físico, diagnósticos, reunión informativa sobre el plan de estudios e entrevista ministerial.",
   },
   {
     title: "Consideraciones importantes",
     content:
-      "Las fechas deben respetarse, la documentación debe entregarse completa y la participación en las etapas indicadas es parte del proceso oficial. La entrevista vocacional será grabada para uso exclusivo del departamento educativo.",
+      "Las fechas deben respetarse, la documentación debe entregarse completa y la participación en las etapas indicadas es parte del proceso oficial. La entrevista ministerial será grabada para uso exclusivo del departamento educativo.",
   },
   {
     title: "Requisitos generales",
     content:
-      "Manifestar el deseo de participar, contar con la aprobación correspondiente en la localidad y preparar oportunamente los documentos requeridos para la matriculación.",
+      "Manifestar el deseo de participar, contar con la aprobación correspondiente en la localidad y preparar oportunamente los documentos requeridos para la matrícula.",
   },
   {
     title: "Qué sucede después del registro",
@@ -41,24 +41,24 @@ export const outcomeNotes = [
 
 export const processCards = [
   {
-    title: "Examen Diagnóstico",
+    title: "Diagnósticos",
     description:
-      "Todos los aspirantes deberán presentar el examen diagnóstico en la fecha correspondiente a su zona.",
-    action: "Ver fecha del examen",
-    href: "/calendario",
+      "Todos los aspirantes deberán completar el diagnóstico vocacional y el diagnóstico ministerial en la etapa inicial del proceso.",
+    action: "Ver formularios",
+    href: "/inscripcion#formularios",
   },
   {
     title: "Reunión Informativa",
     description:
-      "Se realizará una reunión informativa sobre el plan de estudios según el calendario establecido por zona.",
-    action: "Ver reunión informativa",
-    href: "/reuniones",
+      "La reunión informativa sobre el plan de estudios se publicará en Calendario cuando el enlace oficial esté disponible.",
+    action: "Ver calendario",
+    href: "/calendario",
   },
   {
-    title: "Entrevista Vocacional",
+    title: "Entrevista Ministerial",
     description:
-      "La fecha deberá consultarse con el departamento educativo de la zona. La entrevista será grabada para uso exclusivo del departamento.",
-    action: "Consultar entrevista",
+      "La entrevista se programa posteriormente. Si tienes dudas sobre esa etapa, consulta la página de Ayuda.",
+    action: "Ir a ayuda",
     href: "/ayuda",
   },
 ];

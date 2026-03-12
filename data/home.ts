@@ -6,7 +6,7 @@ export const roleCards = [
   },
   {
     title: "Ya soy alumno",
-    description: "Entra a Classroom y sigue tus tareas y avisos.",
+    description: "Entra a Classroom y sigue tus tareas, materiales y avisos.",
     href: "/classroom",
   },
   {
@@ -18,8 +18,8 @@ export const roleCards = [
 
 export const nextStepList = [
   {
-    title: "Registro",
-    description: "Completa el Registro de Aspirante.",
+    title: "Registro de Aspirante",
+    description: "Completa primero el formulario oficial.",
     href: "/inscripcion",
   },
   {
@@ -28,7 +28,7 @@ export const nextStepList = [
     href: "/inscripcion#formularios",
   },
   {
-    title: "Documentos",
+    title: "Solicitud y documentos",
     description: "Revisa la solicitud y prepara tu expediente.",
     href: "/inscripcion#documentos",
   },

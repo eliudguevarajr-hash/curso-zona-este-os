@@ -6,10 +6,10 @@ export type Contact = {
 };
 
 export const contacts: Contact[] = [
-  { name: "Hno Eliud Guevara", role: "Encargado", phone: "832-661-6355", primary: true },
-  { name: "Hno Marco Antonio Tellez", role: "Secretario", phone: "347-891-5351" },
-  { name: "Hno Abraham Torres", role: "Educador Ministerial", phone: "929-206-9728" },
-  { name: "Hno Isai Chavez", role: "Educador Ministerial", phone: "347-266-5321" },
+  { name: "Hno. Eliud Guevara", role: "Encargado", phone: "832-661-6355", primary: true },
+  { name: "Hno. Marco Antonio Tellez", role: "Secretario", phone: "347-891-5351" },
+  { name: "Hno. Abraham Torres", role: "Educador Ministerial", phone: "929-206-9728" },
+  { name: "Hno. Isai Chavez", role: "Educador Ministerial", phone: "347-266-5321" },
 ];
 
 export const supportAreas = [
@@ -26,7 +26,7 @@ export const supportAreas = [
     description: "Acceso, código de clase, tareas y problemas de ingreso.",
   },
   {
-    title: "Reuniones",
-    description: "Zoom, horarios y orientación técnica básica.",
+    title: "Calendario y reuniones",
+    description: "Fechas importantes, materias, reuniones futuras y estado de Zoom.",
   },
 ];

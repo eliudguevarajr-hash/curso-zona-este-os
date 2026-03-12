@@ -10,21 +10,6 @@ type ClassroomCourseLink = {
   note: string;
 };
 
-export const classroomUsage = [
-  {
-    title: "Tareas y entregas",
-    description: "Todas las actividades y entregas de materias se realizan en Google Classroom.",
-  },
-  {
-    title: "Avisos de clase",
-    description: "Los alumnos deben revisar anuncios, materiales y recordatorios publicados por el maestro.",
-  },
-  {
-    title: "Seguimiento académico",
-    description: "Classroom es el espacio para dar seguimiento a cada materia ya asignada.",
-  },
-];
-
 export const classroomChecklist = [
   "Entra a tu clase o materia asignada.",
   "Revisa anuncios, materiales y avisos del maestro.",
@@ -34,16 +19,16 @@ export const classroomChecklist = [
 
 export const classroomSupportNotes = [
   {
-    title: "Si no encuentras tu clase",
-    description: "Confirma primero el nombre de la materia, el código o el enlace correcto.",
+    title: "No encuentro mi clase",
+    description: "Confirma primero el nombre de la materia y usa el acceso general publicado.",
   },
   {
-    title: "Si tu código no funciona",
-    description: "Comunícate con el responsable correspondiente antes de intentar otro acceso por tu cuenta.",
+    title: "El acceso no funciona",
+    description: "Verifica que hayas iniciado sesión en tu cuenta correcta y luego comunícate con Ayuda si el problema continúa.",
   },
   {
-    title: "Si tienes duda sobre una tarea",
-    description: "Revisa primero los anuncios y materiales dentro de Classroom y después solicita apoyo.",
+    title: "Tengo duda sobre una tarea",
+    description: "Revisa anuncios y materiales dentro de Classroom antes de solicitar apoyo.",
   },
 ];
 
@@ -61,10 +46,13 @@ export const classroomCourses: ClassroomCourseLink[] = [
   code: `CCM2026-${index + 1}X`,
   href: managedLinks.classroomAccess.href,
   external: managedLinks.classroomAccess.external,
-  status: managedLinks.classroomAccess.status === "available" ? "Acceso general disponible" : "Pendiente de publicación",
+  status:
+    managedLinks.classroomAccess.status === "available"
+      ? "Acceso general disponible"
+      : "Pendiente de publicación",
   linkStatus: managedLinks.classroomAccess.status,
   note:
     managedLinks.classroomAccess.status === "available"
-      ? "Actualmente se muestra el acceso general compartido. Cuando existan enlaces o códigos por materia, se podrán sustituir aquí."
+      ? "Actualmente se usa el acceso general compartido. Cuando existan enlaces o códigos por materia, se sustituirán aquí."
       : "El acceso oficial de esta materia aún no ha sido publicado.",
 }));

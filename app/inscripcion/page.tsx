@@ -23,10 +23,14 @@ export default function InscripcionPage() {
           <p className="eyebrow text-brand-100">Ruta principal</p>
           <h2 className="mt-3 font-display text-3xl text-white">Aquí comienza todo el proceso</h2>
           <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-50">
-            Primero completa el Registro de Aspirante. Después abre los dos diagnósticos oficiales. Luego revisa la Solicitud de Inscripción y prepara tus documentos.
+            Primero completa el Registro de Aspirante. Después, cuando se habilite la siguiente etapa, podrás abrir los diagnósticos oficiales. Luego revisa la Solicitud de Inscripción y prepara tus documentos.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href={processForms[0]?.href ?? "/inscripcion"} external={processForms[0]?.external} variant="panel">
+            <ButtonLink
+              href={processForms[0]?.href ?? "/inscripcion"}
+              external={processForms[0]?.external}
+              variant="panel"
+            >
               Registro de Aspirante
             </ButtonLink>
             <ButtonLink href="#formularios" variant="panelSecondary">
@@ -41,7 +45,7 @@ export default function InscripcionPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-5">
+      <section className="mt-10 space-y-5">
         <SectionHeading
           eyebrow="Pasos"
           title="Hazlo en este orden"
@@ -50,20 +54,23 @@ export default function InscripcionPage() {
         <Stepper steps={registrationSteps} />
       </section>
 
-      <section className="mt-12 space-y-5" id="formularios">
+      <section className="mt-10 space-y-5" id="formularios">
         <SectionHeading
           eyebrow="Formularios"
           title="Abre el formulario correcto"
-          description="Todos los formularios oficiales del proceso están reunidos aquí."
+          description="Aquí ves qué formularios ya están habilitados y cuáles siguen pendientes."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
           {processForms.map((form, index) => (
-            <div className={`card p-5 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={form.title}>
+            <div
+              className={`card p-5 ${index === 1 ? "tint-mist" : index === 2 ? "tint-sage" : "tint-brand"}`}
+              key={form.title}
+            >
               <div className="flex items-center justify-between gap-3">
                 <h3 className="text-lg font-semibold text-brand-900">{form.title}</h3>
                 <span
                   className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
-                    form.status === "available" ? "bg-sage-100 text-sage-700" : "bg-gold-100 text-gold-700"
+                    form.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                   }`}
                 >
                   {form.status === "available" ? "Disponible" : "Pendiente"}
@@ -86,11 +93,11 @@ export default function InscripcionPage() {
         </div>
       </section>
 
-      <section className="mt-12" id="documentos">
+      <section className="mt-10" id="documentos">
         <DocumentsCard documents={requiredDocuments} />
       </section>
 
-      <section className="mt-12 grid gap-4 lg:grid-cols-2">
+      <section className="mt-10 grid gap-4 lg:grid-cols-2">
         <div className="card p-6 sm:p-8">
           <p className="eyebrow">Resultado del curso</p>
           <div className="mt-4 space-y-4 text-sm leading-7 text-slate-700">
@@ -101,7 +108,7 @@ export default function InscripcionPage() {
         </div>
         <div className="space-y-4">
           {registrationNotes.map((note, index) => (
-            <div className={`card p-5 ${index === 0 ? "tint-brand" : "tint-sage"}`} key={note}>
+            <div className={`card p-5 ${index === 0 ? "tint-brand" : "tint-mist"}`} key={note}>
               <p className="text-sm leading-7 text-slate-700">{note}</p>
             </div>
           ))}

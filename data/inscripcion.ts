@@ -36,7 +36,7 @@ export const registrationSteps = [
   {
     title: "Prepara tus documentos",
     description:
-      "Comienza a reunir los documentos físicos para tu matriculación y da seguimiento a las siguientes etapas del proceso.",
+      "Comienza a reunir los documentos físicos para tu matrícula y da seguimiento a las siguientes etapas del proceso.",
   },
 ];
 
@@ -80,8 +80,8 @@ export const registrationCtas: RegistrationCta[] = [
 
 export const processForms: ProcessForm[] = [
   {
-    title: "Registro para Aspirante",
-    description: "Completa tu información básica y carga los documentos iniciales en el formulario oficial.",
+    title: "Registro de Aspirante",
+    description: "Completa tu información básica en el formulario oficial.",
     href: managedLinks.registrationForm.href,
     external: managedLinks.registrationForm.external,
     status: managedLinks.registrationForm.status,
@@ -107,11 +107,11 @@ export const processForms: ProcessForm[] = [
     title: "Entrevista Ministerial",
     description: "Paso final. No requiere llenar formulario en línea.",
     status: "pending",
-    note: "Nuestro equipo te contactará por correo o mensaje para programar tu entrevista vía Zoom. El enlace de Zoom se publicará más adelante.",
+    note: "El equipo de Zona Este te contactará para programar la entrevista. El enlace de Zoom se publicará más adelante en Calendario.",
   },
 ];
 
 export const registrationNotes = [
-  "Si tienes preguntas sobre el registro en línea, comunícate con el Responsable del Departamento Educativo de tu zona.",
-  "Ya están disponibles los formularios de registro y diagnósticos, la Solicitud de Inscripción y la convocatoria PDF. Los enlaces de Zoom se publicarán más adelante.",
+  "Si tienes preguntas sobre el registro en línea, comunícate con el equipo de Ayuda de Zona Este.",
+  "Ya están disponibles los formularios oficiales, la Solicitud de Inscripción, la convocatoria PDF, Classroom y la carpeta general de recursos.",
 ];

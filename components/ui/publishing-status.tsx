@@ -10,12 +10,12 @@ export function PublishingStatus() {
       </p>
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         {publishingChecklist.map((item, index) => (
-          <div className={`rounded-2xl border border-line p-4 ${index % 2 === 0 ? "tint-brand" : "tint-gold"}`} key={item.title}>
+          <div className={`rounded-2xl border border-line p-4 ${index % 2 === 0 ? "tint-brand" : "tint-mist"}`} key={item.title}>
             <div className="flex items-center justify-between gap-3">
               <h3 className="text-base font-semibold text-brand-900">{item.title}</h3>
               <span
                 className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
-                  item.status === "available" ? "bg-sage-100 text-sage-700" : "bg-gold-100 text-gold-700"
+                  item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                 }`}
               >
                 {item.status === "available" ? "Disponible" : "Pendiente"}

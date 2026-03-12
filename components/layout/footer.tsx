@@ -17,12 +17,12 @@ export function Footer() {
           </p>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-100">Secciones</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-100">Secciones</h3>
           <div className="mt-4 grid gap-2">
             {footerLinks.map((item) => (
               <Link
                 key={item.href}
-                className="rounded-lg px-1 py-1 text-sm text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-gold-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+                className="rounded-lg px-1 py-1 text-sm text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-brand-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
                 href={item.href}
               >
                 {item.label}
@@ -31,12 +31,12 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-gold-100">Contacto principal</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-100">Contacto principal</h3>
           <div className="mt-4 space-y-2 text-sm">
             <p className="text-brand-50">{primaryContact?.role}</p>
             <p className="font-semibold text-white">{primaryContact?.name}</p>
             <a
-              className="rounded-lg px-1 py-1 text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-gold-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
+              className="rounded-lg px-1 py-1 text-brand-50 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-brand-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
               href={`tel:${primaryContact?.phone}`}
             >
               {primaryContact?.phone}

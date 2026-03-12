@@ -15,27 +15,26 @@ export const faqItems = [
   {
     question: "¿Qué documentos necesito?",
     answer:
-      "Debes reunir la solicitud firmada por tu localidad, identificación, acta de nacimiento, acta de matrimonio cuando aplique, certificado de estudios y acta de bautizo emitida por la Iglesia de Dios (Israelita).",
+      "Debes reunir la Solicitud de Inscripción firmada por tu localidad, identificación, acta de nacimiento, acta de matrimonio cuando aplique, certificado de estudios y acta de bautizo emitida por la Iglesia de Dios (Israelita).",
   },
   {
     question: "¿Qué pasa después del registro?",
     answer:
-      "Después del registro en línea debes comenzar a reunir y preparar los documentos físicos requeridos para matriculación y dar seguimiento a las etapas posteriores del proceso.",
+      "Después del registro en línea debes preparar tus documentos físicos, dar seguimiento a los diagnósticos y mantenerte pendiente de las fechas del proceso.",
   },
   {
     question: "¿Debo hacer examen diagnóstico?",
-    answer:
-      "Sí. Todos los aspirantes interesados deben presentar examen diagnóstico según las fechas correspondientes a su zona.",
+    answer: "Sí. Todos los aspirantes deben completar los diagnósticos oficiales correspondientes.",
   },
   {
     question: "¿Habrá reunión informativa?",
     answer:
-      "Sí. Todos los aspirantes deberán participar en la reunión informativa sobre el plan de estudios en la fecha asignada a su zona.",
+      "Sí. La reunión informativa sobre el plan de estudios se programará según la zona y se publicará en el calendario cuando el enlace esté disponible.",
   },
   {
     question: "¿Cómo sabré la fecha de mi entrevista?",
     answer:
-      "Debes consultar la fecha con el Departamento Educativo de tu zona. La entrevista vocacional será grabada para uso exclusivo del departamento.",
+      "El equipo de Zona Este te contactará para programar tu entrevista ministerial. No necesitas llenar un formulario adicional para esa etapa.",
   },
   {
     question: "¿Cuándo inician las clases?",
@@ -43,22 +42,21 @@ export const faqItems = [
   },
   {
     question: "¿Dónde se entregan tareas?",
-    answer:
-      "Las tareas, actividades y entregas se realizan en Google Classroom. Este sitio solo organiza la información y los accesos.",
+    answer: "Las tareas, actividades y entregas se realizan en Google Classroom.",
   },
   {
     question: "¿Dónde serán las reuniones?",
     answer:
-      "Las reuniones informativas y sesiones en vivo se realizarán por Zoom, según las ligas y horarios oficiales publicados.",
+      "Las reuniones informativas y sesiones en vivo se realizarán por Zoom. Los enlaces se publicarán en la página de Calendario cuando estén disponibles.",
   },
   {
     question: "¿Dónde encuentro mis recursos?",
     answer:
-      "Puedes encontrar formatos, carpetas, ligas y materiales en la sección de Recursos del sitio.",
+      "Los formularios, documentos oficiales y la carpeta general de recursos están concentrados en Inscripción y en los accesos oficiales de Inicio.",
   },
   {
     question: "¿A quién contacto si tengo dudas?",
     answer:
-      "Si perteneces a la Zona Este, debes comunicarte prioritariamente con Hno. Eliud Guevara. También encontrarás contactos de otras zonas y del departamento nacional en la sección de Ayuda.",
+      "Si perteneces a Zona Este, comunícate con el equipo de apoyo publicado en la página de Ayuda.",
   },
 ];

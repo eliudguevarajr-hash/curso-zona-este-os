@@ -35,14 +35,14 @@ export default function CalendarioPage() {
       <section className="space-y-6">
         <SectionHeading
           eyebrow="Fechas principales"
-          title="Calendario general del curso"
+          title="Calendario General del Curso"
           description="Sigue el orden del proceso y ubica cada bloque académico dentro del año escolar."
         />
         <div className="space-y-4">
           {courseSchedule.map((block, index) => (
             <div className="flex gap-4" key={block.slug}>
               <div className="flex flex-col items-center">
-                <div className={`h-4 w-4 rounded-full ${block.type === "Receso" ? "bg-amber-400" : "bg-brand-700"}`} />
+                <div className={`h-4 w-4 rounded-full ${block.type === "Receso" ? "bg-brand-300" : "bg-brand-700"}`} />
                 {index !== courseSchedule.length - 1 ? <div className="mt-2 h-full w-px bg-brand-200" /> : null}
               </div>
               <div className="card flex-1 p-5">
@@ -53,7 +53,9 @@ export default function CalendarioPage() {
                     </p>
                     <h3 className="mt-1 text-lg font-semibold text-brand-900">{block.title}</h3>
                   </div>
-                  <p className="text-sm text-slate-700">{block.start} al {block.end}</p>
+                  <p className="text-sm text-slate-700">
+                    {block.start} al {block.end}
+                  </p>
                 </div>
               </div>
             </div>
@@ -61,7 +63,7 @@ export default function CalendarioPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-6">
+      <section className="mt-10 space-y-6">
         <SectionHeading
           eyebrow="Resumen mensual"
           title="Lectura rápida por periodo"
@@ -73,7 +75,10 @@ export default function CalendarioPage() {
               <h3 className="font-display text-2xl text-brand-900">{group.month}</h3>
               <div className="mt-5 space-y-4">
                 {group.items.map((item) => (
-                  <div className="flex items-start justify-between gap-4 border-b border-line pb-4 last:border-none" key={item.label}>
+                  <div
+                    className="flex items-start justify-between gap-4 border-b border-line pb-4 last:border-none"
+                    key={item.label}
+                  >
                     <div>
                       <p className="text-sm font-semibold text-brand-900">{item.label}</p>
                       <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
@@ -87,19 +92,21 @@ export default function CalendarioPage() {
         </div>
       </section>
 
-      <section className="mt-12 space-y-6">
+      <section className="mt-10 space-y-6">
         <SectionHeading
           eyebrow="Reuniones"
           title="Estado de reuniones y Zoom"
           description="Los enlaces de Zoom se publicarán más adelante. Aquí puedes revisar las reuniones previstas."
         />
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 lg:grid-cols-2">
           {meetings.map((meeting, index) => (
-            <div className={`card p-6 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={meeting.title}>
+            <div className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`} key={meeting.title}>
               <h3 className="text-lg font-semibold text-brand-900">{meeting.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-700">{meeting.date} · {meeting.time}</p>
+              <p className="mt-3 text-sm leading-7 text-slate-700">
+                {meeting.date} · {meeting.time}
+              </p>
               <p className="mt-3 text-xs leading-6 text-slate-600">{meeting.notes}</p>
-              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-gold-700">
+              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-brand-700">
                 Enlace pendiente de publicación
               </p>
             </div>

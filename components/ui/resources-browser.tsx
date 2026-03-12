@@ -83,9 +83,7 @@ export function ResourcesBrowser({
             <div className="mt-3 flex items-center gap-2">
               <span
                 className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
-                  item.status === "available"
-                    ? "bg-sage-100 text-sage-700"
-                    : "bg-gold-100 text-gold-700"
+                  item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                 }`}
               >
                 {item.status === "available" ? "Disponible" : "Pendiente"}
