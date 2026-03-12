@@ -23,7 +23,7 @@ export function InfoCard({ title, description, href, accent = "bg-brand-700" }: 
   );
 
   return href ? (
-    <Link className="block rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory" href={href}>
+    <Link className="block rounded-3xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand" href={href}>
       {content}
     </Link>
   ) : (

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { navigation, siteMeta } from "@/data/site";
+import { navigation } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "../ui/button-link";
 import { SiteLogo } from "../ui/site-logo";
@@ -23,10 +23,7 @@ export function Header() {
           {navigation.map((item) => (
             <Link
               key={item.href}
-              className={cn(
-                "nav-link",
-                pathname === item.href && "nav-link-active"
-              )}
+              className={cn("nav-link", pathname === item.href && "nav-link-active")}
               href={item.href}
             >
               {item.label}
@@ -40,7 +37,7 @@ export function Header() {
 
         <button
           aria-label="Abrir menú"
-          className="rounded-2xl border border-line bg-white px-3 py-3 text-brand-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory lg:hidden"
+          className="rounded-2xl border border-line bg-white px-3 py-3 text-brand-900 shadow-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand lg:hidden"
           onClick={() => setOpen((current) => !current)}
           type="button"
         >
@@ -54,10 +51,7 @@ export function Header() {
             {navigation.map((item) => (
               <Link
                 key={`${item.href}-${item.label}`}
-                className={cn(
-                  "nav-link px-4 py-3",
-                  pathname === item.href && "nav-link-active"
-                )}
+                className={cn("nav-link px-4 py-3", pathname === item.href && "nav-link-active")}
                 href={item.href}
                 onClick={() => setOpen(false)}
               >

@@ -36,7 +36,7 @@ export function ContactForm() {
           required
         />
         <button
-          className="inline-flex items-center justify-center rounded-2xl bg-brand-800 px-5 py-3 text-sm font-semibold text-white ring-1 ring-transparent shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-brand-900 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-ivory sm:col-span-2"
+          className="inline-flex items-center justify-center rounded-2xl bg-brand-800 px-5 py-3 text-sm font-semibold text-white ring-1 ring-transparent shadow-sm transition duration-200 hover:-translate-y-0.5 hover:bg-brand-900 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand sm:col-span-2"
           type="submit"
         >
           Enviar solicitud
