@@ -1,6 +1,5 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { ButtonLink } from "@/components/ui/button-link";
-import { CtaPanel } from "@/components/ui/cta-panel";
 import { SectionHeading } from "@/components/ui/section-heading";
 import {
   classroomChecklist,
@@ -13,7 +12,7 @@ export default function ClassroomPage() {
     <PageShell
       eyebrow="Google Classroom"
       title="Google Classroom"
-      description="Usa esta página solo para una cosa: entrar a tus clases y saber qué hacer si tienes un problema de acceso."
+      description="Usa esta página solo para entrar a tus clases y saber qué hacer si tienes un problema de acceso."
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
@@ -100,17 +99,6 @@ export default function ClassroomPage() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="mt-12">
-        <CtaPanel
-          title="Este portal solo te orienta"
-          description="Usa Google Classroom para entrar a tu clase y realizar entregas. Usa este sitio solo para fechas, proceso, recursos y ayuda."
-          actions={[
-            { label: "Ir a Ayuda", href: "/ayuda" },
-            { label: "Ver Recursos", href: "/recursos" },
-          ]}
-        />
       </section>
     </PageShell>
   );

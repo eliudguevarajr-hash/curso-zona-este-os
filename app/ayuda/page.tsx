@@ -1,14 +1,16 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { ContactForm } from "@/components/ui/contact-form";
+import { FAQAccordion } from "@/components/ui/faq-accordion";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { contacts, supportAreas } from "@/data/contacts";
+import { faqItems } from "@/data/faq";
 
 export default function AyudaPage() {
   return (
     <PageShell
       eyebrow="Ayuda"
       title="Ayuda y contacto"
-      description="Usa esta página cuando necesites orientación directa sobre inscripción, documentos, Classroom o reuniones."
+      description="Aquí están tus contactos de Zona Este y las respuestas rápidas para dudas comunes."
     >
       <section className="grid gap-6 lg:grid-cols-[1fr_1fr]">
         <div className="brand-panel p-6 sm:p-8">
@@ -31,7 +33,7 @@ export default function AyudaPage() {
         </div>
 
         <div className="card p-6 sm:p-8">
-          <p className="eyebrow">Qué tipo de ayuda necesitas</p>
+          <p className="eyebrow">Tipo de ayuda</p>
           <div className="mt-4 grid gap-3">
             {supportAreas.map((area, index) => (
               <div className={`rounded-2xl p-4 ${index % 2 === 0 ? "tint-brand" : "tint-gold"}`} key={area.title}>
@@ -41,6 +43,15 @@ export default function AyudaPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="mt-12 space-y-5">
+        <SectionHeading
+          eyebrow="Preguntas frecuentes"
+          title="Respuestas rápidas"
+          description="Si tu duda es común, probablemente la encuentres aquí sin necesidad de salir de esta página."
+        />
+        <FAQAccordion items={faqItems} />
       </section>
 
       <section className="mt-12">

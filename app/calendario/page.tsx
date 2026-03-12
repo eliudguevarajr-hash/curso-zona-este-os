@@ -1,6 +1,7 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { courseSchedule, keyDates } from "@/data/courses";
+import { meetings } from "@/data/meetings";
 
 const groupedBlocks = [
   {
@@ -28,14 +29,14 @@ export default function CalendarioPage() {
   return (
     <PageShell
       eyebrow="Calendario"
-      title="Calendario General del Curso"
-      description="Consulta las fechas principales del proceso y ubica cada materia o receso sin revisar información de más."
+      title="Calendario y materias"
+      description="Aquí están las fechas principales, la secuencia de materias y el estado de reuniones futuras."
     >
       <section className="space-y-6">
         <SectionHeading
-          eyebrow="Línea de tiempo"
-          title="Calendario General del Curso"
-          description="Sigue el orden completo del proceso y ubica cada bloque académico dentro del año escolar."
+          eyebrow="Fechas principales"
+          title="Calendario general del curso"
+          description="Sigue el orden del proceso y ubica cada bloque académico dentro del año escolar."
         />
         <div className="space-y-4">
           {courseSchedule.map((block, index) => (
@@ -64,7 +65,7 @@ export default function CalendarioPage() {
         <SectionHeading
           eyebrow="Resumen mensual"
           title="Lectura rápida por periodo"
-          description="Después de revisar la línea de tiempo principal, aquí puedes ubicar cada etapa por mes."
+          description="Después de revisar la línea principal, aquí puedes ubicar cada etapa por mes."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           {groupedBlocks.map((group) => (
@@ -81,6 +82,26 @@ export default function CalendarioPage() {
                   </div>
                 ))}
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 space-y-6">
+        <SectionHeading
+          eyebrow="Reuniones"
+          title="Estado de reuniones y Zoom"
+          description="Los enlaces de Zoom se publicarán más adelante. Aquí puedes revisar las reuniones previstas."
+        />
+        <div className="grid gap-4 lg:grid-cols-3">
+          {meetings.map((meeting, index) => (
+            <div className={`card p-6 ${index === 1 ? "tint-gold" : index === 2 ? "tint-sage" : "tint-brand"}`} key={meeting.title}>
+              <h3 className="text-lg font-semibold text-brand-900">{meeting.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-slate-700">{meeting.date} · {meeting.time}</p>
+              <p className="mt-3 text-xs leading-6 text-slate-600">{meeting.notes}</p>
+              <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-gold-700">
+                Enlace pendiente de publicación
+              </p>
             </div>
           ))}
         </div>

@@ -29,15 +29,10 @@ export const siteMeta = {
 
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Convocatoria", href: "/convocatoria" },
   { label: "Inscripción", href: "/inscripcion" },
   { label: "Calendario", href: "/calendario" },
-  { label: "Materias", href: "/materias" },
-  { label: "Recursos", href: "/recursos" },
   { label: "Classroom", href: "/classroom" },
-  { label: "Reuniones", href: "/reuniones" },
   { label: "Ayuda", href: "/ayuda" },
-  { label: "FAQ", href: "/faq" },
 ];
 
 export const colorPalette = [
@@ -87,25 +82,20 @@ export const quickLinks: QuickLink[] = [
     ...managedLinks.inscriptionRequestPdf,
   },
   {
-    title: "Google Classroom",
-    description: "Acceso general a clases, tareas y avisos.",
-    ...managedLinks.classroomAccess,
+    title: "Convocatoria PDF",
+    description: "Convocatoria oficial del curso 2026.",
+    ...managedLinks.convocatoriaPdf,
   },
   {
     title: "Carpeta de Recursos",
     description: "Carpeta general de materiales y documentos.",
     ...managedLinks.generalDrive,
   },
+  {
+    title: "Google Classroom",
+    description: "Acceso general a clases, tareas y avisos.",
+    ...managedLinks.classroomAccess,
+  },
 ];
 
-export const footerLinks: NavItem[] = [
-  { label: "Convocatoria", href: "/convocatoria" },
-  { label: "Inscripción", href: "/inscripcion" },
-  { label: "Calendario", href: "/calendario" },
-  { label: "Materias", href: "/materias" },
-  { label: "Classroom", href: "/classroom" },
-  { label: "Recursos", href: "/recursos" },
-  { label: "Reuniones", href: "/reuniones" },
-  { label: "Ayuda", href: "/ayuda" },
-  { label: "FAQ", href: "/faq" },
-];
+export const footerLinks: NavItem[] = [...navigation];

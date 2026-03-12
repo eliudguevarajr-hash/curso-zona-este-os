@@ -6,26 +6,26 @@ export const roleCards = [
   },
   {
     title: "Ya soy alumno",
-    description: "Entra a Classroom y consulta materiales, calendario y apoyo.",
+    description: "Entra a Classroom y sigue tus tareas y avisos.",
     href: "/classroom",
   },
   {
     title: "Necesito ayuda",
-    description: "Consulta al responsable correcto y resuelve tu duda rápido.",
+    description: "Consulta a tu equipo de apoyo de Zona Este.",
     href: "/ayuda",
   },
 ];
 
 export const nextStepList = [
   {
-    title: "Registro de Aspirante",
-    description: "Completa el primer formulario oficial.",
+    title: "Registro",
+    description: "Completa el Registro de Aspirante.",
     href: "/inscripcion",
   },
   {
     title: "Diagnósticos",
-    description: "Completa diagnóstico vocacional y ministerial.",
-    href: "/inscripcion",
+    description: "Abre el diagnóstico vocacional y el ministerial.",
+    href: "/inscripcion#formularios",
   },
   {
     title: "Documentos",
@@ -33,8 +33,8 @@ export const nextStepList = [
     href: "/inscripcion#documentos",
   },
   {
-    title: "Classroom",
-    description: "Usa Classroom cuando ya seas alumno.",
-    href: "/classroom",
+    title: "Fechas del curso",
+    description: "Confirma convocatoria, inicio y materias.",
+    href: "/calendario",
   },
 ];

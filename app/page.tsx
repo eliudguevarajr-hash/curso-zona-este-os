@@ -1,11 +1,16 @@
 import { AnnouncementBanner } from "@/components/ui/announcement-banner";
 import { ButtonLink } from "@/components/ui/button-link";
-import { CtaPanel } from "@/components/ui/cta-panel";
 import { KeyDates } from "@/components/ui/key-dates";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
 import { nextStepList, roleCards } from "@/data/home";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
+
+const audienceItems = [
+  "Varones bautizados",
+  "Hermanos con reconocimiento de Obrero Laico",
+  "Hermanos con jerarquía de Ayuda",
+];
 
 export default function HomePage() {
   return (
@@ -20,11 +25,11 @@ export default function HomePage() {
               </h1>
               <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
               <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-700 sm:text-base">
-                Este portal existe para que sepas qué hacer ahora, en qué orden seguir el proceso y dónde entrar sin confusión.
+                Este portal existe para que sepas quién puede participar, qué hacer ahora y qué acceso oficial debes abrir en cada etapa.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
-                <ButtonLink href="/classroom" variant="secondary">Ir a Classroom</ButtonLink>
+                <ButtonLink href="/calendario" variant="secondary">Ver Fechas</ButtonLink>
                 <ButtonLink href="/ayuda" variant="ghost">Necesito Ayuda</ButtonLink>
               </div>
             </div>
@@ -33,20 +38,13 @@ export default function HomePage() {
                 <AnnouncementBanner item={item} key={item.title} />
               ))}
               <div className="brand-panel p-5">
-                <p className="eyebrow text-brand-100">Orden recomendado</p>
+                <p className="eyebrow text-brand-100">Quiénes pueden participar</p>
                 <div className="mt-4 grid gap-3">
-                  <div className="panel-step">
-                    <p className="panel-step-kicker">Paso 1</p>
-                    <p className="panel-step-copy">Abre el Registro de Aspirante</p>
-                  </div>
-                  <div className="panel-step">
-                    <p className="panel-step-kicker">Paso 2</p>
-                    <p className="panel-step-copy">Completa los diagnósticos oficiales</p>
-                  </div>
-                  <div className="panel-step">
-                    <p className="panel-step-kicker">Paso 3</p>
-                    <p className="panel-step-copy">Revisa solicitud, documentos y fechas</p>
-                  </div>
+                  {audienceItems.map((item) => (
+                    <div className="panel-step" key={item}>
+                      <p className="panel-step-copy">{item}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -56,9 +54,9 @@ export default function HomePage() {
 
       <section className="container-shell mt-12 space-y-5">
         <SectionHeading
-          eyebrow="Qué necesitas"
+          eyebrow="Rutas"
           title="Elige solo una ruta"
-          description="La mayoría de las personas solo necesita una de estas tres rutas para continuar."
+          description="La mayoría de las personas solo necesita una de estas tres opciones para continuar."
         />
         <div className="grid gap-4 lg:grid-cols-3">
           {roleCards.map((card, index) => (
@@ -77,9 +75,9 @@ export default function HomePage() {
 
       <section className="container-shell mt-12 space-y-5">
         <SectionHeading
-          eyebrow="Siguiente paso"
+          eyebrow="Proceso"
           title="Lo principal del proceso"
-          description="No necesitas buscar en muchas páginas. Estas son las acciones más importantes."
+          description="Estas son las acciones que normalmente debes seguir primero."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {nextStepList.map((item, index) => (
@@ -112,7 +110,7 @@ export default function HomePage() {
         <SectionHeading
           eyebrow="Accesos oficiales"
           title="Abre directamente lo que ya está publicado"
-          description="Aquí encuentras los accesos que hoy sí están disponibles."
+          description="Aquí encuentras formularios, documentos y accesos oficiales sin salir a buscar en otras páginas del sitio."
         />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {quickLinks.map((item, index) => (
@@ -142,18 +140,6 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </section>
-
-      <section className="container-shell mt-12">
-        <CtaPanel
-          title="Si no sabes por dónde seguir, empieza en Inscripción"
-          description="Ahí encontrarás el orden del proceso, los formularios oficiales, los documentos y lo que todavía falta por publicarse."
-          actions={[
-            { label: "Ir a Inscripción", href: "/inscripcion" },
-            { label: "Ver Classroom", href: "/classroom" },
-            { label: "Pedir Ayuda", href: "/ayuda" },
-          ]}
-        />
       </section>
     </div>
   );
