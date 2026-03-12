@@ -22,8 +22,8 @@ export function AnnouncementBanner({ item }: { item: Announcement }) {
         {warning ? <AlertCircle className="h-5 w-5" /> : <Info className="h-5 w-5" />}
       </div>
       <div className="space-y-1">
-        <p className="font-semibold text-ink">{item.title}</p>
-        <p className="text-sm leading-6 text-slate-600">{item.detail}</p>
+        <p className="font-semibold text-brand-900">{item.title}</p>
+        <p className="text-sm leading-6 text-slate-700">{item.detail}</p>
       </div>
     </div>
   );

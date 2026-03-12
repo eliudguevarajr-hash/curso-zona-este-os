@@ -58,19 +58,19 @@ export default function HomePage() {
                 <AnnouncementBanner item={item} key={item.title} />
               ))}
               <div className="brand-panel p-5">
-                <p className="eyebrow">Ruta inmediata</p>
+                <p className="eyebrow text-brand-100">Ruta inmediata</p>
                 <div className="mt-4 grid gap-3">
-                  <div className="rounded-2xl bg-white/10 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 1</p>
-                    <p className="mt-1 text-sm font-medium text-white">Solicita tu formato firmado en tu localidad</p>
+                  <div className="panel-step">
+                    <p className="panel-step-kicker">Paso 1</p>
+                    <p className="panel-step-copy">Solicita tu formato firmado en tu localidad</p>
                   </div>
-                  <div className="rounded-2xl bg-white/10 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 2</p>
-                    <p className="mt-1 text-sm font-medium text-white">Completa el registro en linea</p>
+                  <div className="panel-step">
+                    <p className="panel-step-kicker">Paso 2</p>
+                    <p className="panel-step-copy">Completa el registro en linea</p>
                   </div>
-                  <div className="rounded-2xl bg-white/10 p-4">
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-100">Paso 3</p>
-                    <p className="mt-1 text-sm font-medium text-white">Reune y entrega tus documentos</p>
+                  <div className="panel-step">
+                    <p className="panel-step-kicker">Paso 3</p>
+                    <p className="panel-step-copy">Reune y entrega tus documentos</p>
                   </div>
                 </div>
               </div>

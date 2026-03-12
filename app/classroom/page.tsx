@@ -18,16 +18,16 @@ export default function ClassroomPage() {
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow">Uso principal</p>
+          <p className="eyebrow text-brand-100">Uso principal</p>
           <h2 className="mt-3 font-display text-3xl text-white">Aqui se hacen las tareas y entregas</h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-100">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
             Si ya eres alumno, Google Classroom debe ser tu punto de entrada para revisar actividades, avisos y entregas de cada materia.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <ButtonLink href="#clases" className="bg-white text-brand-900 hover:bg-brand-50">
               Ver Clases
             </ButtonLink>
-            <ButtonLink href="/ayuda" variant="secondary" className="border-white/30 bg-white/10 text-white hover:bg-white/20">
+            <ButtonLink href="/ayuda" variant="secondary" className="border-white/35 bg-white/15 text-white hover:bg-white/25">
               Necesito Ayuda
             </ButtonLink>
           </div>

@@ -20,9 +20,9 @@ export default function InscripcionPage() {
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow">Empieza aqui</p>
+          <p className="eyebrow text-brand-100">Empieza aqui</p>
           <h2 className="mt-3 font-display text-3xl text-white">Haz una sola cosa a la vez</h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-100">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
             Primero consigue tu solicitud firmada. Despues realiza tu registro en linea. Luego prepara tu expediente fisico.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -33,7 +33,7 @@ export default function InscripcionPage() {
               href="https://example.com/solicitud-inscripcion.pdf"
               external
               variant="secondary"
-              className="border-white/30 bg-white/10 text-white hover:bg-white/20"
+              className="border-white/35 bg-white/15 text-white hover:bg-white/25"
             >
               Ver Solicitud
             </ButtonLink>

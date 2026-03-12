@@ -8,6 +8,7 @@ import { useState } from "react";
 import { navigation, siteMeta } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "../ui/button-link";
+import { SiteLogo } from "../ui/site-logo";
 
 export function Header() {
   const pathname = usePathname();
@@ -16,10 +17,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(248,246,241,0.86)] backdrop-blur">
       <div className="container-shell flex min-h-20 items-center justify-between gap-4">
-        <Link className="max-w-xs" href="/">
-          <p className="font-display text-lg leading-tight text-brand-900">{siteMeta.title}</p>
-          <p className="text-xs uppercase tracking-[0.22em] text-gold-600">Convocatoria 2026</p>
-        </Link>
+        <SiteLogo />
 
         <nav className="hidden items-center gap-1 lg:flex">
           {navigation.map((item) => (
