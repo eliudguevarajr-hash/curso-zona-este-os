@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-sand text-ink font-sans antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(219, 230, 240, 0.9), transparent 35%),
+    linear-gradient(to bottom, #f8f6f1, #f4f7fa);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  @apply transition duration-200;
+}
+
+::selection {
+  @apply bg-brand-200 text-brand-900;
+}
+
+.container-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.card {
+  @apply rounded-2xl border border-white/70 bg-white/90 shadow-soft backdrop-blur;
+}
+
+.section-title {
+  @apply font-display text-3xl text-brand-900 sm:text-4xl;
+}
+
+.section-copy {
+  @apply max-w-3xl text-sm leading-7 text-slate-600 sm:text-base;
+}
+
+.eyebrow {
+  @apply text-xs font-semibold uppercase tracking-[0.24em] text-brand-600;
+}
