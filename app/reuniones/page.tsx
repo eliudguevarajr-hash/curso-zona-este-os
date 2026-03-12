@@ -36,8 +36,18 @@ export default function ReunionesPage() {
                 </div>
               </dl>
               <p className="mt-4 text-sm leading-7 text-slate-700">{meeting.notes}</p>
+              <p className="mt-3 text-xs leading-6 text-slate-600">
+                {meeting.linkStatus === "available"
+                  ? "Enlace disponible."
+                  : "Enlace pendiente de publicación. Consulta esta página y el apartado de ayuda para seguimiento."}
+              </p>
               <div className="mt-5">
-                <ButtonLink href={meeting.href} external variant="secondary">
+                <ButtonLink
+                  href={meeting.href}
+                  external={meeting.external}
+                  variant="secondary"
+                  disabled={meeting.linkStatus !== "available"}
+                >
                   Abrir Zoom
                 </ButtonLink>
               </div>

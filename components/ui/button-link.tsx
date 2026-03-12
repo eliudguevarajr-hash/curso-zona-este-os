@@ -9,6 +9,7 @@ type ButtonLinkProps = {
   external?: boolean;
   variant?: "primary" | "secondary" | "ghost" | "panel" | "panelSecondary";
   className?: string;
+  disabled?: boolean;
 };
 
 export function ButtonLink({
@@ -17,6 +18,7 @@ export function ButtonLink({
   external,
   variant = "primary",
   className,
+  disabled = false,
 }: ButtonLinkProps) {
   const shared =
     "inline-flex items-center justify-center gap-2 rounded-2xl px-4 py-3 text-sm font-semibold ring-1 ring-transparent shadow-sm transition duration-200 hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2 focus-visible:ring-offset-sand";
@@ -27,6 +29,19 @@ export function ButtonLink({
     panel: "bg-white text-brand-900 hover:bg-brand-50 hover:shadow-md",
     panelSecondary: "border border-brand-100/40 bg-brand-50 text-brand-900 hover:border-white/50 hover:bg-white hover:shadow-md",
   };
+  const disabledClasses =
+    "cursor-not-allowed border border-slate-200 bg-slate-100 text-slate-500 shadow-none hover:translate-y-0 hover:bg-slate-100 hover:shadow-none";
+
+  if (disabled) {
+    return (
+      <span
+        aria-disabled="true"
+        className={cn(shared, disabledClasses, className)}
+      >
+        {children}
+      </span>
+    );
+  }
 
   if (external) {
     return (

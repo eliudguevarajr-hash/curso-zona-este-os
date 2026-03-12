@@ -19,7 +19,7 @@ export default function ClassroomPage() {
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
           <p className="eyebrow text-brand-100">Uso principal</p>
-          <h2 className="mt-3 font-display text-3xl text-white">Aqui se hacen las tareas y entregas</h2>
+          <h2 className="mt-3 font-display text-3xl text-white">Aquí se hacen las tareas y entregas</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
             Si ya eres alumno, Google Classroom debe ser tu punto de entrada para revisar actividades, avisos y entregas de cada materia.
           </p>
@@ -51,9 +51,9 @@ export default function ClassroomPage() {
 
       <section className="mt-12 space-y-5">
         <SectionHeading
-          eyebrow="Funcion de Classroom"
-          title="Que debes hacer aqui"
-          description="Esta pagina debe resolver de inmediato para que sirve Classroom y que no debes buscar aqui."
+          eyebrow="Función de Classroom"
+          title="Qué debes hacer aquí"
+          description="Esta página debe resolver de inmediato para qué sirve Classroom y qué no debes buscar aquí."
         />
         <div className="grid gap-4 md:grid-cols-3">
           {classroomUsage.map((item, index) => (
@@ -83,12 +83,20 @@ export default function ClassroomPage() {
                 <h3 className="text-base font-semibold text-brand-900">{course.title}</h3>
                 <p className="mt-1 text-xs uppercase tracking-wide text-slate-700">{course.status}</p>
               </div>
-              <p className="text-sm text-slate-700">Codigo: {course.code}</p>
+              <p className="text-sm text-slate-700">Código: {course.code}</p>
               <p className="text-sm text-slate-700">Acceso de materia</p>
               <div>
-                <ButtonLink href={course.href} external variant="secondary">
+                <ButtonLink
+                  href={course.href}
+                  external={course.external}
+                  variant="secondary"
+                  disabled={course.linkStatus !== "available"}
+                >
                   Entrar
                 </ButtonLink>
+              </div>
+              <div className="md:col-span-4">
+                <p className="text-xs leading-6 text-slate-600">{course.note}</p>
               </div>
             </div>
           ))}

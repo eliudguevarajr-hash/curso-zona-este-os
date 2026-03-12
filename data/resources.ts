@@ -1,3 +1,5 @@
+import { managedLinks } from "./links";
+
 export type ResourceCategory =
   | "Convocatoria"
   | "Registro"
@@ -14,6 +16,9 @@ export type ResourceItem = {
   category: ResourceCategory;
   type: "PDF" | "Formulario" | "Drive" | "Classroom" | "Zoom";
   href: string;
+  status: "available" | "pending";
+  external?: boolean;
+  note?: string;
 };
 
 export const resourceCategories: ResourceCategory[] = [
@@ -30,58 +35,60 @@ export const resourceCategories: ResourceCategory[] = [
 export const resourceItems: ResourceItem[] = [
   {
     title: "Convocatoria Oficial 2026",
-    description: "Versión PDF para consulta y difusión.",
+    description: "Versión PDF para consulta y difusión cuando sea publicada oficialmente.",
     category: "Convocatoria",
     type: "PDF",
-    href: "https://example.com/convocatoria-2026.pdf",
+    ...managedLinks.convocatoriaPdf,
   },
   {
     title: "Registro en Línea",
-    description: "Formulario principal para iniciar el proceso.",
+    description: "Formulario principal para iniciar el proceso cuando esté disponible.",
     category: "Registro",
     type: "Formulario",
-    href: "https://example.com/registro",
+    ...managedLinks.registrationForm,
   },
   {
     title: "Solicitud de Inscripción",
-    description: "Formato para firma del Encargado de Localidad.",
+    description: "Formato para firma del Encargado de Localidad cuando sea publicado.",
     category: "Documentos",
     type: "PDF",
-    href: "https://example.com/solicitud-inscripcion.pdf",
+    ...managedLinks.inscriptionRequestPdf,
   },
   {
     title: "Carpeta de Materias",
-    description: "Repositorio de materiales generales del curso.",
+    description: "Repositorio general de materiales del curso cuando sea habilitado.",
     category: "Materias",
     type: "Drive",
-    href: "https://drive.google.com/example-materias",
+    ...managedLinks.generalDrive,
   },
   {
     title: "Acceso General a Classroom",
-    description: "Página con enlaces y códigos de cada materia.",
+    description: "Página con enlaces, códigos y ayuda de ingreso por materia.",
     category: "Classroom",
     type: "Classroom",
-    href: "/classroom",
+    ...managedLinks.classroomAccess,
   },
   {
     title: "Sala Zoom de Orientación",
-    description: "Enlace de referencia para reuniones informativas.",
+    description: "Consulta reuniones y enlaces oficiales cuando sean publicados.",
     category: "Zoom",
     type: "Zoom",
-    href: "https://zoom.us/j/example",
+    ...managedLinks.orientationZoom,
   },
   {
     title: "Formulario de Ayuda",
-    description: "Solicitud de apoyo o aclaración de dudas.",
+    description: "Solicitud de apoyo o aclaración de dudas. Por ahora usa la página de ayuda.",
     category: "Formularios",
     type: "Formulario",
-    href: "https://example.com/ayuda",
+    ...managedLinks.helpForm,
   },
   {
     title: "Guía General del Alumno",
-    description: "Indicaciones básicas para dar seguimiento al curso.",
+    description: "Documento de apoyo general pendiente de publicación oficial.",
     category: "Recursos Generales",
     type: "PDF",
-    href: "https://example.com/guia-alumno.pdf",
+    href: "/recursos",
+    status: "pending",
+    note: "Pendiente de publicación de la guía general del alumno.",
   },
 ];

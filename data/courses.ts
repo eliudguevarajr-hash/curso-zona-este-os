@@ -157,16 +157,16 @@ export const courseSchedule: Course[] = [
 ];
 
 export const keyDates = [
-  { label: "Convocatoria", date: "05–28 marzo 2026", kind: "Convocatoria" },
+  { label: "Convocatoria", date: "05-28 marzo 2026", kind: "Convocatoria" },
   { label: "Inicio de clases", date: "03 mayo 2026", kind: "Inicio" },
-  { label: "Dirección de Culto", date: "04–22 mayo 2026", kind: "Materia" },
-  { label: "Fiesta de Pentecostés", date: "25–29 mayo 2026", kind: "Receso" },
-  { label: "Administración I", date: "01–19 junio 2026", kind: "Materia" },
-  { label: "Hermenéutica", date: "22 junio–10 julio 2026", kind: "Materia" },
-  { label: "Homilética", date: "13–31 julio 2026", kind: "Materia" },
-  { label: "Escuela Sabática", date: "03–21 agosto 2026", kind: "Materia" },
-  { label: "Ética Ministerial", date: "24 agosto–11 septiembre 2026", kind: "Materia" },
-  { label: "Doctrina", date: "14 septiembre–02 octubre 2026", kind: "Materia" },
-  { label: "Fiesta de Cabañas", date: "05–09 octubre 2026", kind: "Receso" },
-  { label: "Profecía", date: "12–30 octubre 2026", kind: "Materia" },
+  { label: "Dirección de Culto", date: "04-22 mayo 2026", kind: "Materia" },
+  { label: "Fiesta de Pentecostés", date: "25-29 mayo 2026", kind: "Receso" },
+  { label: "Administración I", date: "01-19 junio 2026", kind: "Materia" },
+  { label: "Hermenéutica", date: "22 junio-10 julio 2026", kind: "Materia" },
+  { label: "Homilética", date: "13-31 julio 2026", kind: "Materia" },
+  { label: "Escuela Sabática", date: "03-21 agosto 2026", kind: "Materia" },
+  { label: "Ética Ministerial", date: "24 agosto-11 septiembre 2026", kind: "Materia" },
+  { label: "Doctrina", date: "14 septiembre-02 octubre 2026", kind: "Materia" },
+  { label: "Fiesta de Cabañas", date: "05-09 octubre 2026", kind: "Receso" },
+  { label: "Profecía", date: "12-30 octubre 2026", kind: "Materia" },
 ];

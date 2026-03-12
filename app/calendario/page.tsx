@@ -29,13 +29,13 @@ export default function CalendarioPage() {
     <PageShell
       eyebrow="Calendario"
       title="Calendario General del Curso"
-      description="Consulta la Convocatoria, Fechas Importantes, Materias y Recesos en una Vista Clara y Facil de Seguir."
+      description="Consulta la Convocatoria, Fechas Importantes, Materias y Recesos en una vista clara y fácil de seguir."
     >
       <section className="space-y-6">
         <SectionHeading
-          eyebrow="Linea de Tiempo"
+          eyebrow="Línea de Tiempo"
           title="Calendario General del Curso"
-          description="Sigue el orden completo del proceso y ubica cada bloque academico dentro del ano escolar."
+          description="Sigue el orden completo del proceso y ubica cada bloque académico dentro del año escolar."
         />
         <div className="space-y-4">
           {courseSchedule.map((block, index) => (
@@ -65,8 +65,8 @@ export default function CalendarioPage() {
       <section className="mt-12 space-y-6">
         <SectionHeading
           eyebrow="Resumen Mensual"
-          title="Lectura Rapida por Periodo"
-          description="Despues de revisar la linea de tiempo principal, puedes ubicar cada etapa por mes o bloque del ano."
+          title="Lectura Rápida por Periodo"
+          description="Después de revisar la línea de tiempo principal, puedes ubicar cada etapa por mes o bloque del año."
         />
         <div className="grid gap-4 lg:grid-cols-2">
           {groupedBlocks.map((group) => (

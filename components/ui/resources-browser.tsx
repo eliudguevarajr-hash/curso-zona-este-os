@@ -80,8 +80,25 @@ export function ResourcesBrowser({
             </div>
             <h3 className="mt-4 text-lg font-semibold text-brand-900">{item.title}</h3>
             <p className="mt-2 flex-1 text-sm leading-7 text-slate-700">{item.description}</p>
+            <div className="mt-3 flex items-center gap-2">
+              <span
+                className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
+                  item.status === "available"
+                    ? "bg-sage-100 text-sage-700"
+                    : "bg-gold-100 text-gold-700"
+                }`}
+              >
+                {item.status === "available" ? "Disponible" : "Pendiente"}
+              </span>
+            </div>
+            {item.note ? <p className="mt-3 text-xs leading-6 text-slate-600">{item.note}</p> : null}
             <div className="mt-5">
-              <ButtonLink href={item.href} external={item.href.startsWith("http")} variant="secondary">
+              <ButtonLink
+                href={item.href}
+                external={item.href.startsWith("http")}
+                variant="secondary"
+                disabled={item.status !== "available"}
+              >
                 Abrir recurso
               </ButtonLink>
             </div>

@@ -5,6 +5,7 @@ import { KeyDates } from "@/components/ui/key-dates";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { convocatoriaAudience, convocatoriaSections, outcomeNotes, processCards } from "@/data/convocatoria";
 import { keyDates } from "@/data/courses";
+import { managedLinks } from "@/data/links";
 
 export default function ConvocatoriaPage() {
   return (
@@ -30,7 +31,11 @@ export default function ConvocatoriaPage() {
       </section>
 
       <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Información principal" title="Aspectos que todo aspirante debe conocer" description="La convocatoria establece un proceso ordenado y acompañado por el Departamento Educativo." />
+        <SectionHeading
+          eyebrow="Información principal"
+          title="Aspectos que todo aspirante debe conocer"
+          description="La convocatoria establece un proceso ordenado y acompañado por el Departamento Educativo."
+        />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {convocatoriaSections.map((section) => (
             <InfoCard key={section.title} title={section.title} description={section.content} accent="bg-brand-600" />
@@ -59,7 +64,11 @@ export default function ConvocatoriaPage() {
       </section>
 
       <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Calendario" title="Fechas principales del proceso formativo" description="Estas fechas sirven como guía general para el seguimiento de la convocatoria y las materias del curso." />
+        <SectionHeading
+          eyebrow="Calendario"
+          title="Fechas principales del proceso formativo"
+          description="Estas fechas sirven como guía general para el seguimiento de la convocatoria y las materias del curso."
+        />
         <KeyDates items={keyDates.slice(0, 8)} />
       </section>
 
@@ -69,7 +78,11 @@ export default function ConvocatoriaPage() {
           description="Si ya verificaste que puedes participar, el siguiente paso es solicitar tu formato firmado e iniciar el registro en línea."
           actions={[
             { label: "Ver Inscripción", href: "/inscripcion" },
-            { label: "Abrir Registro en Línea", href: "https://example.com/registro", external: true },
+            {
+              label: managedLinks.registrationForm.status === "available" ? "Abrir Registro en Línea" : "Registro Pendiente",
+              href: managedLinks.registrationForm.href,
+              external: managedLinks.registrationForm.external,
+            },
           ]}
         />
       </section>

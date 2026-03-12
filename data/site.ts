@@ -1,3 +1,5 @@
+import { managedLinks } from "./links";
+
 export type NavItem = {
   label: string;
   href: string;
@@ -14,10 +16,12 @@ export type QuickLink = {
   description: string;
   href: string;
   external?: boolean;
+  status?: "available" | "pending";
+  note?: string;
 };
 
 export const siteMeta = {
-  title: "Departamento Educativo – Zona Este",
+  title: "Departamento Educativo - Zona Este",
   subtitle: "Convocatoria / Curso de Capacitación Ministerial 2026",
   description:
     "Portal oficial de información, orientación y seguimiento para la Convocatoria y Curso de Capacitación Ministerial 2026 de la Zona Este.",
@@ -60,34 +64,36 @@ export const announcements: Announcement[] = [
 export const quickLinks: QuickLink[] = [
   {
     title: "Registro en línea",
-    description: "Completa tu preinscripción mediante el formulario oficial.",
-    href: "https://example.com/registro",
-    external: true,
+    description: "Completa tu preinscripción mediante el formulario oficial cuando sea publicado.",
+    ...managedLinks.registrationForm,
   },
   {
     title: "Google Classroom",
     description: "Consulta clases, tareas, avisos y entregas de cada materia.",
-    href: "/classroom",
+    ...managedLinks.classroomAccess,
   },
   {
     title: "Zoom",
-    description: "Accede a reuniones informativas y sesiones en vivo.",
-    href: "/reuniones",
+    description: "Accede a reuniones informativas y sesiones en vivo cuando se publiquen los enlaces.",
+    ...managedLinks.orientationZoom,
   },
   {
     title: "Recursos",
     description: "Encuentra formatos, documentos y carpetas de apoyo.",
     href: "/recursos",
+    status: "available",
   },
   {
     title: "Documentos",
-    description: "Revisa el listado de documentos de matriculación.",
+    description: "Revisa el listado oficial de documentos para matriculación.",
     href: "/inscripcion#documentos",
+    status: "available",
   },
   {
     title: "Contacto Zona Este",
     description: "Solicita orientación directa al equipo responsable.",
     href: "/ayuda",
+    status: "available",
   },
 ];
 

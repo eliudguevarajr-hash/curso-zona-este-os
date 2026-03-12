@@ -7,9 +7,17 @@ export default function MateriasPage() {
   const visibleCourses = courseSchedule.filter((item) => item.type === "Materia");
 
   return (
-    <PageShell eyebrow="Plan de estudios" title="Materias y programación académica" description="Consulta el desarrollo del curso por materia, fechas, duración y referencias básicas para el seguimiento del proceso académico.">
+    <PageShell
+      eyebrow="Plan de estudios"
+      title="Materias y programación académica"
+      description="Consulta el desarrollo del curso por materia, fechas, duración y referencias básicas para el seguimiento del proceso académico."
+    >
       <section className="space-y-6">
-        <SectionHeading eyebrow="Calendario académico" title="Tabla general del plan de estudios" description="Los horarios de clases estarán determinados en el calendario escolar del Departamento Educativo de la zona y por su Administrador." />
+        <SectionHeading
+          eyebrow="Calendario académico"
+          title="Tabla general del plan de estudios"
+          description="Los horarios de clases estarán determinados en el calendario escolar del Departamento Educativo de la zona y por su Administrador."
+        />
         <div className="card overflow-hidden">
           <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm">
@@ -39,7 +47,11 @@ export default function MateriasPage() {
       </section>
 
       <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Vista por materia" title="Tarjetas del plan de estudios" description="Cada tarjeta resume información básica y campos listos para actualización futura." />
+        <SectionHeading
+          eyebrow="Vista por materia"
+          title="Tarjetas del plan de estudios"
+          description="Cada tarjeta resume información básica y campos listos para actualización futura."
+        />
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {visibleCourses.map((course) => (
             <CourseCard course={course} key={course.slug} />
@@ -48,7 +60,11 @@ export default function MateriasPage() {
       </section>
 
       <section className="mt-12 space-y-6">
-        <SectionHeading eyebrow="Línea de tiempo" title="Secuencia del curso 2026" description="Vista resumida para ubicar materias y recesos durante el año académico." />
+        <SectionHeading
+          eyebrow="Línea de tiempo"
+          title="Secuencia del curso 2026"
+          description="Vista resumida para ubicar materias y recesos durante el año académico."
+        />
         <div className="space-y-4">
           {courseSchedule.map((course) => (
             <div className="card flex flex-col gap-3 p-5 md:flex-row md:items-center md:justify-between" key={course.slug}>
@@ -56,7 +72,9 @@ export default function MateriasPage() {
                 <p className="eyebrow">{course.type}</p>
                 <h3 className="mt-1 text-lg font-semibold text-brand-900">{course.title}</h3>
               </div>
-              <div className="text-sm text-slate-700">{course.start} al {course.end} · {course.duration}</div>
+              <div className="text-sm text-slate-700">
+                {course.start} al {course.end} · {course.duration}
+              </div>
             </div>
           ))}
         </div>

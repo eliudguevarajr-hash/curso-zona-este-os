@@ -1,3 +1,15 @@
+import { managedLinks } from "./links";
+
+type ClassroomCourseLink = {
+  title: string;
+  code: string;
+  href: string;
+  external?: boolean;
+  status: string;
+  linkStatus: "available" | "pending";
+  note: string;
+};
+
 export const classroomUsage = [
   {
     title: "Tareas y entregas",
@@ -8,7 +20,7 @@ export const classroomUsage = [
     description: "Los alumnos deben revisar anuncios, materiales y recordatorios publicados por el maestro.",
   },
   {
-    title: "Seguimiento academico",
+    title: "Seguimiento académico",
     description: "Classroom es el espacio para dar seguimiento a cada materia ya asignada.",
   },
 ];
@@ -23,19 +35,19 @@ export const classroomChecklist = [
 export const classroomSupportNotes = [
   {
     title: "Si no encuentras tu clase",
-    description: "Confirma primero el nombre de la materia, el codigo o el enlace correcto.",
+    description: "Confirma primero el nombre de la materia, el código o el enlace correcto.",
   },
   {
-    title: "Si tu codigo no funciona",
-    description: "Comunicate con el responsable correspondiente antes de intentar otro acceso por tu cuenta.",
+    title: "Si tu código no funciona",
+    description: "Comunícate con el responsable correspondiente antes de intentar otro acceso por tu cuenta.",
   },
   {
     title: "Si tienes duda sobre una tarea",
-    description: "Revisa primero los anuncios y materiales dentro de Classroom y despues solicita apoyo.",
+    description: "Revisa primero los anuncios y materiales dentro de Classroom y después solicita apoyo.",
   },
 ];
 
-export const classroomCourses = [
+export const classroomCourses: ClassroomCourseLink[] = [
   "Dirección de Culto",
   "Administración I",
   "Hermenéutica",
@@ -47,6 +59,9 @@ export const classroomCourses = [
 ].map((course, index) => ({
   title: course,
   code: `CCM2026-${index + 1}X`,
-  href: "https://classroom.google.com/example",
-  status: "Pendiente de publicacion",
+  href: managedLinks.classroomAccess.href,
+  external: managedLinks.classroomAccess.external,
+  status: "Pendiente de publicación",
+  linkStatus: "pending" as const,
+  note: "El acceso oficial de esta materia aún no ha sido publicado.",
 }));

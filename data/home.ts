@@ -5,7 +5,7 @@ export const roleCards = [
     href: "/convocatoria",
   },
   {
-    title: "Ya inicie mi inscripcion",
+    title: "Ya inicié mi inscripción",
     description: "Confirma tus pasos pendientes y prepara documentos.",
     href: "/inscripcion",
   },
@@ -16,7 +16,7 @@ export const roleCards = [
   },
   {
     title: "Necesito ayuda",
-    description: "Encuentra contacto directo y orientacion rapida.",
+    description: "Encuentra contacto directo y orientación rápida.",
     href: "/ayuda",
   },
 ];

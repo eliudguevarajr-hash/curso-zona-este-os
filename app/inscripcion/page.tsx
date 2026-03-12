@@ -10,43 +10,59 @@ import {
   registrationSteps,
   requiredDocuments,
 } from "@/data/inscripcion";
+import { managedLinks } from "@/data/links";
 
 export default function InscripcionPage() {
   return (
     <PageShell
-      eyebrow="Inscripcion"
-      title="Inscripcion y Matriculacion"
-      description="Esta pagina debe ayudarte a completar el proceso en orden, sin confusion y sin perder ningun paso importante."
+      eyebrow="Inscripción"
+      title="Inscripción y Matriculación"
+      description="Esta página debe ayudarte a completar el proceso en orden, sin confusión y sin perder ningún paso importante."
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow text-brand-100">Empieza aqui</p>
+          <p className="eyebrow text-brand-100">Empieza aquí</p>
           <h2 className="mt-3 font-display text-3xl text-white">Haz una sola cosa a la vez</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
-            Primero consigue tu solicitud firmada. Despues realiza tu registro en linea. Luego prepara tu expediente fisico.
+            Primero consigue tu solicitud firmada. Después realiza tu registro en línea. Luego prepara tu expediente físico.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href="https://example.com/registro" external variant="panel">
-              Registro en Linea
+            <ButtonLink
+              href={managedLinks.registrationForm.href}
+              external={managedLinks.registrationForm.external}
+              variant="panel"
+              disabled={managedLinks.registrationForm.status !== "available"}
+            >
+              Registro en Línea
             </ButtonLink>
             <ButtonLink
-              href="https://example.com/solicitud-inscripcion.pdf"
-              external
+              href={managedLinks.inscriptionRequestPdf.href}
+              external={managedLinks.inscriptionRequestPdf.external}
               variant="panelSecondary"
+              disabled={managedLinks.inscriptionRequestPdf.status !== "available"}
             >
               Ver Solicitud
             </ButtonLink>
           </div>
+          <p className="mt-4 text-xs leading-6 text-brand-100">
+            {managedLinks.registrationForm.note}
+          </p>
         </div>
 
         <div className="card p-6 sm:p-8">
-          <p className="eyebrow">Accesos rapidos</p>
+          <p className="eyebrow">Accesos rápidos</p>
           <div className="mt-4 grid gap-3">
             {registrationCtas.map((cta, index) => (
               <div className={`rounded-2xl p-4 ${index % 2 === 0 ? "tint-brand" : "tint-gold"}`} key={cta.label}>
-                <ButtonLink href={cta.href} external={cta.external} variant="secondary">
+                <ButtonLink
+                  href={cta.href}
+                  external={cta.external}
+                  variant="secondary"
+                  disabled={cta.status !== "available"}
+                >
                   {cta.label}
                 </ButtonLink>
+                {cta.note ? <p className="mt-3 text-xs leading-6 text-slate-600">{cta.note}</p> : null}
               </div>
             ))}
           </div>
@@ -57,7 +73,7 @@ export default function InscripcionPage() {
         <SectionHeading
           eyebrow="Pasos"
           title="Completa estos pasos en orden"
-          description="La pagina debe sentirse como una ruta simple de seguimiento y no como una lista larga de instrucciones."
+          description="La página debe sentirse como una ruta simple de seguimiento y no como una lista larga de instrucciones."
         />
         <Stepper steps={registrationSteps} />
       </section>
@@ -66,7 +82,7 @@ export default function InscripcionPage() {
         <SectionHeading
           eyebrow="Notas Importantes"
           title="Lo que no debes olvidar"
-          description="Estas dos indicaciones ayudan a evitar retrasos o errores durante la matriculacion."
+          description="Estas dos indicaciones ayudan a evitar retrasos o errores durante la matriculación."
         />
         <div className="grid gap-4 md:grid-cols-2">
           {registrationNotes.map((note, index) => (
@@ -83,8 +99,8 @@ export default function InscripcionPage() {
 
       <section className="mt-12">
         <CtaPanel
-          title="Si ya terminaste el registro, continua con tus documentos"
-          description="No necesitas memorizar todo el proceso. Solo avanza en este orden: solicitud firmada, registro en linea, documentos y seguimiento del calendario."
+          title="Si ya terminaste el registro, continúa con tus documentos"
+          description="No necesitas memorizar todo el proceso. Solo avanza en este orden: solicitud firmada, registro en línea, documentos y seguimiento del calendario."
           actions={[
             { label: "Ver Documentos", href: "/inscripcion#documentos" },
             { label: "Ver Calendario", href: "/calendario" },
