@@ -11,7 +11,7 @@ type FAQItem = {
 };
 
 export function FAQAccordion({ items }: { items: FAQItem[] }) {
-  const [openItem, setOpenItem] = useState<number>(0);
+  const [openItem, setOpenItem] = useState<number>(-1);
 
   return (
     <div className="space-y-3">
