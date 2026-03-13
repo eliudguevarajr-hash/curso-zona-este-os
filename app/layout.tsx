@@ -9,6 +9,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: `${siteMeta.title} | ${siteMeta.subtitle}`,
   description: siteMeta.description,
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

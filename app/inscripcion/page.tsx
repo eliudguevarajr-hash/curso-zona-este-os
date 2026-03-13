@@ -19,7 +19,7 @@ export default function InscripcionPage() {
         <p className="eyebrow-inverse">Paso actual</p>
         <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Haz solo el paso que está abierto</h2>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90">
-          Por ahora solo debes completar el Registro de Aspirante y preparar tu documentación.
+          Por ahora solo debes completar el registro correspondiente a Aspirante, Obrero Laico o Ayuda y preparar tu documentación.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <ButtonLink className="w-full sm:w-auto" href={processSequence[1].href} external={processSequence[1].external} variant="panel">

@@ -1,7 +1,7 @@
 export const processStatus = {
-  currentPhase: "Registro de Aspirante",
+  currentPhase: "Registro para Aspirante, Obrero Laico y Ayuda",
   nextPhase: "Diagnósticos",
-  currentMessage: "Por ahora solo está habilitado el Registro de Aspirante.",
+  currentMessage: "Por ahora solo está habilitado el registro para Aspirante, Obrero Laico y Ayuda.",
   nextMessage: "Los diagnósticos se abrirán en la siguiente etapa del proceso.",
 };
 
@@ -16,8 +16,8 @@ export const processSequence = [
   },
   {
     step: "Paso 2",
-    title: "Registro de Aspirante",
-    description: "Completa el formulario oficial para iniciar el proceso.",
+    title: "Registro inicial",
+    description: "Completa el formulario oficial correspondiente para iniciar el proceso.",
     href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
     external: true,
     status: "available" as const,
