@@ -24,7 +24,7 @@ export const faqItems = [
   },
   {
     question: "¿Debo hacer examen diagnóstico?",
-    answer: "Sí. Todos los aspirantes deben completar los diagnósticos oficiales correspondientes.",
+    answer: "Sí. Todos los participantes deberán completar los diagnósticos oficiales cuando esta etapa sea publicada.",
   },
   {
     question: "¿Habrá reunión informativa?",

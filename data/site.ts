@@ -35,16 +35,6 @@ export const navigation: NavItem[] = [
   { label: "Ayuda", href: "/ayuda" },
 ];
 
-export const colorPalette = [
-  { name: "Marfil", hex: "#f8f6f1" },
-  { name: "Papel", hex: "#fffdf9" },
-  { name: "Niebla", hex: "#eef3f7" },
-  { name: "Arena Suave", hex: "#e7dfd2" },
-  { name: "Azul Base", hex: "#3f6f94" },
-  { name: "Azul Institucional", hex: "#284860" },
-  { name: "Azul Profundo", hex: "#11202a" },
-];
-
 export const announcements: Announcement[] = [
   {
     title: "Convocatoria abierta del 05 al 28 de Marzo de 2026",

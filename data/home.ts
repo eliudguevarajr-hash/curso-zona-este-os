@@ -15,26 +15,3 @@ export const roleCards = [
     href: "/ayuda",
   },
 ];
-
-export const nextStepList = [
-  {
-    title: "Registro inicial",
-    description: "Completa primero el formulario oficial correspondiente.",
-    href: "/inscripcion",
-  },
-  {
-    title: "Diagnósticos",
-    description: "Abre el diagnóstico vocacional y el ministerial.",
-    href: "/inscripcion#formularios",
-  },
-  {
-    title: "Solicitud y documentos",
-    description: "Revisa la solicitud y prepara tu expediente.",
-    href: "/inscripcion#documentos",
-  },
-  {
-    title: "Fechas del curso",
-    description: "Confirma convocatoria, inicio y materias.",
-    href: "/calendario",
-  },
-];
