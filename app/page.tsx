@@ -18,7 +18,7 @@ export default function HomePage() {
     <div className="pb-8">
       <section className="container-shell pt-8 sm:pt-12">
         <div className="soft-panel overflow-hidden">
-          <div className="surface-grid grid gap-8 px-6 py-10 sm:px-10 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="surface-grid grid gap-8 px-6 py-10 sm:px-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
             <div>
               <p className="eyebrow">Centro oficial de información</p>
               <h1 className="mt-4 font-display text-[2.35rem] leading-tight text-brand-900 sm:text-5xl lg:text-6xl">
@@ -34,11 +34,9 @@ export default function HomePage() {
                   Necesito Ayuda
                 </ButtonLink>
               </div>
-              <div className="mt-8">
-                <ProcessStatusBanner />
-              </div>
             </div>
             <div className="grid gap-4">
+              <ProcessStatusBanner />
               <div className="brand-panel p-5">
                 <p className="eyebrow-inverse">Quiénes pueden participar</p>
                 <div className="mt-4 grid gap-3">
