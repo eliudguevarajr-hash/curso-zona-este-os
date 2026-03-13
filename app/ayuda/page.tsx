@@ -14,7 +14,7 @@ export default function AyudaPage() {
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="brand-panel p-6 sm:p-8">
           <p className="eyebrow-inverse">Equipo de apoyo Zona Este</p>
-          <h2 className="mt-3 font-display text-3xl text-white">Contactos principales</h2>
+          <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Contactos principales</h2>
           <p className="mt-4 text-sm leading-7 text-white/90">
             Si perteneces a Zona Este, estos son los contactos correctos para resolver tus dudas del proceso.
           </p>

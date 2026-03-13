@@ -17,15 +17,15 @@ export default function InscripcionPage() {
 
       <section className="mt-10 brand-panel p-6 sm:p-8">
         <p className="eyebrow-inverse">Paso actual</p>
-        <h2 className="mt-3 font-display text-3xl text-white">Haz solo el paso que está abierto</h2>
+        <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Haz solo el paso que está abierto</h2>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90">
           Por ahora solo debes completar el Registro de Aspirante y preparar tu documentación.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <ButtonLink href={processSequence[1].href} external={processSequence[1].external} variant="panel">
+          <ButtonLink className="w-full sm:w-auto" href={processSequence[1].href} external={processSequence[1].external} variant="panel">
             Abrir Registro
           </ButtonLink>
-          <ButtonLink href="#pasos" variant="panelSecondary">
+          <ButtonLink className="w-full sm:w-auto" href="#pasos" variant="panelSecondary">
             Ver Camino
           </ButtonLink>
         </div>
@@ -40,7 +40,7 @@ export default function InscripcionPage() {
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {processSequence.map((item, index) => (
             <div
-              className={`grid gap-3 px-5 py-4 md:grid-cols-[110px_1fr_auto] md:items-center ${
+              className={`grid gap-3 px-5 py-4 md:grid-cols-[100px_1fr_auto] md:items-center ${
                 index % 2 === 0 ? "tint-brand" : "tint-mist"
               }`}
               key={item.title}
@@ -60,6 +60,7 @@ export default function InscripcionPage() {
                 <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
               </div>
               <ButtonLink
+                className="w-full md:w-auto"
                 href={item.href}
                 external={item.external}
                 variant="secondary"

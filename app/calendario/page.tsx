@@ -18,12 +18,12 @@ export default function CalendarioPage() {
         />
         <div className="space-y-4">
           {courseSchedule.map((block, index) => (
-            <div className="flex gap-4" key={block.slug}>
+            <div className="flex gap-3 sm:gap-4" key={block.slug}>
               <div className="flex flex-col items-center">
                 <div className={`h-4 w-4 rounded-full ${block.type === "Receso" ? "bg-brand-300" : "bg-brand-700"}`} />
                 {index !== courseSchedule.length - 1 ? <div className="mt-2 h-full w-px bg-brand-200" /> : null}
               </div>
-              <div className="card flex-1 p-5">
+              <div className="card flex-1 p-4 sm:p-5">
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">

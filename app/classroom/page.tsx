@@ -18,15 +18,15 @@ export default function ClassroomPage() {
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
           <p className="eyebrow-inverse">Uso principal</p>
-          <h2 className="mt-3 font-display text-3xl text-white">Aquí entras a tus clases</h2>
+          <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Aquí entras a tus clases</h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-white/90">
             Classroom se usa para tareas, actividades, materiales y avisos.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <ButtonLink href={classroomAccess.href} external={classroomAccess.external} variant="panel">
+            <ButtonLink className="w-full sm:w-auto" href={classroomAccess.href} external={classroomAccess.external} variant="panel">
               Entrar a Classroom
             </ButtonLink>
-            <ButtonLink href="/ayuda" variant="panelSecondary">
+            <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="panelSecondary">
               Tengo un Problema
             </ButtonLink>
           </div>

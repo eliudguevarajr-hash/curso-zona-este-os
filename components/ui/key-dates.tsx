@@ -10,7 +10,7 @@ export function KeyDates({ items }: { items: DateItem[] }) {
       {items.map((item) => (
         <div
           key={`${item.label}-${item.date}`}
-          className="grid gap-3 px-5 py-4 sm:grid-cols-[130px_1fr_auto] sm:items-center"
+          className="grid gap-2 px-5 py-4 sm:grid-cols-[120px_1fr_auto] sm:items-center sm:gap-3"
         >
           <span className="rounded-full bg-brand-50 px-3 py-1 text-center text-xs font-semibold text-brand-700">
             {item.kind}

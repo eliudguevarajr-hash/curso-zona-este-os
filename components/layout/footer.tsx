@@ -7,15 +7,15 @@ import { SiteLogo } from "../ui/site-logo";
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-line bg-brand-wash text-white">
-      <div className="container-shell grid gap-8 py-8 xl:grid-cols-[minmax(0,1.15fr)_0.7fr_minmax(0,1fr)]">
-        <div className="min-w-0">
+      <div className="container-shell grid gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] xl:grid-cols-[minmax(0,0.92fr)_0.58fr_minmax(0,0.9fr)]">
+        <div className="min-w-0 lg:pr-2">
           <SiteLogo variant="footer" />
           <p className="mt-3 max-w-lg text-sm leading-6 text-white/90">
             Portal oficial de información para la Convocatoria y Curso de Capacitación Ministerial 2026.
           </p>
         </div>
 
-        <div className="min-w-0">
+        <div className="min-w-0 lg:col-span-2 xl:col-span-1">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">Secciones</h3>
           <div className="mt-3 grid gap-1.5">
             {footerLinks.map((item) => (

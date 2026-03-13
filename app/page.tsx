@@ -21,16 +21,16 @@ export default function HomePage() {
           <div className="surface-grid grid gap-8 px-6 py-10 sm:px-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
             <div>
               <p className="eyebrow">Centro oficial de información</p>
-              <h1 className="mt-4 font-display text-4xl leading-tight text-brand-900 sm:text-6xl">
+              <h1 className="mt-4 font-display text-[2.35rem] leading-tight text-brand-900 sm:text-5xl lg:text-6xl">
                 {siteMeta.title}
               </h1>
-              <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
+              <p className="mt-4 text-lg text-brand-700 sm:text-xl">{siteMeta.subtitle}</p>
               <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-700 sm:text-base">
                 Este portal te muestra qué hacer ahora, qué acceso está habilitado y a quién contactar si necesitas ayuda.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
-                <ButtonLink href="/ayuda" variant="secondary">
+                <ButtonLink className="w-full sm:w-auto" href="/inscripcion">Comenzar Proceso</ButtonLink>
+                <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="secondary">
                   Necesito Ayuda
                 </ButtonLink>
               </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
                 key={item.title}
               >
                 <div>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-wrap items-start gap-3">
                     <h3 className="text-base font-semibold text-brand-900">{item.title}</h3>
                     <span
                       className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
@@ -119,7 +119,7 @@ export default function HomePage() {
                   </div>
                   <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
                 </div>
-                <ButtonLink href={item.href} external={item.external} variant="secondary" disabled={item.status !== "available"}>
+                <ButtonLink className="w-full md:w-auto" href={item.href} external={item.external} variant="secondary" disabled={item.status !== "available"}>
                   {item.status === "available" ? "Abrir" : "Pendiente"}
                 </ButtonLink>
               </div>
