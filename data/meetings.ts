@@ -14,7 +14,7 @@ type Meeting = {
 export const meetings: Meeting[] = [
   {
     title: "Reunión Informativa General",
-    date: "20 marzo 2026",
+    date: "20 Marzo 2026",
     time: "7:00 PM",
     href: managedLinks.orientationZoom.href,
     external: managedLinks.orientationZoom.external,
@@ -24,7 +24,7 @@ export const meetings: Meeting[] = [
   },
   {
     title: "Sesión de Orientación para Inscritos",
-    date: "30 abril 2026",
+    date: "30 Abril 2026",
     time: "7:30 PM",
     href: managedLinks.orientationZoom.href,
     external: managedLinks.orientationZoom.external,

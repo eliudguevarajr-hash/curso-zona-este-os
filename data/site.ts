@@ -47,8 +47,8 @@ export const colorPalette = [
 
 export const announcements: Announcement[] = [
   {
-    title: "Convocatoria abierta del 05 al 28 de marzo de 2026",
-    detail: "No hay prórroga. El curso inicia el 03 de mayo de 2026.",
+    title: "Convocatoria abierta del 05 al 28 de Marzo de 2026",
+    detail: "No hay prórroga. El curso inicia el 03 de Mayo de 2026.",
     tone: "warning",
   },
   {

@@ -6,7 +6,7 @@ export const faqItems = [
   },
   {
     question: "¿Cuál es la fecha de la convocatoria?",
-    answer: "La convocatoria está abierta del 05 al 28 de marzo de 2026.",
+    answer: "La convocatoria está abierta del 05 al 28 de Marzo de 2026.",
   },
   {
     question: "¿Habrá prórroga?",
@@ -38,7 +38,7 @@ export const faqItems = [
   },
   {
     question: "¿Cuándo inician las clases?",
-    answer: "El inicio de clases está previsto para el 03 de mayo de 2026.",
+    answer: "El inicio de clases está previsto para el 03 de Mayo de 2026.",
   },
   {
     question: "¿Dónde se entregan tareas?",
