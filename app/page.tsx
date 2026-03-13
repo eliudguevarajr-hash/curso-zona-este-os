@@ -1,6 +1,7 @@
 import { AnnouncementBanner } from "@/components/ui/announcement-banner";
 import { ButtonLink } from "@/components/ui/button-link";
 import { KeyDates } from "@/components/ui/key-dates";
+import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
 import { roleCards } from "@/data/home";
@@ -13,8 +14,6 @@ const audienceItems = [
 ];
 
 export default function HomePage() {
-  const primaryLinks = quickLinks.slice(0, 5);
-
   return (
     <div className="pb-8">
       <section className="container-shell pt-8 sm:pt-12">
@@ -27,12 +26,12 @@ export default function HomePage() {
               </h1>
               <p className="mt-4 text-xl text-brand-700">{siteMeta.subtitle}</p>
               <p className="mt-6 max-w-2xl text-sm leading-8 text-slate-700 sm:text-base">
-                Este portal te muestra qué hacer ahora, qué acceso ya está habilitado y a quién contactar si necesitas ayuda.
+                Este portal te muestra qué hacer ahora, qué acceso está habilitado y a quién contactar si necesitas ayuda.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink href="/inscripcion">Comenzar Proceso</ButtonLink>
-                <ButtonLink href="/calendario" variant="secondary">
-                  Ver Fechas
+                <ButtonLink href="/ayuda" variant="secondary">
+                  Necesito Ayuda
                 </ButtonLink>
               </div>
             </div>
@@ -53,6 +52,10 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className="container-shell mt-10">
+        <ProcessStatusBanner />
       </section>
 
       <section className="container-shell mt-10 space-y-5">
@@ -96,7 +99,7 @@ export default function HomePage() {
             description="Aquí encuentras lo principal sin buscar en más páginas."
           />
           <div className="card divide-y divide-slate-200/80 overflow-hidden">
-            {primaryLinks.map((item, index) => (
+            {quickLinks.map((item, index) => (
               <div
                 className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
                   index % 2 === 0 ? "tint-brand" : "tint-mist"

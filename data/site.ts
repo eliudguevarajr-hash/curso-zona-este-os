@@ -43,8 +43,6 @@ export const colorPalette = [
   { name: "Azul Base", hex: "#3f6f94" },
   { name: "Azul Institucional", hex: "#284860" },
   { name: "Azul Profundo", hex: "#11202a" },
-  { name: "Dorado Suave", hex: "#c59a57" },
-  { name: "Salvia", hex: "#5d7555" },
 ];
 
 export const announcements: Announcement[] = [
@@ -67,16 +65,6 @@ export const quickLinks: QuickLink[] = [
     ...managedLinks.registrationForm,
   },
   {
-    title: "Diagnóstico Vocacional",
-    description: "Formulario oficial de seguimiento vocacional.",
-    ...managedLinks.vocationalDiagnosticForm,
-  },
-  {
-    title: "Diagnóstico Ministerial",
-    description: "Formulario oficial de evaluación ministerial.",
-    ...managedLinks.ministerialDiagnosticForm,
-  },
-  {
     title: "Solicitud de Inscripción",
     description: "Formato oficial para firma del Encargado de Localidad.",
     ...managedLinks.inscriptionRequestPdf,
@@ -87,14 +75,14 @@ export const quickLinks: QuickLink[] = [
     ...managedLinks.convocatoriaPdf,
   },
   {
-    title: "Carpeta de Recursos",
-    description: "Carpeta general de materiales y documentos.",
-    ...managedLinks.generalDrive,
-  },
-  {
     title: "Google Classroom",
     description: "Acceso general a clases, tareas y avisos.",
     ...managedLinks.classroomAccess,
+  },
+  {
+    title: "Carpeta de Recursos",
+    description: "Carpeta general de materiales y documentos.",
+    ...managedLinks.generalDrive,
   },
 ];
 

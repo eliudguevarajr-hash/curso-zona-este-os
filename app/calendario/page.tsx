@@ -3,28 +3,6 @@ import { SectionHeading } from "@/components/ui/section-heading";
 import { courseSchedule, keyDates } from "@/data/courses";
 import { meetings } from "@/data/meetings";
 
-const groupedBlocks = [
-  {
-    month: "Marzo",
-    items: keyDates.filter((item) => item.date.includes("marzo")),
-  },
-  {
-    month: "Mayo",
-    items: keyDates.filter((item) => item.date.includes("mayo")),
-  },
-  {
-    month: "Junio y Julio",
-    items: keyDates.filter((item) => item.date.includes("junio") || item.date.includes("julio")),
-  },
-  {
-    month: "Agosto a Octubre",
-    items: keyDates.filter(
-      (item) =>
-        item.date.includes("agosto") || item.date.includes("septiembre") || item.date.includes("octubre")
-    ),
-  },
-];
-
 export default function CalendarioPage() {
   return (
     <PageShell
@@ -63,25 +41,26 @@ export default function CalendarioPage() {
         </div>
       </section>
 
-      <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
+      <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
         <div className="space-y-5">
           <SectionHeading
-            eyebrow="Resumen mensual"
-            title="Lectura rápida por periodo"
-            description="Después de revisar la línea principal, aquí puedes ubicar cada etapa por mes."
+            eyebrow="Fechas rápidas"
+            title="Lo más importante"
+            description="Estas son las fechas que más se consultan."
           />
-          <div className="grid gap-4 sm:grid-cols-2">
-            {groupedBlocks.map((group) => (
-              <div className="card p-5" key={group.month}>
-                <h3 className="text-lg font-semibold text-brand-900">{group.month}</h3>
-                <div className="mt-4 space-y-3">
-                  {group.items.map((item) => (
-                    <div className="border-b border-line pb-3 last:border-none" key={item.label}>
-                      <p className="text-sm font-semibold text-brand-900">{item.label}</p>
-                      <p className="mt-1 text-xs text-slate-700">{item.date}</p>
-                    </div>
-                  ))}
+          <div className="card divide-y divide-slate-200/80 overflow-hidden">
+            {keyDates.slice(0, 4).map((item, index) => (
+              <div
+                className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
+                  index % 2 === 0 ? "tint-brand" : "tint-mist"
+                }`}
+                key={item.label}
+              >
+                <div>
+                  <p className="text-sm font-semibold text-brand-900">{item.label}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
                 </div>
+                <p className="text-sm text-slate-700">{item.date}</p>
               </div>
             ))}
           </div>
@@ -89,9 +68,9 @@ export default function CalendarioPage() {
 
         <div className="space-y-5">
           <SectionHeading
-            eyebrow="Reuniones"
-            title="Estado de Zoom"
-            description="Los enlaces de Zoom todavía no están publicados. Aquí puedes ver las reuniones previstas."
+            eyebrow="Zoom"
+            title="Estado de reuniones"
+            description="Los enlaces todavía no están publicados."
           />
           <div className="card divide-y divide-slate-200/80 overflow-hidden">
             {meetings.map((meeting, index) => (
