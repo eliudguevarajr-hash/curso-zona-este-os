@@ -19,7 +19,7 @@ export function Header() {
       <div className="container-shell grid min-h-[76px] grid-cols-[auto_1fr_auto] items-center gap-4 py-2">
         <SiteLogo />
 
-        <nav className="hidden items-center justify-self-center lg:flex">
+        <nav className="hidden items-center justify-self-end lg:flex">
           <div className="flex items-center gap-1 rounded-full border border-slate-200/90 bg-white/80 px-2 py-1 shadow-sm">
             {navigation.map((item) => (
               <Link
@@ -36,7 +36,7 @@ export function Header() {
           </div>
         </nav>
 
-        <div className="hidden lg:block">
+        <div className="hidden justify-self-start lg:block">
           <ButtonLink className="px-5" href="/inscripcion">
             Comenzar Proceso
           </ButtonLink>
