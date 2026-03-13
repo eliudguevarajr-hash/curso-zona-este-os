@@ -15,7 +15,7 @@ export const contacts: Contact[] = [
 export const supportAreas = [
   {
     title: "Inscripción",
-    description: "Registro de Aspirante, diagnósticos, solicitud firmada y pasos iniciales.",
+    description: "Registro inicial, diagnósticos, solicitud firmada y pasos iniciales.",
   },
   {
     title: "Documentos",

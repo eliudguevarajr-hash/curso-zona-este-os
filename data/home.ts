@@ -18,8 +18,8 @@ export const roleCards = [
 
 export const nextStepList = [
   {
-    title: "Registro de Aspirante",
-    description: "Completa primero el formulario oficial.",
+    title: "Registro inicial",
+    description: "Completa primero el formulario oficial correspondiente.",
     href: "/inscripcion",
   },
   {

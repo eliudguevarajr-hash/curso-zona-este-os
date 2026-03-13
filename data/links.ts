@@ -21,7 +21,7 @@ export const managedLinks: {
     href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
     external: true,
     status: "available",
-    note: "Formulario oficial para Registro de Aspirante.",
+    note: "Formulario oficial de registro inicial para Aspirante, Obrero Laico y Ayuda.",
   },
   vocationalDiagnosticForm: {
     href: "/inscripcion",
@@ -69,23 +69,23 @@ export const managedLinks: {
 
 export const publishingChecklist = [
   {
-    title: "Registro de Aspirante",
-    audience: "Aspirantes",
+    title: "Registro inicial",
+    audience: "Aspirante, Obrero Laico y Ayuda",
     ...managedLinks.registrationForm,
   },
   {
     title: "Diagnóstico Vocacional",
-    audience: "Aspirantes",
+    audience: "Aspirante, Obrero Laico y Ayuda",
     ...managedLinks.vocationalDiagnosticForm,
   },
   {
     title: "Diagnóstico Ministerial",
-    audience: "Aspirantes",
+    audience: "Aspirante, Obrero Laico y Ayuda",
     ...managedLinks.ministerialDiagnosticForm,
   },
   {
     title: "Solicitud de Inscripción",
-    audience: "Aspirantes",
+    audience: "Aspirante, Obrero Laico y Ayuda",
     ...managedLinks.inscriptionRequestPdf,
   },
   {

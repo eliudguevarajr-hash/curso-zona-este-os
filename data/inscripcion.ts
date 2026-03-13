@@ -26,7 +26,7 @@ export const registrationSteps = [
   {
     title: "Haz tu registro en línea",
     description:
-      "Completa el Registro de Aspirante con tus datos básicos.",
+      "Completa el registro inicial correspondiente a Aspirante, Obrero Laico o Ayuda.",
   },
   {
     title: "Espera la siguiente etapa",
@@ -51,7 +51,7 @@ export const requiredDocuments = [
 
 export const registrationCtas: RegistrationCta[] = [
   {
-    label: "Registro de Aspirante",
+    label: "Registro inicial",
     ...managedLinks.registrationForm,
   },
   {
@@ -80,8 +80,8 @@ export const registrationCtas: RegistrationCta[] = [
 
 export const processForms: ProcessForm[] = [
   {
-    title: "Registro de Aspirante",
-    description: "Completa tu información básica en el formulario oficial.",
+    title: "Registro inicial",
+    description: "Completa tu información básica en el formulario oficial correspondiente.",
     href: managedLinks.registrationForm.href,
     external: managedLinks.registrationForm.external,
     status: managedLinks.registrationForm.status,
@@ -113,5 +113,5 @@ export const processForms: ProcessForm[] = [
 
 export const registrationNotes = [
   "Si tienes preguntas sobre el registro en línea, comunícate con el equipo de Ayuda de Zona Este.",
-  "Por ahora solo está habilitado el Registro de Aspirante. Los diagnósticos siguen pendientes.",
+  "Por ahora solo está habilitado el registro inicial para Aspirante, Obrero Laico y Ayuda. Los diagnósticos siguen pendientes.",
 ];

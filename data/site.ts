@@ -60,8 +60,8 @@ export const announcements: Announcement[] = [
 
 export const quickLinks: QuickLink[] = [
   {
-    title: "Registro de Aspirante",
-    description: "Formulario oficial para comenzar el proceso.",
+    title: "Registro inicial",
+    description: "Formulario oficial para comenzar el proceso de Aspirante, Obrero Laico o Ayuda.",
     ...managedLinks.registrationForm,
   },
   {

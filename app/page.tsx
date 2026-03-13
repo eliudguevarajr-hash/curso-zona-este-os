@@ -8,7 +8,7 @@ import { roleCards } from "@/data/home";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
 const audienceItems = [
-  "Varones bautizados",
+  "Varones bautizados en proceso de Aspirante",
   "Hermanos con reconocimiento de Obrero Laico",
   "Hermanos con jerarquía de Ayuda",
 ];
