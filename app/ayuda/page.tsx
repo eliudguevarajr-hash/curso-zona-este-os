@@ -5,9 +5,6 @@ import { contacts, supportAreas } from "@/data/contacts";
 import { faqItems } from "@/data/faq";
 
 export default function AyudaPage() {
-  const primaryContact = contacts[0];
-  const secondaryContacts = contacts.slice(1);
-
   return (
     <PageShell
       eyebrow="Ayuda"
@@ -16,18 +13,14 @@ export default function AyudaPage() {
     >
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow text-brand-100">Contacto principal</p>
-          <h2 className="mt-3 font-display text-3xl text-white">{primaryContact.name}</h2>
-          <p className="mt-2 text-base text-brand-100">{primaryContact.role}</p>
-          <a
-            className="mt-5 inline-flex rounded-2xl bg-white px-5 py-3 text-sm font-semibold text-brand-900 shadow-sm"
-            href={`tel:${primaryContact.phone}`}
-          >
-            Llamar ahora: {primaryContact.phone}
-          </a>
+          <p className="eyebrow text-brand-100">Equipo de apoyo Zona Este</p>
+          <h2 className="mt-3 font-display text-3xl text-white">Contactos principales</h2>
+          <p className="mt-4 text-sm leading-7 text-brand-50">
+            Si perteneces a Zona Este, estos son los contactos correctos para resolver tus dudas del proceso.
+          </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
-            {secondaryContacts.map((contact) => (
+            {contacts.map((contact) => (
               <div className="rounded-2xl border border-white/15 bg-white/15 p-5" key={contact.phone}>
                 <p className="text-lg font-semibold text-white">{contact.name}</p>
                 <p className="mt-1 text-sm text-brand-100">{contact.role}</p>
