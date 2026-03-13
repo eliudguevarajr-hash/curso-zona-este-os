@@ -15,14 +15,18 @@ export function SiteLogo({ href = "/", variant = "header" }: SiteLogoProps) {
     <div className={`flex items-center ${header ? "gap-2.5" : "gap-3"}`}>
       <Image
         alt="Logo Departamento Educativo Zona Este"
-        className={header ? "h-11 w-11 object-contain" : "h-14 w-14 object-contain"}
+        className={header ? "h-11 w-11 object-contain" : "h-12 w-12 object-contain"}
         height={56}
         priority={header}
         src="/logo.png"
         width={56}
       />
-      <div className={header ? "min-w-0" : "min-w-0"}>
-        <p className={`font-display leading-tight whitespace-nowrap ${header ? "text-[1.02rem] text-brand-900" : "text-[1.75rem] text-white"}`}>
+      <div className="min-w-0">
+        <p
+          className={`font-display leading-tight whitespace-nowrap ${
+            header ? "text-[1.02rem] text-brand-900" : "text-[1.45rem] text-white"
+          }`}
+        >
           {siteMeta.title}
         </p>
         <p className={`text-xs uppercase tracking-[0.18em] ${header ? "text-brand-500" : "text-brand-100"}`}>

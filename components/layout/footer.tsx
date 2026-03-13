@@ -7,15 +7,15 @@ import { SiteLogo } from "../ui/site-logo";
 export function Footer() {
   return (
     <footer className="mt-20 border-t border-line bg-brand-wash text-white">
-      <div className="container-shell grid gap-8 py-9 lg:grid-cols-[1.2fr_0.75fr_1.15fr]">
-        <div>
+      <div className="container-shell grid gap-8 py-8 xl:grid-cols-[minmax(0,1.15fr)_0.7fr_minmax(0,1fr)]">
+        <div className="min-w-0">
           <SiteLogo variant="footer" />
-          <p className="mt-3 max-w-xl text-sm leading-6 text-brand-50">
+          <p className="mt-3 max-w-lg text-sm leading-6 text-brand-50">
             Portal oficial de información para la Convocatoria y Curso de Capacitación Ministerial 2026.
           </p>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-100">Secciones</h3>
           <div className="mt-3 grid gap-1.5">
             {footerLinks.map((item) => (
@@ -30,9 +30,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-brand-100">Contactos Zona Este</h3>
-          <div className="mt-3 grid gap-3">
+          <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
             {contacts.map((contact) => (
               <div key={contact.phone} className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3">
                 <p className="text-sm font-semibold text-white">{contact.name}</p>
