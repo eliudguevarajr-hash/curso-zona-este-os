@@ -13,9 +13,9 @@ export default function AyudaPage() {
     >
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow text-brand-100">Equipo de apoyo Zona Este</p>
+          <p className="eyebrow-inverse">Equipo de apoyo Zona Este</p>
           <h2 className="mt-3 font-display text-3xl text-white">Contactos principales</h2>
-          <p className="mt-4 text-sm leading-7 text-brand-50">
+          <p className="mt-4 text-sm leading-7 text-white/90">
             Si perteneces a Zona Este, estos son los contactos correctos para resolver tus dudas del proceso.
           </p>
 
@@ -23,9 +23,9 @@ export default function AyudaPage() {
             {contacts.map((contact) => (
               <div className="rounded-2xl border border-white/15 bg-white/15 p-5" key={contact.phone}>
                 <p className="text-lg font-semibold text-white">{contact.name}</p>
-                <p className="mt-1 text-sm text-brand-100">{contact.role}</p>
+                <p className="mt-1 text-sm text-white/80">{contact.role}</p>
                 <a
-                  className="mt-3 inline-block text-base font-semibold text-brand-100 underline underline-offset-4"
+                  className="mt-3 inline-block text-base font-semibold text-white underline underline-offset-4"
                   href={`tel:${contact.phone}`}
                 >
                   {contact.phone}

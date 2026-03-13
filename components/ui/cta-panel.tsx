@@ -19,9 +19,9 @@ export function CtaPanel({
     <div className="card overflow-hidden">
       <div className="grid gap-6 bg-brand-wash px-6 py-8 text-white sm:px-8 lg:grid-cols-[1.5fr_1fr] lg:items-center">
         <div>
-          <p className="eyebrow text-brand-100">Siguiente paso</p>
+          <p className="eyebrow-inverse">Siguiente paso</p>
           <h3 className="mt-2 font-display text-3xl">{title}</h3>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-brand-50">{description}</p>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-white/90">{description}</p>
         </div>
         <div className="flex flex-wrap gap-3 lg:justify-end">
           {actions.map((action) => (

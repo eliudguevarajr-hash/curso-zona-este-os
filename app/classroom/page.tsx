@@ -17,9 +17,9 @@ export default function ClassroomPage() {
     >
       <section className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div className="brand-panel p-6 sm:p-8">
-          <p className="eyebrow text-brand-100">Uso principal</p>
+          <p className="eyebrow-inverse">Uso principal</p>
           <h2 className="mt-3 font-display text-3xl text-white">Aquí entras a tus clases</h2>
-          <p className="mt-4 max-w-2xl text-sm leading-7 text-brand-50">
+          <p className="mt-4 max-w-2xl text-sm leading-7 text-white/90">
             Classroom se usa para tareas, actividades, materiales y avisos.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">

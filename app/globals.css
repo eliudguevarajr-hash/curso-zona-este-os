@@ -108,6 +108,10 @@ a {
   @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-brand-600;
 }
 
+.eyebrow-inverse {
+  @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-white/80;
+}
+
 .surface-grid {
   background-image:
     linear-gradient(rgba(63, 111, 148, 0.06) 1px, transparent 1px),

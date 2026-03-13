@@ -40,7 +40,7 @@ export default function HomePage() {
                 <AnnouncementBanner item={item} key={item.title} />
               ))}
               <div className="brand-panel p-5">
-                <p className="eyebrow text-brand-100">Quiénes pueden participar</p>
+                <p className="eyebrow-inverse">Quiénes pueden participar</p>
                 <div className="mt-4 grid gap-3">
                   {audienceItems.map((item) => (
                     <div className="panel-step" key={item}>

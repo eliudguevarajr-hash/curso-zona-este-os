@@ -29,7 +29,7 @@ export function SiteLogo({ href = "/", variant = "header" }: SiteLogoProps) {
         >
           {siteMeta.title}
         </p>
-        <p className={`text-xs uppercase tracking-[0.18em] ${header ? "text-brand-500" : "text-brand-100"}`}>
+        <p className={`text-xs uppercase tracking-[0.18em] ${header ? "text-brand-500" : "text-white/80"}`}>
           Convocatoria 2026
         </p>
       </div>

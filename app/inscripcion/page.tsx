@@ -16,9 +16,9 @@ export default function InscripcionPage() {
       <ProcessStatusBanner />
 
       <section className="mt-10 brand-panel p-6 sm:p-8">
-        <p className="eyebrow text-brand-100">Paso actual</p>
+        <p className="eyebrow-inverse">Paso actual</p>
         <h2 className="mt-3 font-display text-3xl text-white">Haz solo el paso que está abierto</h2>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-brand-50">
+        <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90">
           Por ahora solo debes completar el Registro de Aspirante y preparar tu documentación.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
