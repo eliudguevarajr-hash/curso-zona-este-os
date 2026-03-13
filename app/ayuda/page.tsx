@@ -21,9 +21,9 @@ export default function AyudaPage() {
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {contacts.map((contact) => (
-              <div className="rounded-2xl border border-white/15 bg-white/15 p-5" key={contact.phone}>
+              <div className="rounded-2xl border border-white/20 bg-white/20 p-5" key={contact.phone}>
                 <p className="text-lg font-semibold text-white">{contact.name}</p>
-                <p className="mt-1 text-sm text-white/80">{contact.role}</p>
+                <p className="mt-1 text-sm text-white/85">{contact.role}</p>
                 <a
                   className="mt-3 inline-block text-base font-semibold text-white underline underline-offset-4"
                   href={`tel:${contact.phone}`}

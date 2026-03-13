@@ -26,7 +26,7 @@ export default function CalendarioPage() {
               <div className="card flex-1 p-5">
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">
+                    <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
                       {block.type === "Receso" ? "Receso" : "Materia"}
                     </p>
                     <h3 className="mt-1 text-lg font-semibold text-brand-900">{block.title}</h3>
@@ -58,7 +58,7 @@ export default function CalendarioPage() {
               >
                 <div>
                   <p className="text-sm font-semibold text-brand-900">{item.label}</p>
-                  <p className="mt-1 text-xs uppercase tracking-wide text-brand-600">{item.kind}</p>
+                  <p className="mt-1 text-xs uppercase tracking-wide text-brand-700">{item.kind}</p>
                 </div>
                 <p className="text-sm text-slate-700">{item.date}</p>
               </div>

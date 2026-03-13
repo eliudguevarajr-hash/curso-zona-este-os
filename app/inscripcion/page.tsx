@@ -46,7 +46,7 @@ export default function InscripcionPage() {
               key={item.title}
             >
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-600">{item.step}</p>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">{item.step}</p>
                 <span
                   className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
                     item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
