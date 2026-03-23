@@ -5,6 +5,7 @@ import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
 import { roleCards } from "@/data/home";
+import { managedLinks } from "@/data/links";
 import { processSequence } from "@/data/process";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
@@ -30,7 +31,11 @@ export default function HomePage() {
                 Este portal te muestra qué hacer ahora, qué acceso está habilitado y a quién contactar si necesitas ayuda.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink className="w-full sm:w-auto" href="/inscripcion">
+                <ButtonLink
+                  className="w-full sm:w-auto"
+                  href={managedLinks.registrationForm.href}
+                  external={managedLinks.registrationForm.external}
+                >
                   Comenzar Proceso
                 </ButtonLink>
                 <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="secondary">

@@ -22,7 +22,7 @@ export default function InscripcionPage() {
           Por ahora solo debes completar el registro correspondiente a Aspirante, Obrero Laico o Ayuda y preparar tu documentación.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <ButtonLink className="w-full sm:w-auto" href={processSequence[1].href} external={processSequence[1].external} variant="panel">
+          <ButtonLink className="w-full sm:w-auto" href={processSequence[0].href} external={processSequence[0].external} variant="panel">
             Abrir Registro
           </ButtonLink>
           <ButtonLink className="w-full sm:w-auto" href="#pasos" variant="panelSecondary">
