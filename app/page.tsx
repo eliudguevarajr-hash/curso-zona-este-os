@@ -5,6 +5,7 @@ import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
 import { roleCards } from "@/data/home";
+import { processSequence } from "@/data/process";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
 const audienceItems = [
@@ -29,7 +30,9 @@ export default function HomePage() {
                 Este portal te muestra qué hacer ahora, qué acceso está habilitado y a quién contactar si necesitas ayuda.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink className="w-full sm:w-auto" href="/inscripcion">Comenzar Proceso</ButtonLink>
+                <ButtonLink className="w-full sm:w-auto" href="/inscripcion">
+                  Comenzar Proceso
+                </ButtonLink>
                 <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="secondary">
                   Necesito Ayuda
                 </ButtonLink>
@@ -66,10 +69,7 @@ export default function HomePage() {
         />
         <div className="grid gap-4 md:grid-cols-2">
           {roleCards.map((card, index) => (
-            <div
-              className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`}
-              key={card.title}
-            >
+            <div className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`} key={card.title}>
               <h3 className="text-xl font-semibold text-brand-900">{card.title}</h3>
               <p className="mt-3 text-sm leading-7 text-slate-700">{card.description}</p>
               <div className="mt-5">
@@ -77,6 +77,48 @@ export default function HomePage() {
                   Continuar
                 </ButtonLink>
               </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-shell mt-10 space-y-5">
+        <SectionHeading
+          eyebrow="Pasos"
+          title="Sigue este camino"
+          description="Este es el proceso que debes seguir en este momento."
+        />
+        <div className="card divide-y divide-slate-200/80 overflow-hidden">
+          {processSequence.map((item, index) => (
+            <div
+              className={`grid gap-3 px-5 py-4 md:grid-cols-[100px_1fr_auto] md:items-center ${
+                index % 2 === 0 ? "tint-brand" : "tint-mist"
+              }`}
+              key={item.title}
+            >
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">{item.step}</p>
+                <span
+                  className={`mt-2 inline-flex rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
+                    item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
+                  }`}
+                >
+                  {item.status === "available" ? "Abierta actualmente" : "Pendiente"}
+                </span>
+              </div>
+              <div>
+                <h3 className="text-base font-semibold text-brand-900">{item.title}</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
+              </div>
+              <ButtonLink
+                className="w-full md:w-auto"
+                href={item.href}
+                external={item.external}
+                variant="secondary"
+                disabled={item.status !== "available"}
+              >
+                {item.buttonLabel}
+              </ButtonLink>
             </div>
           ))}
         </div>
@@ -114,12 +156,18 @@ export default function HomePage() {
                         item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                       }`}
                     >
-                      {item.status === "available" ? "Disponible" : "Pendiente"}
+                      {item.status === "available" ? "Abierta actualmente" : "Pendiente"}
                     </span>
                   </div>
                   <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
                 </div>
-                <ButtonLink className="w-full md:w-auto" href={item.href} external={item.external} variant="secondary" disabled={item.status !== "available"}>
+                <ButtonLink
+                  className="w-full md:w-auto"
+                  href={item.href}
+                  external={item.external}
+                  variant="secondary"
+                  disabled={item.status !== "available"}
+                >
                   {item.status === "available" ? "Abrir" : "Pendiente"}
                 </ButtonLink>
               </div>
