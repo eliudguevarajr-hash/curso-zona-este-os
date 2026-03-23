@@ -35,7 +35,7 @@ export default function HomePage() {
               <ProcessStatusBanner />
               <div className="brand-panel p-5">
                 <p className="eyebrow-inverse">Quiénes pueden participar</p>
-                <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <div className="mt-4 grid gap-3">
                   {audienceItems.map((item) => (
                     <div className="panel-step" key={item}>
                       <p className="panel-step-copy">{item}</p>

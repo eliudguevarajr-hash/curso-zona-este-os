@@ -3,9 +3,9 @@ export function DocumentsCard({ documents }: { documents: string[] }) {
     <div className="card p-6 sm:p-8">
       <div className="mb-6 border-b border-dashed border-line pb-4">
         <p className="eyebrow">Documentos</p>
-        <h3 className="mt-2 font-display text-3xl text-brand-900">Documentos para matrícula</h3>
+        <h3 className="mt-2 font-display text-3xl text-brand-900">Documentos para preparar</h3>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-700">
-          Este listado debe revisarse con cuidado antes de la entrega del expediente físico.
+          Este listado debe revisarse y prepararse con cuidado. Por ahora no indica etapa de entrega.
         </p>
       </div>
       <ol className="space-y-4 text-sm text-slate-700">

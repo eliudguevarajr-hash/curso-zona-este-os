@@ -30,8 +30,8 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Contactar", href: "/ayuda" },
   { label: "Calendario", href: "/calendario" },
+  { label: "Contactar", href: "/ayuda" },
 ];
 
 export const announcements: Announcement[] = [

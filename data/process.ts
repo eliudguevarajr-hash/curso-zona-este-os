@@ -25,10 +25,10 @@ export const processSequence = [
   },
   {
     step: "Paso 3",
-    title: "Documentos para matrícula",
-    description: "Prepara el expediente físico para la matrícula.",
+    title: "Preparar documentos",
+    description: "Reúne y revisa tu expediente físico. Todavía no es etapa de entrega.",
     href: "/inscripcion#documentos",
     status: "available" as const,
-    buttonLabel: "Ver documentos",
+    buttonLabel: "Preparar documentos",
   },
 ];

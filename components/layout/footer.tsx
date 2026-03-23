@@ -16,7 +16,7 @@ export function Footer() {
         </div>
 
         <div className="min-w-0 lg:col-span-2 xl:col-span-1">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">Secciones</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90">Secciones</h3>
           <div className="mt-3 grid gap-1.5">
             {footerLinks.map((item) => (
               <Link
@@ -31,12 +31,12 @@ export function Footer() {
         </div>
 
         <div className="min-w-0">
-          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/80">Contactos Zona Este</h3>
+          <h3 className="text-sm font-semibold uppercase tracking-[0.18em] text-white/90">Contactos Zona Este</h3>
           <div className="mt-3 grid gap-3 sm:grid-cols-2 xl:grid-cols-1">
             {contacts.map((contact) => (
               <div key={contact.phone} className="rounded-2xl border border-white/10 bg-white/10 px-4 py-3">
                 <p className="text-sm font-semibold text-white">{contact.name}</p>
-                <p className="mt-1 text-xs text-white/75">{contact.role}</p>
+                <p className="mt-1 text-xs text-white/85">{contact.role}</p>
                 <a
                   className="mt-2 inline-block text-sm text-white/90 underline decoration-transparent underline-offset-4 hover:text-white hover:decoration-brand-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-brand-900"
                   href={`tel:${contact.phone}`}
