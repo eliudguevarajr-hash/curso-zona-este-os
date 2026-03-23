@@ -2,7 +2,7 @@ export const faqItems = [
   {
     question: "¿Quiénes pueden inscribirse?",
     answer:
-      "Pueden inscribirse los varones bautizados, los hermanos con reconocimiento de Obrero Laico y los hermanos con jerarquía de Ayuda del ministerio de la Iglesia de Dios (Israelita), conforme a la convocatoria oficial.",
+      "Pueden inscribirse Varones Bautizados, Laicos y Ayudas, conforme a la convocatoria oficial de la Iglesia de Dios (Israelita).",
   },
   {
     question: "¿Cuál es la fecha de la convocatoria?",

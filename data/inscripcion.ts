@@ -8,8 +8,8 @@ export const requiredDocuments = [
 ];
 
 export const registrationNotes = [
-  "El formulario oficial se llama Registro de Aspirante y se usa en esta etapa para Aspirante, Obrero Laico y Ayuda.",
+  "El formulario oficial se llama Registro de Aspirante y se usa en esta etapa para Varones Bautizados, Laicos y Ayudas.",
   "Si tienes preguntas sobre el registro en línea, comunícate con el equipo de Ayuda de Zona Este.",
   "La Solicitud de Inscripción y los demás documentos se revisarán dentro del proceso, pero en este momento tu prioridad es completar el registro inicial.",
-  "Por ahora solo está habilitado el registro inicial para Aspirante, Obrero Laico y Ayuda. Los diagnósticos siguen pendientes.",
+  "Por ahora solo está habilitado el registro inicial para Varones Bautizados, Laicos y Ayudas. Los diagnósticos siguen pendientes.",
 ];

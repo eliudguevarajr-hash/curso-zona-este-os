@@ -8,7 +8,7 @@ export default function CalendarioPage() {
     <PageShell
       eyebrow="Calendario"
       title="Calendario y Materias"
-      description="Aquí están las fechas principales, la secuencia de materias y el estado de reuniones futuras."
+      description="Consulta esta página solo como referencia después de completar tu registro inicial."
     >
       <section className="space-y-6">
         <SectionHeading
@@ -42,32 +42,30 @@ export default function CalendarioPage() {
       </section>
 
       <section className="mt-10 space-y-5">
-        <div className="space-y-5">
-          <SectionHeading
-            eyebrow="Zoom"
-            title="Estado de reuniones"
-            description="Los enlaces todavía no están publicados."
-          />
-          <div className="card divide-y divide-slate-200/80 overflow-hidden">
-            {meetings.map((meeting, index) => (
-              <div
-                className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
-                  index % 2 === 0 ? "tint-brand" : "tint-mist"
-                }`}
-                key={meeting.title}
-              >
-                <div>
-                  <h3 className="text-base font-semibold text-brand-900">{meeting.title}</h3>
-                  <p className="mt-1 text-sm text-slate-700">
-                    {meeting.date} · {meeting.time}
-                  </p>
-                </div>
-                <span className="rounded-full bg-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-700">
-                  Pendiente
-                </span>
+        <SectionHeading
+          eyebrow="Zoom"
+          title="Estado de reuniones"
+          description="Los enlaces todavía no están publicados."
+        />
+        <div className="card divide-y divide-slate-200/80 overflow-hidden">
+          {meetings.map((meeting, index) => (
+            <div
+              className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
+                index % 2 === 0 ? "tint-brand" : "tint-mist"
+              }`}
+              key={meeting.title}
+            >
+              <div>
+                <h3 className="text-base font-semibold text-brand-900">{meeting.title}</h3>
+                <p className="mt-1 text-sm text-slate-700">
+                  {meeting.date} · {meeting.time}
+                </p>
               </div>
-            ))}
-          </div>
+              <span className="rounded-full bg-slate-200 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-slate-700">
+                Pendiente
+              </span>
+            </div>
+          ))}
         </div>
       </section>
     </PageShell>

@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
-import { managedLinks } from "@/data/links";
 import { navigation } from "@/data/site";
 import { cn } from "@/lib/utils";
 import { ButtonLink } from "../ui/button-link";
@@ -38,7 +37,7 @@ export function Header() {
             </div>
           </nav>
 
-          <ButtonLink className="px-5" href={managedLinks.registrationForm.href} external={managedLinks.registrationForm.external}>
+          <ButtonLink className="px-5" href="/inscripcion">
             Comenzar Proceso
           </ButtonLink>
         </div>
@@ -66,7 +65,7 @@ export function Header() {
                 {item.label}
               </Link>
             ))}
-            <ButtonLink className="mt-2" href={managedLinks.registrationForm.href} external={managedLinks.registrationForm.external}>
+            <ButtonLink className="mt-2" href="/inscripcion">
               Comenzar Proceso
             </ButtonLink>
           </div>

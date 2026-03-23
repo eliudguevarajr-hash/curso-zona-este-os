@@ -4,16 +4,10 @@ import { KeyDates } from "@/components/ui/key-dates";
 import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
-import { roleCards } from "@/data/home";
-import { managedLinks } from "@/data/links";
 import { processSequence } from "@/data/process";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
-const audienceItems = [
-  "Varones bautizados en proceso de Aspirante",
-  "Hermanos con reconocimiento de Obrero Laico",
-  "Hermanos con jerarquía de Ayuda",
-];
+const audienceItems = ["Varones Bautizados, Laicos y Ayudas"];
 
 export default function HomePage() {
   return (
@@ -31,11 +25,7 @@ export default function HomePage() {
                 Este portal te muestra qué hacer ahora, qué acceso está habilitado y a quién contactar si necesitas ayuda.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <ButtonLink
-                  className="w-full sm:w-auto"
-                  href={managedLinks.registrationForm.href}
-                  external={managedLinks.registrationForm.external}
-                >
+                <ButtonLink className="w-full sm:w-auto" href="/inscripcion">
                   Comenzar Proceso
                 </ButtonLink>
                 <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="secondary">
@@ -64,27 +54,6 @@ export default function HomePage() {
         {announcements.map((item) => (
           <AnnouncementBanner item={item} key={item.title} />
         ))}
-      </section>
-
-      <section className="container-shell mt-10 space-y-5">
-        <SectionHeading
-          eyebrow="Rutas"
-          title="Empieza por aquí"
-          description="Por ahora solo necesitas registrarte o pedir ayuda."
-        />
-        <div className="grid gap-4 md:grid-cols-2">
-          {roleCards.map((card, index) => (
-            <div className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`} key={card.title}>
-              <h3 className="text-xl font-semibold text-brand-900">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-700">{card.description}</p>
-              <div className="mt-5">
-                <ButtonLink href={card.href} variant="secondary">
-                  Continuar
-                </ButtonLink>
-              </div>
-            </div>
-          ))}
-        </div>
       </section>
 
       <section className="container-shell mt-10 space-y-5">
@@ -134,16 +103,16 @@ export default function HomePage() {
           <SectionHeading
             eyebrow="Fechas clave"
             title="Solo recuerda esto"
-            description="Estas fechas son suficientes para empezar."
+            description="Toma estas fechas solo como referencia después de registrarte."
           />
           <KeyDates items={keyDates.slice(0, 3)} />
         </div>
 
         <div className="space-y-5">
           <SectionHeading
-            eyebrow="Accesos oficiales"
-            title="Abre lo esencial"
-            description="Aquí encuentras lo principal sin buscar en más páginas."
+            eyebrow="Apoyo"
+            title="Solo si lo necesitas"
+            description="Usa estos accesos como apoyo durante tu registro."
           />
           <div className="card divide-y divide-slate-200/80 overflow-hidden">
             {quickLinks.map((item, index) => (

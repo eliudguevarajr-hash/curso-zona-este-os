@@ -1,7 +1,7 @@
 export const processStatus = {
-  currentPhase: "Registro para Aspirante, Obrero Laico y Ayuda",
+  currentPhase: "Registro para Varones Bautizados, Laicos y Ayudas",
   nextPhase: "Diagnósticos",
-  currentMessage: "Por ahora solo está habilitado el registro para Aspirante, Obrero Laico y Ayuda.",
+  currentMessage: "Por ahora solo está habilitado el registro para Varones Bautizados, Laicos y Ayudas.",
   nextMessage: "Los diagnósticos se abrirán en la siguiente etapa del proceso.",
 };
 

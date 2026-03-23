@@ -21,7 +21,7 @@ export const managedLinks: {
     href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
     external: true,
     status: "available",
-    note: "Formulario oficial de registro inicial para Aspirante, Obrero Laico y Ayuda.",
+    note: "Formulario oficial de registro inicial para Varones Bautizados, Laicos y Ayudas.",
   },
   vocationalDiagnosticForm: {
     href: "/inscripcion",
@@ -70,22 +70,22 @@ export const managedLinks: {
 export const publishingChecklist = [
   {
     title: "Registro inicial",
-    audience: "Aspirante, Obrero Laico y Ayuda",
+    audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.registrationForm,
   },
   {
     title: "Diagnóstico Vocacional",
-    audience: "Aspirante, Obrero Laico y Ayuda",
+    audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.vocationalDiagnosticForm,
   },
   {
     title: "Diagnóstico Ministerial",
-    audience: "Aspirante, Obrero Laico y Ayuda",
+    audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.ministerialDiagnosticForm,
   },
   {
     title: "Solicitud de Inscripción",
-    audience: "Aspirante, Obrero Laico y Ayuda",
+    audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.inscriptionRequestPdf,
   },
   {

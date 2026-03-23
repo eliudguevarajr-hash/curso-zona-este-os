@@ -30,8 +30,8 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Calendario", href: "/calendario" },
   { label: "Ayuda", href: "/ayuda" },
+  { label: "Calendario", href: "/calendario" },
 ];
 
 export const announcements: Announcement[] = [
@@ -50,19 +50,13 @@ export const announcements: Announcement[] = [
 export const quickLinks: QuickLink[] = [
   {
     title: "Registro inicial",
-    description: "Formulario oficial para comenzar el proceso de Aspirante, Obrero Laico o Ayuda.",
+    description: "Formulario oficial para comenzar el proceso de Varones Bautizados, Laicos y Ayudas.",
     ...managedLinks.registrationForm,
   },
   {
     title: "Convocatoria PDF",
     description: "Convocatoria oficial del curso 2026.",
     ...managedLinks.convocatoriaPdf,
-  },
-  {
-    title: "Calendario",
-    description: "Consulta las fechas principales del proceso y del curso.",
-    href: "/calendario",
-    status: "available",
   },
   {
     title: "Ayuda Zona Este",
