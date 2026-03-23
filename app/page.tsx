@@ -1,4 +1,5 @@
 import { AnnouncementBanner } from "@/components/ui/announcement-banner";
+import Link from "next/link";
 import { ButtonLink } from "@/components/ui/button-link";
 import { KeyDates } from "@/components/ui/key-dates";
 import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
@@ -7,7 +8,7 @@ import { keyDates } from "@/data/courses";
 import { processSequence } from "@/data/process";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
-const audienceItems = ["Varones Bautizados, Laicos y Ayudas"];
+const audienceItems = ["Varones Bautizados", "Laicos", "Ayudas"];
 
 export default function HomePage() {
   return (
@@ -28,16 +29,13 @@ export default function HomePage() {
                 <ButtonLink className="w-full sm:w-auto" href="/inscripcion">
                   Comenzar Proceso
                 </ButtonLink>
-                <ButtonLink className="w-full sm:w-auto" href="/ayuda" variant="secondary">
-                  Necesito Ayuda
-                </ButtonLink>
               </div>
             </div>
             <div className="grid gap-4">
               <ProcessStatusBanner />
               <div className="brand-panel p-5">
                 <p className="eyebrow-inverse">Quiénes pueden participar</p>
-                <div className="mt-4 grid gap-3">
+                <div className="mt-4 grid gap-3 sm:grid-cols-3">
                   {audienceItems.map((item) => (
                     <div className="panel-step" key={item}>
                       <p className="panel-step-copy">{item}</p>
@@ -98,52 +96,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-shell mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-        <div className="space-y-5">
-          <SectionHeading
-            eyebrow="Fechas clave"
-            title="Solo recuerda esto"
-            description="Toma estas fechas solo como referencia después de registrarte."
-          />
-          <KeyDates items={keyDates.slice(0, 3)} />
-        </div>
+      <section className="container-shell mt-10 space-y-5">
+        <SectionHeading
+          eyebrow="Fechas clave"
+          title="Solo recuerda esto"
+          description="Toma estas fechas solo como referencia después de registrarte."
+        />
+        <KeyDates items={keyDates.slice(0, 3)} />
+      </section>
 
-        <div className="space-y-5">
-          <SectionHeading
-            eyebrow="Apoyo"
-            title="Solo si lo necesitas"
-            description="Usa estos accesos como apoyo durante tu registro."
-          />
-          <div className="card divide-y divide-slate-200/80 overflow-hidden">
-            {quickLinks.map((item, index) => (
-              <div
-                className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
-                  index % 2 === 0 ? "tint-brand" : "tint-mist"
-                }`}
-                key={item.title}
-              >
+      <section className="container-shell mt-10 space-y-5">
+        <SectionHeading
+          eyebrow="Apoyo"
+          title="Consulta esto solo si lo necesitas"
+          description="Estos accesos no sustituyen tu registro. Úsalos solo como apoyo."
+        />
+        <div className="card p-6 sm:p-8">
+          <div className="space-y-4">
+            {quickLinks.map((item) => (
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between" key={item.title}>
                 <div>
-                  <div className="flex flex-wrap items-start gap-3">
-                    <h3 className="text-base font-semibold text-brand-900">{item.title}</h3>
-                    <span
-                      className={`rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wide ${
-                        item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
-                      }`}
-                    >
-                      {item.status === "available" ? "Abierta actualmente" : "Pendiente"}
-                    </span>
-                  </div>
-                  <p className="mt-2 text-sm leading-7 text-slate-700">{item.description}</p>
+                  <h3 className="text-base font-semibold text-brand-900">{item.title}</h3>
+                  <p className="mt-1 text-sm leading-7 text-slate-700">{item.description}</p>
                 </div>
-                <ButtonLink
-                  className="w-full md:w-auto"
-                  href={item.href}
-                  external={item.external}
-                  variant="secondary"
-                  disabled={item.status !== "available"}
-                >
-                  {item.status === "available" ? "Abrir" : "Pendiente"}
-                </ButtonLink>
+                {item.external ? (
+                  <a className="action-link" href={item.href} rel="noreferrer" target="_blank">
+                    Abrir
+                  </a>
+                ) : (
+                  <Link className="action-link" href={item.href}>
+                    Abrir
+                  </Link>
+                )}
               </div>
             ))}
           </div>

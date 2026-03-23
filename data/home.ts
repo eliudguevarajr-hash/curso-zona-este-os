@@ -5,7 +5,7 @@ export const roleCards = [
     href: "/inscripcion",
   },
   {
-    title: "Necesito ayuda",
+    title: "Contactar",
     description: "Consulta a tu equipo de apoyo de Zona Este.",
     href: "/ayuda",
   },

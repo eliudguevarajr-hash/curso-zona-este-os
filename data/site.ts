@@ -30,7 +30,7 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Ayuda", href: "/ayuda" },
+  { label: "Contactar", href: "/ayuda" },
   { label: "Calendario", href: "/calendario" },
 ];
 
@@ -49,17 +49,12 @@ export const announcements: Announcement[] = [
 
 export const quickLinks: QuickLink[] = [
   {
-    title: "Registro inicial",
-    description: "Formulario oficial para comenzar el proceso de Varones Bautizados, Laicos y Ayudas.",
-    ...managedLinks.registrationForm,
-  },
-  {
     title: "Convocatoria PDF",
     description: "Convocatoria oficial del curso 2026.",
     ...managedLinks.convocatoriaPdf,
   },
   {
-    title: "Ayuda Zona Este",
+    title: "Contactar Zona Este",
     description: "Accede a los contactos y respuestas rápidas si tienes dudas.",
     href: "/ayuda",
     status: "available",
