@@ -27,7 +27,7 @@ export default function CalendarioPage() {
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">
-                      {block.type === "Receso" ? "Receso" : "Materia"}
+                      {block.type === "Receso" ? "Receso" : `Materia ${block.order}`}
                     </p>
                     <h3 className="mt-1 text-lg font-semibold text-brand-900">{block.title}</h3>
                   </div>

@@ -1,5 +1,6 @@
 export type Course = {
   slug: string;
+  order: string;
   title: string;
   start: string;
   end: string;
@@ -16,6 +17,7 @@ export type Course = {
 export const courseSchedule: Course[] = [
   {
     slug: "direccion-de-culto",
+    order: "1",
     title: "Dirección de Culto",
     start: "03 Mayo 2026",
     end: "30 Mayo 2026",
@@ -30,7 +32,8 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "receso-pentecostes",
-    title: "Fiesta de Pentecostés",
+    order: "—",
+    title: "BREAK – Fiesta de Pentecostés",
     start: "17 Mayo 2026",
     end: "23 Mayo 2026",
     duration: "1 semana",
@@ -44,6 +47,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "administracion-i",
+    order: "2",
     title: "Administración I",
     start: "31 Mayo 2026",
     end: "20 Junio 2026",
@@ -58,6 +62,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "hermeneutica",
+    order: "3",
     title: "Hermenéutica",
     start: "21 Junio 2026",
     end: "11 Julio 2026",
@@ -72,9 +77,10 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "homiletica",
+    order: "4",
     title: "Homilética",
     start: "12 Julio 2026",
-    end: "01 Agosto 2026",
+    end: "1 Agosto 2026",
     duration: "3 semanas",
     type: "Materia",
     instructor: "Por asignar",
@@ -86,6 +92,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "escuela-sabatica",
+    order: "5",
     title: "Escuela Sabática",
     start: "02 Agosto 2026",
     end: "22 Agosto 2026",
@@ -100,6 +107,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "etica-ministerial",
+    order: "6",
     title: "Ética Ministerial",
     start: "23 Agosto 2026",
     end: "12 Septiembre 2026",
@@ -114,6 +122,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "doctrina",
+    order: "7",
     title: "Doctrina",
     start: "13 Septiembre 2026",
     end: "17 Octubre 2026",
@@ -128,7 +137,8 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "receso-cabanas",
-    title: "Fiesta de Cabañas",
+    order: "—",
+    title: "BREAK – Fiesta de Cabañas",
     start: "20 Septiembre 2026",
     end: "03 Octubre 2026",
     duration: "2 semanas",
@@ -142,6 +152,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "profecia",
+    order: "8",
     title: "Profecía",
     start: "18 Octubre 2026",
     end: "07 Noviembre 2026",
@@ -155,8 +166,9 @@ export const courseSchedule: Course[] = [
     description: "Descripción breve editable para la materia.",
   },
   {
-    slug: "oratoria-i",
-    title: "Oratoria I",
+    slug: "oratoria-1",
+    order: "9",
+    title: "Oratoria 1",
     start: "08 Noviembre 2026",
     end: "28 Noviembre 2026",
     duration: "3 semanas",
@@ -170,6 +182,7 @@ export const courseSchedule: Course[] = [
   },
   {
     slug: "valores-y-conductas",
+    order: "10",
     title: "Valores y Conductas",
     start: "29 Noviembre 2026",
     end: "19 Diciembre 2026",
@@ -187,16 +200,16 @@ export const courseSchedule: Course[] = [
 export const keyDates = [
   { label: "Convocatoria", date: "Abierta Actualmente", kind: "Convocatoria" },
   { label: "Inicio de clases", date: "03 Mayo 2026", kind: "Inicio" },
-  { label: "Dirección de Culto", date: "03-30 Mayo 2026", kind: "Materia" },
-  { label: "Fiesta de Pentecostés", date: "17-23 Mayo 2026", kind: "Receso" },
+  { label: "Dirección de Culto", date: "03 Mayo-30 Mayo 2026", kind: "Materia" },
+  { label: "Fiesta de Pentecostés", date: "17 Mayo-23 Mayo 2026", kind: "Receso" },
   { label: "Administración I", date: "31 Mayo-20 Junio 2026", kind: "Materia" },
   { label: "Hermenéutica", date: "21 Junio-11 Julio 2026", kind: "Materia" },
-  { label: "Homilética", date: "12 Julio-01 Agosto 2026", kind: "Materia" },
-  { label: "Escuela Sabática", date: "02-22 Agosto 2026", kind: "Materia" },
+  { label: "Homilética", date: "12 Julio-1 Agosto 2026", kind: "Materia" },
+  { label: "Escuela Sabática", date: "02 Agosto-22 Agosto 2026", kind: "Materia" },
   { label: "Ética Ministerial", date: "23 Agosto-12 Septiembre 2026", kind: "Materia" },
   { label: "Doctrina", date: "13 Septiembre-17 Octubre 2026", kind: "Materia" },
   { label: "Fiesta de Cabañas", date: "20 Septiembre-03 Octubre 2026", kind: "Receso" },
   { label: "Profecía", date: "18 Octubre-07 Noviembre 2026", kind: "Materia" },
-  { label: "Oratoria I", date: "08-28 Noviembre 2026", kind: "Materia" },
+  { label: "Oratoria 1", date: "08 Noviembre-28 Noviembre 2026", kind: "Materia" },
   { label: "Valores y Conductas", date: "29 Noviembre-19 Diciembre 2026", kind: "Materia" },
 ];
