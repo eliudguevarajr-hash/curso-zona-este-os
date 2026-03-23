@@ -61,13 +61,13 @@ export default function HomePage() {
       <section className="container-shell mt-10 space-y-5">
         <SectionHeading
           eyebrow="Rutas"
-          title="Elige solo una ruta"
-          description="Empieza por la opción que mejor describe tu situación."
+          title="Empieza por aquí"
+          description="Por ahora solo necesitas registrarte o pedir ayuda."
         />
-        <div className="grid gap-4 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           {roleCards.map((card, index) => (
             <div
-              className={`card p-6 ${index === 1 ? "tint-mist" : index === 2 ? "tint-sage" : "tint-brand"}`}
+              className={`card p-6 ${index === 1 ? "tint-mist" : "tint-brand"}`}
               key={card.title}
             >
               <h3 className="text-xl font-semibold text-brand-900">{card.title}</h3>

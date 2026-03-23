@@ -31,7 +31,6 @@ export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
   { label: "Calendario", href: "/calendario" },
-  { label: "Classroom", href: "/classroom" },
   { label: "Ayuda", href: "/ayuda" },
 ];
 
@@ -43,7 +42,7 @@ export const announcements: Announcement[] = [
   },
   {
     title: "Este sitio es el centro oficial de información",
-    detail: "Google Classroom sigue siendo la plataforma para tareas, entregas y actividad académica.",
+    detail: "Por ahora este sitio está concentrado en la etapa de inscripción y registro inicial.",
     tone: "info",
   },
 ];
@@ -55,24 +54,21 @@ export const quickLinks: QuickLink[] = [
     ...managedLinks.registrationForm,
   },
   {
-    title: "Solicitud de Inscripción",
-    description: "Formato oficial para firma del Encargado de Localidad.",
-    ...managedLinks.inscriptionRequestPdf,
-  },
-  {
     title: "Convocatoria PDF",
     description: "Convocatoria oficial del curso 2026.",
     ...managedLinks.convocatoriaPdf,
   },
   {
-    title: "Google Classroom",
-    description: "Acceso general a clases, tareas y avisos.",
-    ...managedLinks.classroomAccess,
+    title: "Calendario",
+    description: "Consulta las fechas principales del proceso y del curso.",
+    href: "/calendario",
+    status: "available",
   },
   {
-    title: "Carpeta de Recursos",
-    description: "Carpeta general de materiales y documentos.",
-    ...managedLinks.generalDrive,
+    title: "Ayuda Zona Este",
+    description: "Accede a los contactos y respuestas rápidas si tienes dudas.",
+    href: "/ayuda",
+    status: "available",
   },
 ];
 

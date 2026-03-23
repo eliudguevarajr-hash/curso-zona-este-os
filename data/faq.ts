@@ -41,10 +41,6 @@ export const faqItems = [
     answer: "El inicio de clases está previsto para el 03 de Mayo de 2026.",
   },
   {
-    question: "¿Dónde se entregan tareas?",
-    answer: "Las tareas, actividades y entregas se realizan en Google Classroom.",
-  },
-  {
     question: "¿Dónde serán las reuniones?",
     answer:
       "Las reuniones informativas y sesiones en vivo se realizarán por Zoom. Los enlaces se publicarán en la página de Calendario cuando estén disponibles.",

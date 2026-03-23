@@ -22,10 +22,6 @@ export const supportAreas = [
     description: "Expediente, requisitos de matrícula y revisión de formatos oficiales.",
   },
   {
-    title: "Classroom",
-    description: "Acceso, código de clase, tareas y problemas de ingreso.",
-  },
-  {
     title: "Calendario y reuniones",
     description: "Fechas importantes, materias, reuniones futuras y estado de Zoom.",
   },

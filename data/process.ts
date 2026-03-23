@@ -8,14 +8,6 @@ export const processStatus = {
 export const processSequence = [
   {
     step: "Paso 1",
-    title: "Solicitud con la localidad",
-    description: "Habla con tu localidad y obtén la Solicitud de Inscripción firmada.",
-    href: "/inscripcion#documentos",
-    status: "available" as const,
-    buttonLabel: "Ver solicitud",
-  },
-  {
-    step: "Paso 2",
     title: "Registro inicial",
     description: "Completa el formulario oficial correspondiente para iniciar el proceso.",
     href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
@@ -24,7 +16,7 @@ export const processSequence = [
     buttonLabel: "Abrir registro",
   },
   {
-    step: "Paso 3",
+    step: "Paso 2",
     title: "Diagnósticos",
     description: "El diagnóstico vocacional y el ministerial se habilitarán en la siguiente etapa.",
     href: "/inscripcion#formularios",
@@ -32,7 +24,7 @@ export const processSequence = [
     buttonLabel: "Pendiente",
   },
   {
-    step: "Paso 4",
+    step: "Paso 3",
     title: "Documentos para matrícula",
     description: "Prepara el expediente físico para la matrícula.",
     href: "/inscripcion#documentos",

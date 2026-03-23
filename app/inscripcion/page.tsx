@@ -34,7 +34,7 @@ export default function InscripcionPage() {
       <section className="mt-10 space-y-5" id="pasos">
         <SectionHeading
           eyebrow="Camino"
-          title="Sigue estos cuatro pasos"
+          title="Sigue estos tres pasos"
           description="Haz solo el paso que ya está disponible."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">

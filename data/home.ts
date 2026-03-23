@@ -5,11 +5,6 @@ export const roleCards = [
     href: "/inscripcion",
   },
   {
-    title: "Ya soy alumno",
-    description: "Entra a Classroom y sigue tus tareas, materiales y avisos.",
-    href: "/classroom",
-  },
-  {
     title: "Necesito ayuda",
     description: "Consulta a tu equipo de apoyo de Zona Este.",
     href: "/ayuda",
