@@ -6,11 +6,11 @@ export const faqItems = [
   },
   {
     question: "¿Cuál es la fecha de la convocatoria?",
-    answer: "La convocatoria está abierta del 05 al 28 de Marzo de 2026.",
+    answer: "La convocatoria está abierta actualmente para Zona Este. Revisa Inicio e Inscripción para cualquier actualización del proceso.",
   },
   {
     question: "¿Habrá prórroga?",
-    answer: "No. La convocatoria indica expresamente que no habrá prórroga.",
+    answer: "Las actualizaciones sobre inscripción se comunicarán directamente en este sitio según lo determine Zona Este.",
   },
   {
     question: "¿Qué documentos necesito?",

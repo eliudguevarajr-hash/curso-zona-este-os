@@ -1,6 +1,6 @@
 import { PageShell } from "@/components/layout/page-shell";
 import { SectionHeading } from "@/components/ui/section-heading";
-import { courseSchedule, keyDates } from "@/data/courses";
+import { courseSchedule } from "@/data/courses";
 import { meetings } from "@/data/meetings";
 
 export default function CalendarioPage() {
@@ -41,31 +41,7 @@ export default function CalendarioPage() {
         </div>
       </section>
 
-      <section className="mt-10 grid gap-6 lg:grid-cols-[1fr_0.9fr]">
-        <div className="space-y-5">
-          <SectionHeading
-            eyebrow="Fechas rápidas"
-            title="Lo más importante"
-            description="Estas son las fechas que más se consultan."
-          />
-          <div className="card divide-y divide-slate-200/80 overflow-hidden">
-            {keyDates.slice(0, 4).map((item, index) => (
-              <div
-                className={`grid gap-3 px-5 py-4 md:grid-cols-[1fr_auto] md:items-center ${
-                  index % 2 === 0 ? "tint-brand" : "tint-mist"
-                }`}
-                key={item.label}
-              >
-                <div>
-                  <p className="text-sm font-semibold text-brand-900">{item.label}</p>
-                  <p className="mt-1 text-xs uppercase tracking-wide text-brand-700">{item.kind}</p>
-                </div>
-                <p className="text-sm text-slate-700">{item.date}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
+      <section className="mt-10 space-y-5">
         <div className="space-y-5">
           <SectionHeading
             eyebrow="Zoom"

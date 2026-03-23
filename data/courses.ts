@@ -157,7 +157,7 @@ export const courseSchedule: Course[] = [
 ];
 
 export const keyDates = [
-  { label: "Convocatoria", date: "05-28 Marzo 2026", kind: "Convocatoria" },
+  { label: "Convocatoria", date: "Abierta actualmente", kind: "Convocatoria" },
   { label: "Inicio de clases", date: "03 Mayo 2026", kind: "Inicio" },
   { label: "Dirección de Culto", date: "04-22 Mayo 2026", kind: "Materia" },
   { label: "Fiesta de Pentecostés", date: "25-29 Mayo 2026", kind: "Receso" },

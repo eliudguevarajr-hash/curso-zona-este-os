@@ -36,8 +36,8 @@ export const navigation: NavItem[] = [
 
 export const announcements: Announcement[] = [
   {
-    title: "Convocatoria abierta del 05 al 28 de Marzo de 2026",
-    detail: "No hay prórroga. El curso inicia el 03 de Mayo de 2026.",
+    title: "Convocatoria abierta para Zona Este",
+    detail: "El curso inicia el 03 de Mayo de 2026. Mantente atento a cualquier actualización de inscripción.",
     tone: "warning",
   },
   {
