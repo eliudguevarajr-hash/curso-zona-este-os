@@ -22,10 +22,10 @@ html {
 body {
   @apply bg-sand text-ink font-sans antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(150, 182, 207, 0.56), transparent 24%),
-    radial-gradient(circle at 82% 10%, rgba(185, 203, 219, 0.4), transparent 22%),
-    radial-gradient(circle at 50% 42%, rgba(210, 221, 231, 0.28), transparent 26%),
-    linear-gradient(to bottom, #dbe7ef 0%, #e6e1d8 46%, #d9e4ec 76%, #e4ded4 100%);
+    radial-gradient(circle at top left, rgba(130, 166, 194, 0.54), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(171, 191, 208, 0.4), transparent 22%),
+    radial-gradient(circle at 50% 42%, rgba(191, 204, 216, 0.26), transparent 26%),
+    linear-gradient(to bottom, #cfdde7 0%, #ddd7cc 46%, #cfdae4 76%, #d9d2c7 100%);
 }
 
 a,
