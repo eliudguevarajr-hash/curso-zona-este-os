@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalStudents } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalStudentById } from "@/lib/portal/data";
 
 type StudentDetailPageProps = {
   params: Promise<{ studentId: string }>;
@@ -9,7 +10,7 @@ type StudentDetailPageProps = {
 
 export default async function StudentDetailPage({ params }: StudentDetailPageProps) {
   const { studentId } = await params;
-  const student = portalStudents.find((item) => item.id === studentId);
+  const student = await getPortalStudentById(studentId);
 
   if (!student) {
     notFound();
@@ -25,9 +26,8 @@ export default async function StudentDetailPage({ params }: StudentDetailPagePro
       />
 
       <section className="grid gap-4 xl:grid-cols-[0.9fr_1.1fr]">
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Resumen</p>
-          <dl className="mt-4 space-y-4 text-sm">
+        <PortalSectionCard eyebrow="Resumen" title="Información principal">
+          <dl className="space-y-4 text-sm">
             <div>
               <dt className="font-semibold text-brand-900">Estado</dt>
               <dd className="mt-1 text-slate-700">{student.status}</dd>
@@ -49,11 +49,10 @@ export default async function StudentDetailPage({ params }: StudentDetailPagePro
               <dd className="mt-1 text-slate-700">{student.zone}</dd>
             </div>
           </dl>
-        </article>
+        </PortalSectionCard>
 
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Seguimiento</p>
-          <div className="mt-4 space-y-4">
+        <PortalSectionCard eyebrow="Seguimiento" title="Espacios preparados">
+          <div className="space-y-4">
             <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4">
               <h3 className="text-base font-semibold text-brand-900">Observaciones internas</h3>
               <p className="mt-2 text-sm leading-7 text-slate-700">
@@ -67,7 +66,7 @@ export default async function StudentDetailPage({ params }: StudentDetailPagePro
               </p>
             </div>
           </div>
-        </article>
+        </PortalSectionCard>
       </section>
     </div>
   );

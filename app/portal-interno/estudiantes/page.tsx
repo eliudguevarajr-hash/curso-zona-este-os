@@ -2,9 +2,12 @@ import Link from "next/link";
 import { Search } from "lucide-react";
 
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalStudents } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalStudents } from "@/lib/portal/data";
 
-export default function PortalStudentsPage() {
+export default async function PortalStudentsPage() {
+  const students = await getPortalStudents();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -14,7 +17,7 @@ export default function PortalStudentsPage() {
         description="Consulta el listado interno de alumnos, su materia actual, estado y porcentaje de avance."
       />
 
-      <section className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
+      <PortalSectionCard>
         <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
           <div className="relative w-full max-w-md">
             <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400" />
@@ -40,7 +43,7 @@ export default function PortalStudentsPage() {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-200/80">
-              {portalStudents.map((student) => (
+              {students.map((student) => (
                 <tr key={student.id}>
                   <td className="py-4 pr-4">
                     <Link className="font-semibold text-brand-900 hover:text-brand-700" href={`/portal-interno/estudiantes/${student.id}`}>
@@ -56,7 +59,7 @@ export default function PortalStudentsPage() {
             </tbody>
           </table>
         </div>
-      </section>
+      </PortalSectionCard>
     </div>
   );
 }

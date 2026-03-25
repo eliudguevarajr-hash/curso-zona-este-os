@@ -1,7 +1,10 @@
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalAnnouncements } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalAnnouncements } from "@/lib/portal/data";
 
-export default function PortalAnnouncementsPage() {
+export default async function PortalAnnouncementsPage() {
+  const announcements = await getPortalAnnouncements();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -12,9 +15,8 @@ export default function PortalAnnouncementsPage() {
       />
 
       <section className="grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Nuevo anuncio</p>
-          <form className="mt-4 space-y-4">
+        <PortalSectionCard eyebrow="Nuevo anuncio" title="Redacción">
+          <form className="space-y-4">
             <div>
               <label className="mb-2 block text-sm font-semibold text-brand-900">Título</label>
               <input className="form-control" placeholder="Título del anuncio" />
@@ -28,12 +30,11 @@ export default function PortalAnnouncementsPage() {
               <textarea className="form-control min-h-32" placeholder="Redacta el cuerpo del anuncio" />
             </div>
           </form>
-        </article>
+        </PortalSectionCard>
 
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Feed administrativo</p>
-          <div className="mt-4 space-y-4">
-            {portalAnnouncements.map((item) => (
+        <PortalSectionCard eyebrow="Feed administrativo" title="Publicaciones actuales">
+          <div className="space-y-4">
+            {announcements.map((item) => (
               <article className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4" key={item.id}>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-brand-700">{item.date}</p>
                 <h3 className="mt-2 text-lg font-semibold text-brand-900">{item.title}</h3>
@@ -42,7 +43,7 @@ export default function PortalAnnouncementsPage() {
               </article>
             ))}
           </div>
-        </article>
+        </PortalSectionCard>
       </section>
     </div>
   );

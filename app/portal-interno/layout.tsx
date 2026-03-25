@@ -14,7 +14,7 @@ export default async function PortalLayout({ children }: { children: React.React
 
   return (
     <div className="min-h-screen bg-[radial-gradient(circle_at_top_left,rgba(88,127,160,0.26),transparent_24%),linear-gradient(to_bottom,#b8c8d4_0%,#c7d3dc_100%)] px-4 py-4 sm:px-6 lg:px-8">
-      <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
+      <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[290px_minmax(0,1fr)]">
         <PortalSidebar />
 
         <div className="space-y-4">
@@ -25,6 +25,9 @@ export default async function PortalLayout({ children }: { children: React.React
               <p className="mt-1 text-sm text-slate-700">Rol actual: {session.role}</p>
             </div>
             <div className="flex flex-wrap gap-3">
+              <PortalButton href="/portal-interno/vista-estudiante" variant="secondary">
+                Ver vista del estudiante
+              </PortalButton>
               <PortalButton href="/" variant="secondary">
                 Ver sitio público
               </PortalButton>

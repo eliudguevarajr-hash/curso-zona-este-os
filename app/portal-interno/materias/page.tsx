@@ -1,9 +1,12 @@
 import Link from "next/link";
 
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalCourses } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalCourses } from "@/lib/portal/data";
 
-export default function PortalCoursesPage() {
+export default async function PortalCoursesPage() {
+  const courses = await getPortalCourses();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -14,8 +17,8 @@ export default function PortalCoursesPage() {
       />
 
       <section className="grid gap-4 lg:grid-cols-2">
-        {portalCourses.map((course) => (
-          <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur" key={course.slug}>
+        {courses.map((course) => (
+          <PortalSectionCard className="" key={course.slug}>
             <p className="eyebrow">Módulo</p>
             <h3 className="mt-2 text-xl font-semibold text-brand-900">{course.title}</h3>
             <p className="mt-2 text-sm leading-7 text-slate-700">{course.description}</p>
@@ -26,7 +29,7 @@ export default function PortalCoursesPage() {
             <Link className="action-link mt-5" href={`/portal-interno/materias/${course.slug}`}>
               Ver módulo completo
             </Link>
-          </article>
+          </PortalSectionCard>
         ))}
       </section>
     </div>

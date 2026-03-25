@@ -1,7 +1,10 @@
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalResources } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalResources } from "@/lib/portal/data";
 
-export default function PortalResourcesPage() {
+export default async function PortalResourcesPage() {
+  const resources = await getPortalResources();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -11,7 +14,7 @@ export default function PortalResourcesPage() {
         description="Repositorio administrativo para PDFs, videos, formularios y guías del sistema interno."
       />
 
-      <section className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
+      <PortalSectionCard>
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div className="flex flex-wrap gap-2">
             <span className="interactive-chip interactive-chip-active">Todos</span>
@@ -26,7 +29,7 @@ export default function PortalResourcesPage() {
         </div>
 
         <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {portalResources.map((resource) => (
+          {resources.map((resource) => (
             <article className="rounded-[2rem] border border-slate-200 bg-slate-50/80 p-4" key={resource.id}>
               <p className="eyebrow">{resource.category}</p>
               <h3 className="mt-2 text-lg font-semibold text-brand-900">{resource.title}</h3>
@@ -37,7 +40,7 @@ export default function PortalResourcesPage() {
             </article>
           ))}
         </div>
-      </section>
+      </PortalSectionCard>
     </div>
   );
 }

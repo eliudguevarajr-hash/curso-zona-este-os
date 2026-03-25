@@ -1,7 +1,10 @@
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalQuizQuestions } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalQuizQuestions } from "@/lib/portal/data";
 
-export default function PortalQuizzesPage() {
+export default async function PortalQuizzesPage() {
+  const questions = await getPortalQuizQuestions();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -12,9 +15,8 @@ export default function PortalQuizzesPage() {
       />
 
       <section className="grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Nueva pregunta</p>
-          <form className="mt-4 space-y-4">
+        <PortalSectionCard eyebrow="Nueva pregunta" title="Constructor">
+          <form className="space-y-4">
             <div>
               <label className="mb-2 block text-sm font-semibold text-brand-900">Pregunta</label>
               <textarea className="form-control min-h-24" placeholder="Escribe el enunciado de la pregunta" />
@@ -39,12 +41,11 @@ export default function PortalQuizzesPage() {
               <textarea className="form-control min-h-24" placeholder="Explicación o retroalimentación para la respuesta correcta" />
             </div>
           </form>
-        </article>
+        </PortalSectionCard>
 
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Preguntas de ejemplo</p>
-          <div className="mt-4 space-y-4">
-            {portalQuizQuestions.map((question) => (
+        <PortalSectionCard eyebrow="Preguntas de ejemplo" title="Banco inicial">
+          <div className="space-y-4">
+            {questions.map((question) => (
               <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4" key={question.id}>
                 <h3 className="text-base font-semibold text-brand-900">{question.prompt}</h3>
                 <ul className="mt-3 space-y-2 text-sm text-slate-700">
@@ -59,7 +60,7 @@ export default function PortalQuizzesPage() {
               </div>
             ))}
           </div>
-        </article>
+        </PortalSectionCard>
       </section>
     </div>
   );

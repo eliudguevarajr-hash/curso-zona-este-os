@@ -1,7 +1,10 @@
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalAssignments } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalAssignments } from "@/lib/portal/data";
 
-export default function PortalAssignmentsPage() {
+export default async function PortalAssignmentsPage() {
+  const assignments = await getPortalAssignments();
+
   return (
     <div className="space-y-5">
       <PortalPageHeader
@@ -12,9 +15,8 @@ export default function PortalAssignmentsPage() {
       />
 
       <section className="grid gap-4 xl:grid-cols-[1.1fr_0.9fr]">
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Listado de tareas</p>
-          <div className="mt-4 overflow-x-auto">
+        <PortalSectionCard eyebrow="Listado de tareas" title="Entregas y revisión">
+          <div className="overflow-x-auto">
             <table className="min-w-full text-left text-sm">
               <thead className="border-b border-slate-200 text-slate-500">
                 <tr>
@@ -25,7 +27,7 @@ export default function PortalAssignmentsPage() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200/80">
-                {portalAssignments.map((assignment) => (
+                {assignments.map((assignment) => (
                   <tr key={assignment.id}>
                     <td className="py-4 pr-4">{assignment.title}</td>
                     <td className="py-4 pr-4">{assignment.course}</td>
@@ -36,11 +38,10 @@ export default function PortalAssignmentsPage() {
               </tbody>
             </table>
           </div>
-        </article>
+        </PortalSectionCard>
 
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Panel de revisión</p>
-          <div className="mt-4 rounded-3xl border border-slate-200 bg-slate-50/80 p-4">
+        <PortalSectionCard eyebrow="Panel de revisión" title="Ejemplo de calificación">
+          <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4">
             <h3 className="text-lg font-semibold text-brand-900">Ensayo doctrinal breve</h3>
             <p className="mt-2 text-sm text-slate-700">Alumno: Israel Ramírez Cruz</p>
             <p className="mt-2 text-sm text-slate-700">Estado: Recibida</p>
@@ -51,7 +52,7 @@ export default function PortalAssignmentsPage() {
               <input className="form-control" placeholder="Ej. 9.0" />
             </div>
           </div>
-        </article>
+        </PortalSectionCard>
       </section>
     </div>
   );

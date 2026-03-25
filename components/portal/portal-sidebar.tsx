@@ -7,6 +7,7 @@ import {
   BookOpen,
   CalendarDays,
   ClipboardCheck,
+  Eye,
   FileStack,
   GraduationCap,
   LayoutDashboard,
@@ -27,6 +28,7 @@ const portalNav = [
   { href: "/portal-interno/anuncios", label: "Anuncios", icon: Bell },
   { href: "/portal-interno/recursos", label: "Recursos", icon: FileStack },
   { href: "/portal-interno/calendario", label: "Calendario", icon: CalendarDays },
+  { href: "/portal-interno/vista-estudiante", label: "Vista del Estudiante", icon: Eye },
   { href: "/portal-interno/configuracion", label: "Configuración", icon: Settings },
 ];
 
@@ -35,7 +37,7 @@ export function PortalSidebar() {
 
   return (
     <aside className="rounded-[2rem] border border-brand-200/70 bg-white/85 p-4 shadow-soft backdrop-blur">
-      <div className="mb-4 rounded-3xl bg-brand-900 px-4 py-4 text-white">
+      <div className="mb-4 rounded-3xl bg-[linear-gradient(135deg,#163349,#4c7ba1)] px-4 py-4 text-white">
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-white/70">Portal Interno</p>
         <h2 className="mt-2 text-lg font-semibold">Departamento Educativo: Zona Este</h2>
         <p className="mt-1 text-sm text-white/80">Acceso administrativo privado</p>

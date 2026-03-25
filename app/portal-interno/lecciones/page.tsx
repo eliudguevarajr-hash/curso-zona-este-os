@@ -1,11 +1,11 @@
 import { PortalButton } from "@/components/portal/portal-button";
 import { PortalPageHeader } from "@/components/portal/portal-page-header";
-import { portalCourses } from "@/lib/mock-data/portal";
+import { PortalSectionCard } from "@/components/portal/portal-section-card";
+import { getPortalCourses } from "@/lib/portal/data";
 
-export default function PortalLessonsPage() {
-  const lessonOptions = portalCourses.flatMap((course) =>
-    course.lessons.map((lesson) => ({ ...lesson, courseTitle: course.title })),
-  );
+export default async function PortalLessonsPage() {
+  const courses = await getPortalCourses();
+  const lessons = courses.flatMap((course) => course.lessons.map((lesson) => ({ ...lesson, courseTitle: course.title })));
 
   return (
     <div className="space-y-5">
@@ -18,9 +18,8 @@ export default function PortalLessonsPage() {
       />
 
       <section className="grid gap-4 xl:grid-cols-[0.95fr_1.05fr]">
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Formulario de lección</p>
-          <form className="mt-4 space-y-4">
+        <PortalSectionCard eyebrow="Formulario de lección" title="Nueva lección">
+          <form className="space-y-4">
             <div>
               <label className="mb-2 block text-sm font-semibold text-brand-900">Título de la lección</label>
               <input className="form-control" placeholder="Ej. Introducción al módulo" />
@@ -55,12 +54,11 @@ export default function PortalLessonsPage() {
               </PortalButton>
             </div>
           </form>
-        </article>
+        </PortalSectionCard>
 
-        <article className="rounded-[2rem] border border-slate-200/80 bg-white/85 p-5 shadow-soft backdrop-blur">
-          <p className="eyebrow">Lecciones existentes</p>
-          <div className="mt-4 space-y-4">
-            {lessonOptions.map((lesson) => (
+        <PortalSectionCard eyebrow="Lecciones existentes" title="Listado actual">
+          <div className="space-y-4">
+            {lessons.map((lesson) => (
               <div className="rounded-3xl border border-slate-200 bg-slate-50/80 p-4" key={lesson.id}>
                 <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
                   <div>
@@ -75,7 +73,7 @@ export default function PortalLessonsPage() {
               </div>
             ))}
           </div>
-        </article>
+        </PortalSectionCard>
       </section>
     </div>
   );
