@@ -1,6 +1,7 @@
 function getOptionalServerEnv(name: string) {
   const value = process.env[name];
-  return value && value.trim().length > 0 ? value : undefined;
+  const trimmedValue = value?.trim();
+  return trimmedValue && trimmedValue.length > 0 ? trimmedValue : undefined;
 }
 
 export const env = {
