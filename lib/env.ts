@@ -1,18 +1,17 @@
-function requireServerEnv(name: string) {
+function getOptionalServerEnv(name: string) {
   const value = process.env[name];
-
-  if (!value) {
-    throw new Error(`Falta la variable de entorno requerida: ${name}`);
-  }
-
-  return value;
+  return value && value.trim().length > 0 ? value : undefined;
 }
 
 export const env = {
-  ADMIN_PORTAL_EMAIL: requireServerEnv("ADMIN_PORTAL_EMAIL"),
-  ADMIN_PORTAL_PASSWORD: requireServerEnv("ADMIN_PORTAL_PASSWORD"),
-  ADMIN_PORTAL_SESSION_SECRET: requireServerEnv("ADMIN_PORTAL_SESSION_SECRET"),
+  ADMIN_PORTAL_EMAIL: getOptionalServerEnv("ADMIN_PORTAL_EMAIL"),
+  ADMIN_PORTAL_PASSWORD: getOptionalServerEnv("ADMIN_PORTAL_PASSWORD"),
+  ADMIN_PORTAL_SESSION_SECRET: getOptionalServerEnv("ADMIN_PORTAL_SESSION_SECRET"),
 };
+
+export function isPortalAuthConfigured() {
+  return Boolean(env.ADMIN_PORTAL_EMAIL && env.ADMIN_PORTAL_PASSWORD && env.ADMIN_PORTAL_SESSION_SECRET);
+}
 
 export function hasSupabaseEnv() {
   return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL) && Boolean(getSupabasePublicKey());

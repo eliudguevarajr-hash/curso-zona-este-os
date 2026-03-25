@@ -1,13 +1,14 @@
-import { env } from "@/lib/env";
+import { env, isPortalAuthConfigured } from "@/lib/env";
 
 export const portalAuthConfig = {
   cookieName: "dez_portal_session",
   loginPath: "/login",
   portalPath: "/portal-interno",
-  adminEmail: env.ADMIN_PORTAL_EMAIL,
-  adminPassword: env.ADMIN_PORTAL_PASSWORD,
-  sessionSecret: env.ADMIN_PORTAL_SESSION_SECRET,
+  adminEmail: env.ADMIN_PORTAL_EMAIL ?? "",
+  adminPassword: env.ADMIN_PORTAL_PASSWORD ?? "",
+  sessionSecret: env.ADMIN_PORTAL_SESSION_SECRET ?? "portal-not-configured",
   sessionDurationSeconds: 60 * 60 * 12,
+  isConfigured: isPortalAuthConfigured(),
 };
 
 export const portalRoles = ["admin", "educador", "estudiante"] as const;

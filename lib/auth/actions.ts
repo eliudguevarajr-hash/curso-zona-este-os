@@ -6,6 +6,10 @@ import { portalAuthConfig } from "@/lib/auth/config";
 import { clearPortalSession, setPortalSession } from "@/lib/auth/session";
 
 export async function loginPortalAction(formData: FormData) {
+  if (!portalAuthConfig.isConfigured) {
+    redirect(`${portalAuthConfig.loginPath}?error=unconfigured`);
+  }
+
   const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const password = String(formData.get("password") ?? "");
   const nextPath = String(formData.get("next") ?? portalAuthConfig.portalPath);

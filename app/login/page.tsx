@@ -53,8 +53,16 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
               </div>
             ) : null}
 
+            {resolvedSearchParams.error === "unconfigured" || !portalAuthConfig.isConfigured ? (
+              <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+                El portal interno todavía no está configurado. Agrega ADMIN_PORTAL_EMAIL, ADMIN_PORTAL_PASSWORD y
+                ADMIN_PORTAL_SESSION_SECRET en Vercel y en tu entorno local.
+              </div>
+            ) : null}
+
             <button
-              className="inline-flex w-full items-center justify-center rounded-2xl bg-brand-800 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-900"
+              className="inline-flex w-full items-center justify-center rounded-2xl bg-brand-800 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-900 disabled:cursor-not-allowed disabled:bg-slate-400"
+              disabled={!portalAuthConfig.isConfigured}
               type="submit"
             >
               Ingresar
