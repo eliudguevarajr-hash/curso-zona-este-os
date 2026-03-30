@@ -1,34 +1,37 @@
+import { managedLinks } from "./links";
+
 export const processStatus = {
-  currentPhase: "Registro para Varones Bautizados, Laicos y Ayudas",
+  currentPhase: "Registro y Carga de Documentos",
   nextPhase: "Diagnósticos",
-  currentMessage: "Por ahora solo está habilitado el registro para Varones Bautizados, Laicos y Ayudas.",
+  currentMessage: "Por ahora debes completar el registro y después subir tus documentos del proceso.",
   nextMessage: "Los diagnósticos se abrirán en la siguiente etapa del proceso.",
 };
 
 export const processSequence = [
   {
     step: "Paso 1",
-    title: "Registro inicial",
-    description: "Completa el formulario oficial correspondiente para iniciar el proceso.",
-    href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
-    external: true,
+    title: "Completa tu registro",
+    description: "Llena el formulario oficial de registro para iniciar tu proceso.",
+    href: managedLinks.registrationForm.href,
+    external: managedLinks.registrationForm.external,
     status: "available" as const,
     buttonLabel: "Abrir registro",
   },
   {
     step: "Paso 2",
-    title: "Diagnósticos",
-    description: "El diagnóstico vocacional y el ministerial se habilitarán en la siguiente etapa.",
-    href: "/inscripcion#formularios",
-    status: "pending" as const,
-    buttonLabel: "Pendiente",
+    title: "Sube tus documentos",
+    description: "Después de registrarte, usa el formulario oficial para enviar tus documentos.",
+    href: managedLinks.documentUploadForm.href,
+    external: managedLinks.documentUploadForm.external,
+    status: "available" as const,
+    buttonLabel: "Subir documentos",
   },
   {
     step: "Paso 3",
-    title: "Preparar documentos",
-    description: "Reúne y revisa tu expediente físico. Todavía no es etapa de entrega.",
-    href: "/inscripcion#documentos",
-    status: "available" as const,
-    buttonLabel: "Preparar documentos",
+    title: "Espera la siguiente fase",
+    description: "Cuando esta etapa termine, se publicarán los diagnósticos y las siguientes indicaciones.",
+    href: "/inscripcion",
+    status: "pending" as const,
+    buttonLabel: "Pendiente",
   },
 ];

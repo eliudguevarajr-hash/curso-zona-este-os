@@ -14,15 +14,15 @@ export const contacts: Contact[] = [
 
 export const supportAreas = [
   {
-    title: "Inscripción",
-    description: "Registro inicial, diagnósticos, solicitud firmada y pasos iniciales.",
+    title: "Registro",
+    description: "Dudas sobre el formulario inicial y el orden correcto del proceso.",
   },
   {
     title: "Documentos",
-    description: "Expediente, requisitos de matrícula y revisión de formatos oficiales.",
+    description: "Dudas sobre qué documentos reunir y cómo subirlos en el formulario correspondiente.",
   },
   {
-    title: "Calendario y reuniones",
-    description: "Fechas importantes, materias, reuniones futuras y estado de Zoom.",
+    title: "Siguientes etapas",
+    description: "Preguntas sobre diagnósticos, calendario general o fases que todavía no están abiertas.",
   },
 ];

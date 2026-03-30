@@ -4,44 +4,64 @@ import { DocumentsCard } from "@/components/ui/documents-card";
 import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { registrationNotes, requiredDocuments } from "@/data/inscripcion";
+import { managedLinks } from "@/data/links";
 import { processSequence } from "@/data/process";
 
 export default function InscripcionPage() {
   return (
     <PageShell
       eyebrow="Inscripción"
-      title="Inscripción y Matrícula"
-      description="Aquí está el camino del proceso, en orden y sin pasos ocultos."
+      title="Registro y Documentos"
+      description="Haz este proceso en orden: primero regístrate y después sube tus documentos."
     >
       <ProcessStatusBanner />
 
-      <section className="mt-10 brand-panel p-6 sm:p-8">
-        <p className="eyebrow-inverse">Paso actual</p>
-        <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Haz solo el paso que está abierto</h2>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90">
-          Por ahora solo debes completar el registro correspondiente a Varones Bautizados, Laicos y Ayudas y preparar tu documentación.
-        </p>
-        <div className="mt-6 flex flex-wrap gap-3">
-          <ButtonLink className="w-full sm:w-auto" href={processSequence[0].href} external={processSequence[0].external} variant="panel">
+      <section className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="brand-panel h-full p-5 sm:p-6 lg:p-8">
+          <p className="eyebrow-inverse">Paso 1</p>
+          <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Primero completa tu registro</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-white/90">
+            Este es el primer paso obligatorio. Debes completar el formulario oficial para iniciar tu proceso.
+          </p>
+          <ButtonLink
+            className="mt-6 w-full sm:w-auto"
+            href={managedLinks.registrationForm.href}
+            external={managedLinks.registrationForm.external}
+            variant="panel"
+          >
             Abrir Registro
           </ButtonLink>
-          <ButtonLink className="w-full sm:w-auto" href="#pasos" variant="panelSecondary">
-            Ver Camino
+        </div>
+
+        <div className="card h-full p-5 sm:p-6 lg:p-8">
+          <p className="eyebrow">Paso 2</p>
+          <h2 className="mt-3 font-display text-2xl text-brand-900 sm:text-3xl">Después sube tus documentos</h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-700">
+            Cuando termines el registro, usa el formulario de documentos. No lo dejes para otra etapa.
+          </p>
+          <p className="mt-3 text-sm font-medium text-brand-800">Haz este paso inmediatamente después del registro.</p>
+          <ButtonLink
+            className="mt-6 w-full sm:w-auto"
+            href={managedLinks.documentUploadForm.href}
+            external={managedLinks.documentUploadForm.external}
+            variant="secondary"
+          >
+            Subir Documentos
           </ButtonLink>
         </div>
       </section>
 
-      <section className="mt-10 space-y-5" id="pasos">
+      <section className="mt-8 space-y-5 sm:mt-10" id="pasos">
         <SectionHeading
           eyebrow="Camino"
-          title="Sigue estos tres pasos"
-          description="Haz solo el paso que ya está disponible."
+          title="Este es el orden correcto"
+          description="Sigue estos pasos tal como aparecen aquí."
         />
         <div className="card divide-y divide-slate-200/80 overflow-hidden">
           {processSequence.map((item, index) => (
             <div
               className={`grid gap-3 px-5 py-4 md:grid-cols-[100px_1fr_auto] md:items-center ${
-                index % 2 === 0 ? "tint-brand" : "tint-mist"
+                index === 0 ? "tint-brand" : index === 1 ? "tint-mist" : "bg-slate-50"
               }`}
               key={item.title}
             >
@@ -52,7 +72,7 @@ export default function InscripcionPage() {
                     item.status === "available" ? "bg-brand-100 text-brand-700" : "bg-slate-200 text-slate-700"
                   }`}
                 >
-                  {item.status === "available" ? "Disponible" : "Pendiente"}
+                  {item.status === "available" ? "Abierta actualmente" : "Pendiente"}
                 </span>
               </div>
               <div>
@@ -63,7 +83,7 @@ export default function InscripcionPage() {
                 className="w-full md:w-auto"
                 href={item.href}
                 external={item.external}
-                variant="secondary"
+                variant={index === 0 ? "primary" : "secondary"}
                 disabled={item.status !== "available"}
               >
                 {item.buttonLabel}
@@ -73,12 +93,16 @@ export default function InscripcionPage() {
         </div>
       </section>
 
-      <section className="mt-10" id="documentos">
-        <DocumentsCard documents={requiredDocuments} />
+      <section className="mt-8 sm:mt-10" id="documentos">
+        <DocumentsCard
+          documents={requiredDocuments}
+          uploadHref={managedLinks.documentUploadForm.href}
+          uploadExternal={managedLinks.documentUploadForm.external}
+        />
       </section>
 
-      <section className="mt-10">
-        <div className="card p-6 sm:p-8 tint-mist">
+      <section className="mt-8 sm:mt-10">
+        <div className="card p-5 sm:p-6 lg:p-8 tint-mist">
           <p className="eyebrow">Notas importantes</p>
           <div className="mt-4 space-y-3 text-sm leading-7 text-slate-700">
             {registrationNotes.map((note) => (

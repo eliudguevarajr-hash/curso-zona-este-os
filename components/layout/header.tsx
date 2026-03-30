@@ -16,7 +16,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(243,243,239,0.94)] backdrop-blur">
-      <div className="container-shell grid min-h-[76px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:grid-cols-[auto_1fr]">
+      <div className="container-shell grid min-h-[72px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:grid-cols-[auto_1fr]">
         <SiteLogo />
 
         <div className="hidden items-center justify-self-end gap-4 lg:flex xl:gap-6">
@@ -25,10 +25,7 @@ export function Header() {
               {navigation.map((item) => (
                 <Link
                   key={item.href}
-                  className={cn(
-                    "nav-link whitespace-nowrap px-4 py-2 text-[13px]",
-                    pathname === item.href && "nav-link-active"
-                  )}
+                  className={cn("nav-link whitespace-nowrap px-4 py-2 text-[13px]", pathname === item.href && "nav-link-active")}
                   href={item.href}
                 >
                   {item.label}

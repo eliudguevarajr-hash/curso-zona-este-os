@@ -7,12 +7,12 @@ import { faqItems } from "@/data/faq";
 export default function AyudaPage() {
   return (
     <PageShell
-      eyebrow="Ayuda"
-      title="Ayuda y Contacto"
+      eyebrow="Contactar"
+      title="Contactar y Ayuda"
       description="Aquí están tus contactos de Zona Este y las respuestas rápidas para dudas comunes."
     >
       <section className="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="brand-panel p-6 sm:p-8">
+        <div className="brand-panel p-5 sm:p-6 lg:p-8">
           <p className="eyebrow-inverse">Equipo de apoyo Zona Este</p>
           <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Contactos principales</h2>
           <p className="mt-4 text-sm leading-7 text-white/90">
@@ -35,7 +35,7 @@ export default function AyudaPage() {
           </div>
         </div>
 
-        <div className="card p-6 sm:p-8">
+        <div className="card p-5 sm:p-6 lg:p-8">
           <p className="eyebrow">Te podemos ayudar con</p>
           <div className="mt-4 space-y-3">
             {supportAreas.map((area) => (
@@ -48,7 +48,7 @@ export default function AyudaPage() {
         </div>
       </section>
 
-      <section className="mt-10 space-y-5">
+      <section className="mt-8 space-y-5 sm:mt-10">
         <SectionHeading
           eyebrow="Preguntas frecuentes"
           title="Respuestas rápidas"

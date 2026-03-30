@@ -30,19 +30,18 @@ export const siteMeta = {
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
   { label: "Inscripción", href: "/inscripcion" },
-  { label: "Calendario", href: "/calendario" },
   { label: "Contactar", href: "/ayuda" },
 ];
 
 export const announcements: Announcement[] = [
   {
-    title: "Convocatoria abierta para Zona Este",
-    detail: "El curso inicia el 03 de Mayo de 2026. Mantente atento a cualquier actualización de inscripción.",
+    title: "Etapa abierta actualmente",
+    detail: "En este momento solo debes completar tu registro y subir tus documentos correspondientes.",
     tone: "warning",
   },
   {
-    title: "Este sitio es el centro oficial de información",
-    detail: "Por ahora este sitio está concentrado en la etapa de inscripción y registro inicial.",
+    title: "Sigue el proceso en orden",
+    detail: "Primero regístrate. Después sube tus documentos. Las siguientes fases se publicarán más adelante.",
     tone: "info",
   },
 ];
@@ -50,8 +49,14 @@ export const announcements: Announcement[] = [
 export const quickLinks: QuickLink[] = [
   {
     title: "Convocatoria PDF",
-    description: "Convocatoria oficial del curso 2026.",
+    description: "Consulta la convocatoria oficial si necesitas revisar los detalles del proceso.",
     ...managedLinks.convocatoriaPdf,
+  },
+  {
+    title: "Calendario General",
+    description: "Úsalo solo como referencia general del curso después de completar tu proceso.",
+    href: "/calendario",
+    status: "available",
   },
   {
     title: "Contactar Zona Este",

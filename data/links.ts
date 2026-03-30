@@ -9,6 +9,7 @@ export type ManagedLink = {
 
 export const managedLinks: {
   registrationForm: ManagedLink;
+  documentUploadForm: ManagedLink;
   vocationalDiagnosticForm: ManagedLink;
   ministerialDiagnosticForm: ManagedLink;
   inscriptionRequestPdf: ManagedLink;
@@ -22,6 +23,12 @@ export const managedLinks: {
     external: true,
     status: "available",
     note: "Formulario oficial de registro inicial para Varones Bautizados, Laicos y Ayudas.",
+  },
+  documentUploadForm: {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSf04oYnB8_D8JTSD9-NPPlA9ajm6KM1aTQU1WMLZMacQ0VV-A/viewform?pli=1",
+    external: true,
+    status: "available",
+    note: "Formulario oficial para subir los documentos del proceso.",
   },
   vocationalDiagnosticForm: {
     href: "/inscripcion",
@@ -72,6 +79,11 @@ export const publishingChecklist = [
     title: "Registro inicial",
     audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.registrationForm,
+  },
+  {
+    title: "Subir documentos",
+    audience: "Varones Bautizados, Laicos y Ayudas",
+    ...managedLinks.documentUploadForm,
   },
   {
     title: "Diagnóstico Vocacional",

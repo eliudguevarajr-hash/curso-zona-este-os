@@ -28,5 +28,5 @@ export const zoomTips = [
   "Verifica tu enlace y horario antes de ingresar.",
   "Procura entrar con tu nombre completo para facilitar el control de asistencia.",
   "Ten listo tu dispositivo, conexión y, si es posible, audífonos.",
-  "Si no puedes acceder, comunícate con el equipo de Ayuda de Zona Este.",
+  "Si no puedes acceder, comunícate con el equipo de Contactar Zona Este.",
 ];

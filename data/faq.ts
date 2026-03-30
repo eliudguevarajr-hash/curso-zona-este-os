@@ -20,7 +20,7 @@ export const faqItems = [
   {
     question: "¿Qué pasa después del registro?",
     answer:
-      "Después del registro en línea debes preparar tus documentos físicos, dar seguimiento a los diagnósticos y mantenerte pendiente de las fechas del proceso.",
+      "Después del registro debes subir tus documentos en el formulario correspondiente y mantenerte pendiente de las siguientes fases del proceso.",
   },
   {
     question: "¿Debo hacer examen diagnóstico?",
@@ -53,6 +53,6 @@ export const faqItems = [
   {
     question: "¿A quién contacto si tengo dudas?",
     answer:
-      "Si perteneces a Zona Este, comunícate con el equipo de apoyo publicado en la página de Ayuda.",
+      "Si perteneces a Zona Este, comunícate con el equipo de apoyo publicado en la página de Contactar.",
   },
 ];
