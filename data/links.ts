@@ -19,13 +19,13 @@ export const managedLinks: {
   classroomAccess: ManagedLink;
 } = {
   registrationForm: {
-    href: "https://docs.google.com/forms/d/e/1FAIpQLScHoJ_5VGPzDWljfjREdviRqGJT24FB3EhbdDNKllPn5eYDpw/viewform?pli=1",
+    href: "https://forms.gle/KrfJ7DsGdrzJkEEG6",
     external: true,
     status: "available",
     note: "Formulario oficial de registro inicial para Varones Bautizados, Laicos y Ayudas.",
   },
   documentUploadForm: {
-    href: "https://docs.google.com/forms/d/e/1FAIpQLSf04oYnB8_D8JTSD9-NPPlA9ajm6KM1aTQU1WMLZMacQ0VV-A/viewform?pli=1",
+    href: "https://forms.gle/cVXLRmNdGrRcbNJm8",
     external: true,
     status: "available",
     note: "Formulario oficial para subir los documentos del proceso.",
