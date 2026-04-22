@@ -15,7 +15,7 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(243,243,239,0.94)] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(229,236,242,0.92)] backdrop-blur">
       <div className="container-shell grid min-h-[72px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:grid-cols-[auto_1fr]">
         <SiteLogo />
 
@@ -35,7 +35,7 @@ export function Header() {
           </nav>
 
           <ButtonLink className="px-5" href="/inscripcion">
-            Comenzar Proceso
+            Abrir Diagnósticos
           </ButtonLink>
         </div>
 
@@ -63,7 +63,7 @@ export function Header() {
               </Link>
             ))}
             <ButtonLink className="mt-2" href="/inscripcion">
-              Comenzar Proceso
+              Abrir Diagnósticos
             </ButtonLink>
           </div>
         </div>

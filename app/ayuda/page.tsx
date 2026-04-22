@@ -16,7 +16,7 @@ export default function AyudaPage() {
           <p className="eyebrow-inverse">Equipo de apoyo Zona Este</p>
           <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Contactos principales</h2>
           <p className="mt-4 text-sm leading-7 text-white/90">
-            Si perteneces a Zona Este, estos son los contactos correctos para resolver tus dudas del proceso.
+            Si perteneces a Zona Este, estos son los contactos correctos para resolver tus dudas sobre los diagnósticos y la entrevista.
           </p>
 
           <div className="mt-6 grid gap-4 sm:grid-cols-2">

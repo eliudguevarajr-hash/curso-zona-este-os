@@ -12,6 +12,7 @@ export const managedLinks: {
   documentUploadForm: ManagedLink;
   vocationalDiagnosticForm: ManagedLink;
   ministerialDiagnosticForm: ManagedLink;
+  leadershipDiagnosticForm: ManagedLink;
   inscriptionRequestPdf: ManagedLink;
   convocatoriaPdf: ManagedLink;
   generalDrive: ManagedLink;
@@ -31,16 +32,22 @@ export const managedLinks: {
     note: "Formulario oficial para subir los documentos del proceso.",
   },
   vocationalDiagnosticForm: {
-    href: "/inscripcion",
-    external: false,
-    status: "pending",
-    note: "Este diagnóstico se abrirá cuando esta etapa esté disponible.",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScU86NwMhPpYujuwUQTFirdw6Yojw6_lHow9IHSGcTFD_WL1A/viewform",
+    external: true,
+    status: "available",
+    note: "Diagnóstico Vocacional abierto actualmente.",
   },
   ministerialDiagnosticForm: {
-    href: "/inscripcion",
-    external: false,
-    status: "pending",
-    note: "Este diagnóstico se abrirá cuando esta etapa esté disponible.",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScSTJC5NYgmrHCqdJNBHJn3Di2ysk5MqWVPh5h-wzN3uJ48Hg/viewform",
+    external: true,
+    status: "available",
+    note: "Diagnóstico Ministerial abierto actualmente.",
+  },
+  leadershipDiagnosticForm: {
+    href: "https://docs.google.com/forms/d/e/1FAIpQLSeX33Nqfv7kQYrNMquinqzBUQkYY0zJFuybQyzUJaUZuJ-KsQ/viewform",
+    external: true,
+    status: "available",
+    note: "Diagnóstico de Liderazgo y Servicio abierto actualmente.",
   },
   inscriptionRequestPdf: {
     href: "https://drive.google.com/file/d/1q-teDKbtI3d1w1trNFaS0xOtJGbQdGX-/view?usp=sharing",
@@ -76,16 +83,6 @@ export const managedLinks: {
 
 export const publishingChecklist = [
   {
-    title: "Registro inicial",
-    audience: "Varones Bautizados, Laicos y Ayudas",
-    ...managedLinks.registrationForm,
-  },
-  {
-    title: "Subir documentos",
-    audience: "Varones Bautizados, Laicos y Ayudas",
-    ...managedLinks.documentUploadForm,
-  },
-  {
     title: "Diagnóstico Vocacional",
     audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.vocationalDiagnosticForm,
@@ -96,9 +93,9 @@ export const publishingChecklist = [
     ...managedLinks.ministerialDiagnosticForm,
   },
   {
-    title: "Solicitud de Inscripción",
+    title: "Diagnóstico de Liderazgo y Servicio",
     audience: "Varones Bautizados, Laicos y Ayudas",
-    ...managedLinks.inscriptionRequestPdf,
+    ...managedLinks.leadershipDiagnosticForm,
   },
   {
     title: "Convocatoria Oficial PDF",
@@ -106,19 +103,11 @@ export const publishingChecklist = [
     ...managedLinks.convocatoriaPdf,
   },
   {
-    title: "Carpeta General de Recursos",
-    audience: "Aspirantes y alumnos",
-    ...managedLinks.generalDrive,
-  },
-  {
-    title: "Enlaces de Zoom",
-    audience: "Aspirantes y alumnos",
-    ...managedLinks.orientationZoom,
-  },
-  {
-    title: "Acceso a Classroom",
-    audience: "Alumnos",
-    ...managedLinks.classroomAccess,
+    title: "Calendario General",
+    audience: "Consulta general",
+    href: "/calendario",
+    status: "available" as const,
+    note: "Úsalo solo como referencia general del curso.",
   },
 ];
 

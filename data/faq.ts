@@ -1,54 +1,41 @@
 export const faqItems = [
   {
-    question: "¿Quiénes pueden inscribirse?",
+    question: "¿Quiénes deben completar los diagnósticos?",
     answer:
-      "Pueden inscribirse Varones Bautizados, Laicos y Ayudas, conforme a la convocatoria oficial de la Iglesia de Dios (Israelita).",
+      "Deben completarlos los participantes de Zona Este dentro de esta etapa actual: Varones Bautizados, Laicos y Ayudas.",
   },
   {
-    question: "¿Cuál es la fecha de la convocatoria?",
-    answer: "La convocatoria está abierta actualmente para Zona Este. Revisa Inicio e Inscripción para cualquier actualización del proceso.",
+    question: "¿Cuántos diagnósticos debo hacer?",
+    answer: "Debes completar 3 diagnósticos esta misma semana y hacerlo de manera individual.",
   },
   {
-    question: "¿Habrá prórroga?",
-    answer: "Las actualizaciones sobre inscripción se comunicarán directamente en este sitio según lo determine Zona Este.",
-  },
-  {
-    question: "¿Qué documentos necesito?",
+    question: "¿Cuáles son los 3 diagnósticos?",
     answer:
-      "Debes reunir la Solicitud de Inscripción firmada por tu localidad, identificación, acta de nacimiento, acta de matrimonio cuando aplique, certificado de estudios y acta de bautizo emitida por la Iglesia de Dios (Israelita).",
+      "Diagnóstico Vocacional, Diagnóstico Ministerial y Diagnóstico de Liderazgo y Servicio.",
   },
   {
-    question: "¿Qué pasa después del registro?",
+    question: "¿En qué orden debo hacerlos?",
     answer:
-      "Después del registro debes subir tus documentos en el formulario correspondiente y mantenerte pendiente de las siguientes fases del proceso.",
+      "Sigue el orden que aparece en esta página: primero Diagnóstico Vocacional, después Diagnóstico Ministerial y luego Diagnóstico de Liderazgo y Servicio.",
   },
   {
-    question: "¿Debo hacer examen diagnóstico?",
-    answer: "Sí. Todos los participantes deberán completar los diagnósticos oficiales cuando esta etapa sea publicada.",
-  },
-  {
-    question: "¿Habrá reunión informativa?",
+    question: "¿Qué pasa cuando termine los 3 formularios?",
     answer:
-      "Sí. La reunión informativa sobre el plan de estudios se programará según la zona y se publicará en el calendario cuando el enlace esté disponible.",
+      "Cuando completes los 3 diagnósticos, nuestro equipo te contactará para realizar la entrevista formal.",
   },
   {
-    question: "¿Cómo sabré la fecha de mi entrevista?",
+    question: "¿Debo llenar otro formulario para la entrevista?",
+    answer: "No. La entrevista formal será coordinada directamente por nuestro equipo después de que completes los 3 diagnósticos.",
+  },
+  {
+    question: "¿Cuál será el último paso antes del Ciclo Escolar 2026?",
     answer:
-      "El equipo de Zona Este te contactará para programar tu entrevista ministerial. No necesitas llenar un formulario adicional para esa etapa.",
+      "La entrevista formal será el último paso antes de ser ingresado al Ciclo Escolar 2026.",
   },
   {
-    question: "¿Cuándo inician las clases?",
-    answer: "El inicio de clases está previsto para el 03 de Mayo de 2026.",
-  },
-  {
-    question: "¿Dónde serán las reuniones?",
+    question: "¿Dónde puedo ver el calendario general?",
     answer:
-      "Las reuniones informativas y sesiones en vivo se realizarán por Zoom. Los enlaces se publicarán en la página de Calendario cuando estén disponibles.",
-  },
-  {
-    question: "¿Dónde encuentro mis recursos?",
-    answer:
-      "Los formularios, documentos oficiales y la carpeta general de recursos están concentrados en Inscripción y en los accesos oficiales de Inicio.",
+      "Puedes usar el Calendario General solo como referencia. La prioridad actual es completar los 3 diagnósticos.",
   },
   {
     question: "¿A quién contacto si tengo dudas?",

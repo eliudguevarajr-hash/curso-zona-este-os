@@ -14,15 +14,15 @@ export const contacts: Contact[] = [
 
 export const supportAreas = [
   {
-    title: "Registro",
-    description: "Dudas sobre el formulario inicial y el orden correcto del proceso.",
+    title: "Diagnósticos",
+    description: "Dudas sobre el orden correcto de los 3 formularios y cómo completarlos.",
   },
   {
-    title: "Documentos",
-    description: "Dudas sobre qué documentos reunir y cómo subirlos en el formulario correspondiente.",
+    title: "Acceso a formularios",
+    description: "Problemas para abrir los diagnósticos, enviarlos o confirmar que quedaron completos.",
   },
   {
-    title: "Siguientes etapas",
-    description: "Preguntas sobre diagnósticos, calendario general o fases que todavía no están abiertas.",
+    title: "Entrevista final",
+    description: "Preguntas sobre el contacto posterior y la entrevista formal después de los 3 diagnósticos.",
   },
 ];

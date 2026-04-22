@@ -22,10 +22,10 @@ html {
 body {
   @apply bg-sand text-ink font-sans antialiased;
   background-image:
-    radial-gradient(circle at top left, rgba(88, 127, 160, 0.7), transparent 24%),
-    radial-gradient(circle at 82% 10%, rgba(123, 151, 175, 0.5), transparent 22%),
-    radial-gradient(circle at 50% 42%, rgba(141, 165, 186, 0.34), transparent 26%),
-    linear-gradient(to bottom, #aebfcd 0%, #bccad5 38%, #aebfcd 74%, #b7c5d0 100%);
+    radial-gradient(circle at top left, rgba(67, 104, 136, 0.82), transparent 24%),
+    radial-gradient(circle at 82% 10%, rgba(104, 133, 158, 0.62), transparent 22%),
+    radial-gradient(circle at 50% 42%, rgba(119, 144, 167, 0.42), transparent 26%),
+    linear-gradient(to bottom, #95aabd 0%, #a5b7c5 36%, #98adbf 72%, #a1b4c3 100%);
 }
 
 a,
@@ -91,9 +91,9 @@ a {
 .soft-panel {
   @apply rounded-3xl border border-slate-200/80 bg-white/70 shadow-soft backdrop-blur;
   background-image:
-    radial-gradient(circle at top left, rgba(160, 188, 208, 0.34), transparent 28%),
-    radial-gradient(circle at top right, rgba(200, 214, 226, 0.28), transparent 26%),
-    linear-gradient(180deg, rgba(242, 246, 249, 0.86), rgba(218, 229, 238, 0.76));
+    radial-gradient(circle at top left, rgba(131, 162, 186, 0.34), transparent 28%),
+    radial-gradient(circle at top right, rgba(184, 201, 214, 0.26), transparent 26%),
+    linear-gradient(180deg, rgba(234, 241, 246, 0.86), rgba(205, 219, 229, 0.78));
 }
 
 .section-title {

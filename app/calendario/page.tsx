@@ -8,7 +8,7 @@ export default function CalendarioPage() {
     <PageShell
       eyebrow="Calendario"
       title="Calendario y Materias"
-      description="Consulta esta página solo como referencia después de completar tu registro inicial."
+      description="Consulta esta página solo como referencia mientras completas la etapa actual de diagnósticos."
     >
       <section className="space-y-6">
         <SectionHeading

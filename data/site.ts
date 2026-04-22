@@ -29,19 +29,19 @@ export const siteMeta = {
 
 export const navigation: NavItem[] = [
   { label: "Inicio", href: "/" },
-  { label: "Inscripción", href: "/inscripcion" },
+  { label: "Diagnósticos", href: "/inscripcion" },
   { label: "Contactar", href: "/ayuda" },
 ];
 
 export const announcements: Announcement[] = [
   {
     title: "Etapa abierta actualmente",
-    detail: "En este momento solo debes completar tu registro y subir tus documentos correspondientes.",
+    detail: "Cada estudiante debe completar los 3 diagnósticos esta semana de manera individual.",
     tone: "warning",
   },
   {
-    title: "Sigue el proceso en orden",
-    detail: "Primero regístrate. Después sube tus documentos. Las siguientes fases se publicarán más adelante.",
+    title: "Último paso después de los formularios",
+    detail: "Una vez que completes los 3 diagnósticos, nuestro equipo te contactará para realizar la entrevista formal.",
     tone: "info",
   },
 ];
@@ -54,13 +54,13 @@ export const quickLinks: QuickLink[] = [
   },
   {
     title: "Calendario General",
-    description: "Úsalo solo como referencia general del curso después de completar tu proceso.",
+    description: "Úsalo solo como referencia general del curso mientras completas tus diagnósticos.",
     href: "/calendario",
     status: "available",
   },
   {
     title: "Contactar Zona Este",
-    description: "Accede a los contactos y respuestas rápidas si tienes dudas.",
+    description: "Accede a los contactos y respuestas rápidas si tienes dudas sobre los diagnósticos.",
     href: "/ayuda",
     status: "available",
   },
