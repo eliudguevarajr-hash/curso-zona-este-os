@@ -33,7 +33,7 @@ export default function InscripcionPage() {
   return (
     <PageShell
       eyebrow="Diagnósticos"
-      title="Completa Tus 3 Diagnósticos"
+      title="Completa tus 3 diagnósticos"
       description="Haz estos 3 formularios en orden esta misma semana. Cuando termines, nuestro equipo te contactará para la entrevista formal."
     >
       <ProcessStatusBanner />
