@@ -26,7 +26,7 @@ export const managedLinks: {
     note: "Formulario oficial de registro inicial para Varones Bautizados, Laicos y Ayudas.",
   },
   documentUploadForm: {
-    href: "https://forms.gle/cVXLRmNdGrRcbNJm8",
+    href: "https://docs.google.com/forms/d/e/1FAIpQLScsPpL7a6GiAqXIAn9XgTecv4cQH7BQOKgeqN1Xe_4mBc5ruw/viewform",
     external: true,
     status: "available",
     note: "Formulario oficial para subir los documentos del proceso.",
