@@ -10,11 +10,9 @@ export default function InscripcionPage() {
       title="Completa todo en esta página"
       description="Sigue el orden de abajo. Si ya subiste documentos, empieza en el Paso 2. Si no estás seguro, sube tus documentos ahora."
     >
-      <ProcessStatusBanner />
-
-      <section className="mt-8 sm:mt-10">
+      <section>
         <div className="rounded-3xl border-2 border-brand-700 bg-white p-5 shadow-soft sm:p-6 lg:p-8">
-          <p className="eyebrow">Ruta obligatoria</p>
+          <p className="eyebrow">Primero mira esta ruta</p>
           <h2 className="mt-2 font-display text-3xl text-brand-900">No omitas ningún paso</h2>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-800">
             Completa los 3 diagnósticos esta semana. Los documentos solo se suben si todavía no los has enviado.
@@ -63,6 +61,10 @@ export default function InscripcionPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="mt-8 sm:mt-10">
+        <ProcessStatusBanner />
       </section>
 
       <section className="mt-8 sm:mt-10">
