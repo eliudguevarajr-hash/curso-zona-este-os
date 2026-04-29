@@ -8,8 +8,8 @@ export const requiredDocuments = [
 ];
 
 export const registrationNotes = [
-  "El formulario oficial de registro se usa en esta etapa para Varones Bautizados, Laicos y Ayudas.",
-  "Después de registrarte, debes subir tus documentos en el formulario correspondiente.",
-  "La prioridad de esta etapa es completar esos dos pasos: registro y carga de documentos.",
+  "La etapa actual es completar los 3 diagnósticos de manera individual.",
+  "Si todavía no has subido tus documentos, usa el formulario oficial de documentos.",
+  "Cuando completes los diagnósticos y tengas tus documentos enviados, espera el contacto para tu entrevista formal.",
   "Si tienes dudas durante el proceso, comunícate con Contactar Zona Este.",
 ];

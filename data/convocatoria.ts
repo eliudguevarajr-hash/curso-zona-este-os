@@ -15,7 +15,7 @@ export const convocatoriaSections = [
   {
     title: "Qué incluye el proceso",
     content:
-      "Solicitud firmada por la localidad, registro en línea, integración del expediente físico, diagnósticos, reunión informativa sobre el plan de estudios e entrevista ministerial.",
+      "Solicitud firmada por la localidad, registro en línea, integración del expediente físico, diagnósticos, reunión informativa sobre el plan de estudios y entrevista ministerial.",
   },
   {
     title: "Consideraciones importantes",
@@ -28,9 +28,9 @@ export const convocatoriaSections = [
       "Manifestar el deseo de participar, contar con la aprobación correspondiente en la localidad y preparar oportunamente los documentos requeridos para la matrícula.",
   },
   {
-    title: "Qué sucede después del registro",
+    title: "Qué sucede en la etapa actual",
     content:
-      "Tras completar el registro en línea, el aspirante debe comenzar de inmediato la integración de los documentos físicos y mantenerse pendiente de las fechas de evaluación, reunión informativa e inicio de clases.",
+      "En esta etapa, el estudiante debe completar los 3 diagnósticos y asegurarse de haber subido sus documentos. Después será contactado para la entrevista formal.",
   },
 ];
 
@@ -43,9 +43,9 @@ export const processCards = [
   {
     title: "Diagnósticos",
     description:
-      "Todos los aspirantes deberán completar el diagnóstico vocacional y el diagnóstico ministerial en la etapa inicial del proceso.",
+      "Todos los estudiantes deben completar el diagnóstico vocacional, el diagnóstico ministerial y el diagnóstico de liderazgo y servicio.",
     action: "Ver formularios",
-    href: "/inscripcion#formularios",
+    href: "/inscripcion",
   },
   {
     title: "Reunión Informativa",

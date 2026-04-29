@@ -5,6 +5,11 @@ export const faqItems = [
       "Deben completarlos los participantes de Zona Este dentro de esta etapa actual: Varones Bautizados, Laicos y Ayudas.",
   },
   {
+    question: "¿Tengo que subir documentos otra vez?",
+    answer:
+      "Solo debes usar el formulario de documentos si todavía no los has subido. Si ya los enviaste, continúa con los 3 diagnósticos.",
+  },
+  {
     question: "¿Cuántos diagnósticos debo hacer?",
     answer: "Debes completar 3 diagnósticos esta misma semana y hacerlo de manera individual.",
   },
@@ -21,7 +26,7 @@ export const faqItems = [
   {
     question: "¿Qué pasa cuando termine los 3 formularios?",
     answer:
-      "Cuando completes los 3 diagnósticos, nuestro equipo te contactará para realizar la entrevista formal.",
+      "Cuando completes los 3 diagnósticos y tengas tus documentos enviados, nuestro equipo te contactará para realizar la entrevista formal.",
   },
   {
     question: "¿Debo llenar otro formulario para la entrevista?",

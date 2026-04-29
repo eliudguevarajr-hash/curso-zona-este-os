@@ -40,13 +40,23 @@ export const announcements: Announcement[] = [
     tone: "warning",
   },
   {
-    title: "Último paso después de los formularios",
-    detail: "Una vez que completes los 3 diagnósticos, nuestro equipo te contactará para realizar la entrevista formal.",
+    title: "Documentos pendientes",
+    detail: "Si todavía no has subido tus documentos, debes hacerlo ahora usando el formulario oficial de documentos.",
+    tone: "info",
+  },
+  {
+    title: "Último paso después de completar todo",
+    detail: "Cuando completes los 3 diagnósticos y tengas tus documentos enviados, nuestro equipo te contactará para la entrevista formal.",
     tone: "info",
   },
 ];
 
 export const quickLinks: QuickLink[] = [
+  {
+    title: "Subir Documentos",
+    description: "Usa este formulario solo si aún no has subido tus documentos.",
+    ...managedLinks.documentUploadForm,
+  },
   {
     title: "Convocatoria PDF",
     description: "Consulta la convocatoria oficial si necesitas revisar los detalles del proceso.",

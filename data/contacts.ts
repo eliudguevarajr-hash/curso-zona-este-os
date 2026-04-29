@@ -14,12 +14,12 @@ export const contacts: Contact[] = [
 
 export const supportAreas = [
   {
-    title: "Diagnósticos",
-    description: "Dudas sobre el orden correcto de los 3 formularios y cómo completarlos.",
+    title: "Documentos pendientes",
+    description: "Dudas sobre el formulario para subir documentos si todavía no los has enviado.",
   },
   {
-    title: "Acceso a formularios",
-    description: "Problemas para abrir los diagnósticos, enviarlos o confirmar que quedaron completos.",
+    title: "Diagnósticos",
+    description: "Dudas sobre el orden correcto de los 3 formularios y cómo completarlos.",
   },
   {
     title: "Entrevista final",

@@ -2,7 +2,7 @@ import { managedLinks } from "./links";
 
 export type ResourceCategory =
   | "Convocatoria"
-  | "Registro"
+  | "Diagnósticos"
   | "Documentos"
   | "Materias"
   | "Classroom"
@@ -23,7 +23,7 @@ export type ResourceItem = {
 
 export const resourceCategories: ResourceCategory[] = [
   "Convocatoria",
-  "Registro",
+  "Diagnósticos",
   "Documentos",
   "Materias",
   "Classroom",
@@ -41,25 +41,32 @@ export const resourceItems: ResourceItem[] = [
     ...managedLinks.convocatoriaPdf,
   },
   {
-    title: "Registro en Línea",
-    description: "Formulario principal para iniciar el proceso.",
-    category: "Registro",
+    title: "Subir Documentos",
+    description: "Formulario para estudiantes que todavía no han enviado sus documentos.",
+    category: "Documentos",
     type: "Formulario",
-    ...managedLinks.registrationForm,
+    ...managedLinks.documentUploadForm,
   },
   {
     title: "Diagnóstico Vocacional",
     description: "Formulario oficial para identificar dones y área de servicio.",
-    category: "Formularios",
+    category: "Diagnósticos",
     type: "Formulario",
     ...managedLinks.vocationalDiagnosticForm,
   },
   {
     title: "Diagnóstico Ministerial",
     description: "Formulario oficial para evaluación bíblica, doctrinal y administrativa.",
-    category: "Formularios",
+    category: "Diagnósticos",
     type: "Formulario",
     ...managedLinks.ministerialDiagnosticForm,
+  },
+  {
+    title: "Diagnóstico de Liderazgo y Servicio",
+    description: "Formulario oficial para cerrar la etapa actual de diagnósticos.",
+    category: "Diagnósticos",
+    type: "Formulario",
+    ...managedLinks.leadershipDiagnosticForm,
   },
   {
     title: "Solicitud de Inscripción",

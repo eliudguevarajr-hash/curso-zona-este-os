@@ -6,11 +6,12 @@ import { KeyDates } from "@/components/ui/key-dates";
 import { ProcessStatusBanner } from "@/components/ui/process-status-banner";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { keyDates } from "@/data/courses";
+import { managedLinks } from "@/data/links";
 import { processSequence } from "@/data/process";
 import { announcements, quickLinks, siteMeta } from "@/data/site";
 
 const audienceItems = ["Varones Bautizados", "Laicos", "Ayudas"];
-const openSteps = processSequence.slice(0, 3);
+const diagnosticSteps = processSequence.slice(1, 4);
 
 export default function HomePage() {
   return (
@@ -25,7 +26,7 @@ export default function HomePage() {
               </h1>
               <p className="mt-3 text-base text-brand-700 sm:mt-4 sm:text-xl">{siteMeta.subtitle}</p>
               <p className="mt-5 max-w-2xl text-sm leading-7 text-slate-700 sm:mt-6 sm:text-base sm:leading-8">
-                Esta semana debes completar los 3 diagnósticos individuales. No necesitas hacer otro paso antes de eso.
+                Esta semana debes completar los 3 diagnósticos individuales. Si todavía no subiste tus documentos, súbelos también.
               </p>
               <div className="mt-6 flex flex-wrap gap-3 sm:mt-8">
                 <ButtonLink className="w-full sm:w-auto" href="/inscripcion">
@@ -59,12 +60,39 @@ export default function HomePage() {
 
       <section className="container-shell mt-8 space-y-5 sm:mt-10">
         <SectionHeading
+          eyebrow="Documentos"
+          title="Primero revisa si tienes documentos pendientes"
+          description="Si ya subiste tus documentos, continúa directamente con los diagnósticos."
+        />
+        <div className="brand-panel p-5 sm:p-6 lg:p-8">
+          <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
+            <div>
+              <p className="eyebrow-inverse">Solo si te falta este paso</p>
+              <h3 className="mt-3 text-2xl font-semibold text-white">Sube tus documentos</h3>
+              <p className="mt-3 text-sm leading-7 text-white/90">
+                Este formulario es para estudiantes que todavía no han enviado sus documentos del proceso.
+              </p>
+            </div>
+            <ButtonLink
+              className="w-full md:w-auto"
+              href={managedLinks.documentUploadForm.href}
+              external={managedLinks.documentUploadForm.external}
+              variant="panel"
+            >
+              Subir Documentos
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+
+      <section className="container-shell mt-8 space-y-5 sm:mt-10">
+        <SectionHeading
           eyebrow="Pasos"
           title="Completa estos 3 diagnósticos"
           description="Hazlos en este orden y completa los 3 durante esta semana."
         />
         <div className="grid gap-4 lg:grid-cols-3">
-          {openSteps.map((item, index) => (
+          {diagnosticSteps.map((item, index) => (
             <div className={`${index === 0 ? "brand-panel" : "card"} h-full p-5 sm:p-6`} key={item.title}>
               <p className={index === 0 ? "eyebrow-inverse" : "eyebrow"}>{item.step}</p>
               <h3 className={`mt-3 text-2xl font-semibold ${index === 0 ? "text-white" : "text-brand-900"}`}>{item.title}</h3>

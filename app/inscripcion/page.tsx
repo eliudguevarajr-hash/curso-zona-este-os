@@ -33,10 +33,37 @@ export default function InscripcionPage() {
   return (
     <PageShell
       eyebrow="Diagnósticos"
-      title="Completa tus 3 diagnósticos"
-      description="Haz estos 3 formularios en orden esta misma semana. Cuando termines, nuestro equipo te contactará para la entrevista formal."
+      title="Documentos y diagnósticos"
+      description="Si aún no subiste tus documentos, hazlo ahora. Después completa los 3 diagnósticos en orden esta misma semana."
     >
       <ProcessStatusBanner />
+
+      <section className="mt-8 space-y-5 sm:mt-10">
+        <SectionHeading
+          eyebrow="Antes de seguir"
+          title="¿Te faltan documentos?"
+          description="Este paso es solo para estudiantes que todavía no han subido sus documentos."
+        />
+        <div className="brand-panel p-5 sm:p-6 lg:p-8">
+          <div className="grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
+            <div>
+              <p className="eyebrow-inverse">Documentos pendientes</p>
+              <h2 className="mt-3 font-display text-2xl text-white sm:text-3xl">Sube tus documentos si aún no lo has hecho</h2>
+              <p className="mt-4 text-sm leading-7 text-white/90">
+                Si ya enviaste tus documentos, no repitas este paso. Continúa con los 3 diagnósticos.
+              </p>
+            </div>
+            <ButtonLink
+              className="w-full md:w-auto"
+              href={managedLinks.documentUploadForm.href}
+              external={managedLinks.documentUploadForm.external}
+              variant="panel"
+            >
+              Subir Documentos
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
 
       <section className="mt-8 space-y-5 sm:mt-10">
         <SectionHeading

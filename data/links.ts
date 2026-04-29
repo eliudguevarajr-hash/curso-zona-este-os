@@ -83,6 +83,11 @@ export const managedLinks: {
 
 export const publishingChecklist = [
   {
+    title: "Subir documentos",
+    audience: "Estudiantes con documentos pendientes",
+    ...managedLinks.documentUploadForm,
+  },
+  {
     title: "Diagnóstico Vocacional",
     audience: "Varones Bautizados, Laicos y Ayudas",
     ...managedLinks.vocationalDiagnosticForm,
