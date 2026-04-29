@@ -25,7 +25,7 @@ export function ButtonLink({
   const variants = {
     primary: "bg-brand-800 text-white hover:bg-brand-900 hover:shadow-md",
     secondary: "border border-brand-200 bg-white text-brand-900 hover:border-brand-300 hover:bg-brand-50 hover:shadow-md",
-    ghost: "border border-brand-200 bg-white/90 text-brand-900 hover:border-brand-300 hover:bg-brand-50 hover:shadow-md",
+    ghost: "border border-brand-200 bg-white text-brand-900 hover:border-brand-300 hover:bg-brand-50 hover:shadow-md",
     panel: "bg-white text-brand-900 hover:bg-brand-50 hover:shadow-md",
     panelSecondary: "border border-brand-100/40 bg-brand-50 text-brand-900 hover:border-white/50 hover:bg-white hover:shadow-md",
   };

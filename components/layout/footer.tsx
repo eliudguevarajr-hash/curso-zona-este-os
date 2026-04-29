@@ -6,7 +6,7 @@ import { SiteLogo } from "../ui/site-logo";
 
 export function Footer() {
   return (
-    <footer className="mt-16 border-t border-line bg-brand-wash text-white sm:mt-20">
+    <footer className="mt-16 border-t border-brand-800 bg-brand-900 text-white sm:mt-20">
       <div className="container-shell grid gap-8 py-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.95fr)] xl:grid-cols-[minmax(0,0.92fr)_0.58fr_minmax(0,0.9fr)]">
         <div className="min-w-0 lg:pr-2">
           <SiteLogo variant="footer" />

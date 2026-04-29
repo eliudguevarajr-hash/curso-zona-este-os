@@ -15,13 +15,13 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-[rgba(229,236,242,0.92)] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-slate-300 bg-[#e7eff5]">
       <div className="container-shell grid min-h-[72px] grid-cols-[minmax(0,1fr)_auto] items-center gap-3 py-2 lg:grid-cols-[auto_1fr]">
         <SiteLogo />
 
         <div className="hidden items-center justify-self-end gap-4 lg:flex xl:gap-6">
           <nav className="items-center">
-            <div className="flex items-center gap-1 rounded-full border border-slate-200/90 bg-white/80 px-2 py-1 shadow-sm">
+            <div className="flex items-center gap-1 rounded-full border border-slate-300 bg-white px-2 py-1 shadow-sm">
               {navigation.map((item) => (
                 <Link
                   key={item.href}
@@ -50,7 +50,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="border-t border-line bg-white/95 lg:hidden">
+        <div className="border-t border-line bg-white lg:hidden">
           <div className="container-shell flex flex-col gap-2 py-4">
             {navigation.map((item) => (
               <Link

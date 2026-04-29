@@ -19,7 +19,7 @@ export function AppChrome({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       <main className="pb-24 lg:pb-0">{children}</main>
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-200/80 bg-[rgba(229,236,242,0.95)] px-4 py-3 shadow-[0_-10px_34px_rgba(17,32,42,0.14)] backdrop-blur lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-slate-300 bg-[#e7eff5] px-4 py-3 shadow-[0_-10px_34px_rgba(17,32,42,0.14)] lg:hidden">
         <div className="mx-auto w-full max-w-7xl">
           <ButtonLink className="w-full" href="/inscripcion">
             Abrir Diagnósticos
